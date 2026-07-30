@@ -9,7 +9,12 @@ export function openModal(film) {
     const genresHtml = film.genres.map(g => `<span class="genre-tag" style="background:var(--eff-off-white);padding:0.1rem 0.7rem;border-radius:20px;font-size:0.7rem;border:1px solid rgba(209,209,209,0.3);">${g}</span>`).join(' ');
 
     const qrUrl = `https://api.qrserver.com/v1/create-qr-code/?size=120x120&data=https://www.imdb.com/title/${film.imdbId}/`;
-    const trailerUrl = `https://www.youtube.com/embed/?listType=search&list=${encodeURIComponent(film.title + ' trailer')}`;
+    
+    // FIXED: Correct YouTube embed URL for search results
+    const searchQuery = encodeURIComponent(`${film.title} official trailer`);
+    const trailerUrl = `https://www.youtube.com/embed?listType=search&list=${searchQuery}`;
+    // Fallback link if embed doesn't work
+    const youtubeSearchLink = `https://www.youtube.com/results?search_query=${searchQuery}`;
 
     body.innerHTML = `
         <div class="modal-body">
@@ -42,7 +47,12 @@ export function openModal(film) {
                 <div class="modal-trailer">
                     <h4><i class="fas fa-video"></i> Trailer</h4>
                     <div class="trailer-wrap">
-                        <iframe src="${trailerUrl}" allowfullscreen loading="lazy"></iframe>
+                        <iframe src="${trailerUrl}" allowfullscreen loading="lazy" sandbox="allow-scripts allow-same-origin allow-forms"></iframe>
+                    </div>
+                    <div style="text-align:center;margin-top:0.5rem;">
+                        <a href="${youtubeSearchLink}" target="_blank" style="color:var(--eff-red);font-weight:600;font-size:0.9rem;text-decoration:none;border:1px solid var(--eff-red);padding:0.3rem 1rem;border-radius:30px;display:inline-block;">
+                            <i class="fab fa-youtube"></i> Watch on YouTube
+                        </a>
                     </div>
                 </div>
             </div>
@@ -51,7 +61,6 @@ export function openModal(film) {
     container.style.display = 'flex';
     document.body.style.overflow = 'hidden';
 
-    // Close on overlay click or button
     container.onclick = (e) => { if (e.target === container) closeModal(); };
     document.getElementById('closeModalBtn').onclick = closeModal;
     document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeModal(); });
