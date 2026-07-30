@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EU Film Festival Malawi – Program</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        /* Additional program-specific styles */
+        .program-section {
+            background: var(--eff-white);
+            border-radius: 20px;
+            padding: 2rem;
+            margin-bottom: 2.5rem;
+            border: 1px solid rgba(209,209,209,0.25);
+        }
+        .program-section h2 {
+            font-size: 1.6rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+        .program-section .venue-info {
+            font-size: 0.95rem;
+            color: #4a526b;
+            margin-bottom: 1.5rem;
+        }
+        .program-section .venue-info i {
+            color: var(--eff-red);
+            margin-right: 6px;
+        }
+        .program-item {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: baseline;
+            padding: 0.8rem 0;
+            border-bottom: 1px solid rgba(209,209,209,0.2);
+            gap: 0.5rem 1.5rem;
+        }
+        .program-item:last-child {
+            border-bottom: none;
+        }
+        .program-item .time {
+            font-weight: 700;
+            color: var(--eff-navy);
+            min-width: 80px;
+            font-size: 0.95rem;
+        }
+        .program-item .title {
+            font-weight: 600;
+            flex: 1;
+        }
+        .program-item .title .malawi-badge {
+            display: inline-block;
+            background: var(--eff-gold);
+            color: white;
+            font-size: 0.6rem;
+            font-weight: 700;
+            padding: 0.1rem 0.6rem;
+            border-radius: 20px;
+            text-transform: uppercase;
+            margin-left: 0.5rem;
+        }
+        .program-item .director {
+            font-size: 0.85rem;
+            color: #6e7892;
+            min-width: 120px;
+        }
+        .program-item .slot-tag {
+            background: var(--eff-off-white);
+            padding: 0.15rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.7rem;
+            font-weight: 600;
+            color: var(--eff-navy);
+            border: 1px solid rgba(209,209,209,0.3);
+        }
+        .nav-bar {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+        .nav-bar a {
+            font-weight: 600;
+            color: var(--eff-navy);
+            text-decoration: none;
+            padding: 0.4rem 1.2rem;
+            border-radius: 30px;
+            transition: 0.2s;
+        }
+        .nav-bar a:hover {
+            background: var(--eff-off-white);
+        }
+        .nav-bar a.active {
+            background: var(--eff-red);
+            color: white;
+        }
+        @media (max-width: 700px) {
+            .program-item {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 0.2rem;
+            }
+            .program-item .time {
+                min-width: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="guide-container">
+
+        <!-- Header (same as index) -->
+        <header class="catalogue-header">
+            <div class="logo-wrapper">
+                <img src="https://europeanfilmfestival.eu/wp-content/uploads/2024/03/logo-nero.webp" alt="Logo" onerror="this.style.display='none'">
+                <div class="logo-divider"></div>
+                <div class="festival-name">European Film <span>Festival</span></div>
+            </div>
+            <div class="subtitle"><i class="fas fa-map-pin"></i> Malawi · Program <i class="fas fa-map-pin"></i></div>
+            <div class="header-stats">
+                <span class="stat-item"><i class="fas fa-calendar-day"></i> <span id="dayCount">0</span> days</span>
+                <span class="stat-item"><i class="fas fa-film"></i> <span id="filmCount">0</span> films</span>
+            </div>
+        </header>
+
+        <!-- Navigation -->
+        <nav class="nav-bar">
+            <a href="index.html">Catalogue</a>
+            <a href="program.html" class="active">Program</a>
+        </nav>
+
+        <!-- Program will be injected here -->
+        <div id="programContainer"></div>
+
+    </div>
+
+    <script>
+        async function loadProgram() {
+            try {
+                const res = await fetch('./data/films.json');
+                if (!res.ok) throw new Error('Failed to load films');
+                const films = await res.json();
+
+                // Filter films that have a program
+                const programmed = films.filter(f => f.program);
+                // Group by day
+                const days = {};
+                programmed.forEach(f => {
+                    const day = f.program.day;
+                    if (!days[day]) days[day] = [];
+                    days[day].push(f);
+                });
+
+                // Sort days (custom order)
+                const dayOrder = [
+                    "Thursday 17 September",
+                    "Friday 18 September",
+                    "Saturday 19 September",
+                    "Saturday 26 September"
+                ];
+                const sortedDays = Object.keys(days).sort((a,b) => dayOrder.indexOf(a) - dayOrder.indexOf(b));
+
+                // Update stats
+                document.getElementById('dayCount').textContent = sortedDays.length;
+                document.getElementById('filmCount').textContent = programmed.length;
+
+                const container = document.getElementById('programContainer');
+                let html = '';
+
+                sortedDays.forEach(day => {
+                    const items = days[day];
+                    // Sort by time
+                    items.sort((a,b) => a.program.time.localeCompare(b.program.time));
+
+                    const venue = items[0].program.venue;
+                    html += `
+                        <div class="program-section">
+                            <h2>${day}</h2>
+                            <div class="venue-info"><i class="fas fa-location-dot"></i> ${venue}</div>
+                            <div>
+                    `;
+                    items.forEach(f => {
+                        const isMalawi = f.isMalawian || false;
+                        const titleHtml = isMalawi ? `${f.title} <span class="malawi-badge">Malawi</span>` : f.title;
+                        const directorHtml = f.director || 'TBC';
+                        const slotHtml = f.program.slot ? `<span class="slot-tag">${f.program.slot}</span>` : '';
+                        html += `
+                            <div class="program-item">
+                                <span class="time">${f.program.time}</span>
+                                <span class="title">${titleHtml}</span>
+                                <span class="director">${directorHtml}</span>
+                                ${slotHtml}
+                            </div>
+                        `;
+                    });
+                    html += `
+                            </div>
+                        </div>
+                    `;
+                });
+
+                container.innerHTML = html;
+            } catch (err) {
+                document.getElementById('programContainer').innerHTML = `<p style="color:var(--eff-red);">Error loading program: ${err.message}</p>`;
+            }
+        }
+
+        loadProgram();
+    </script>
+
+</body>
+</html>
