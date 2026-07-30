@@ -19,7 +19,14 @@
     "delegation": "",
     "imdbId": "tt21282260",
     "eventSuggestion": "Opening Night",
-    "youtubeId": "1JyXPP_eWcQ"
+    "youtubeId": "1JyXPP_eWcQ",
+    "isMalawian": false,
+    "program": {
+      "day": "Thursday 17 September",
+      "time": "19:00",
+      "venue": "EU Residence",
+      "slot": "Opening Feature"
+    }
   },
   {
     "id": 2,
@@ -41,7 +48,9 @@
     "delegation": "",
     "imdbId": "tt29572786",
     "eventSuggestion": "",
-    "youtubeId": "FU2BCIojw6k"
+    "youtubeId": "FU2BCIojw6k",
+    "isMalawian": false,
+    "program": null
   },
   {
     "id": 3,
@@ -63,7 +72,9 @@
     "delegation": "",
     "imdbId": "tt27377297",
     "eventSuggestion": "",
-    "youtubeId": "PYkfh2FwVs4"
+    "youtubeId": "PYkfh2FwVs4",
+    "isMalawian": false,
+    "program": null
   },
   {
     "id": 4,
@@ -85,7 +96,9 @@
     "delegation": "",
     "imdbId": "tt27551416",
     "eventSuggestion": "",
-    "youtubeId": "HXhJYggwYYw"
+    "youtubeId": "HXhJYggwYYw",
+    "isMalawian": false,
+    "program": null
   },
   {
     "id": 5,
@@ -107,7 +120,9 @@
     "delegation": "",
     "imdbId": "tt30308333",
     "eventSuggestion": "",
-    "youtubeId": "1m72zY3x5U4"
+    "youtubeId": "1m72zY3x5U4",
+    "isMalawian": false,
+    "program": null
   },
   {
     "id": 6,
@@ -129,7 +144,9 @@
     "delegation": "",
     "imdbId": "tt6796762",
     "eventSuggestion": "",
-    "youtubeId": "uLU8CcMb8OQ"
+    "youtubeId": "uLU8CcMb8OQ",
+    "isMalawian": false,
+    "program": null
   },
   {
     "id": 7,
@@ -151,7 +168,9 @@
     "delegation": "",
     "imdbId": "tt32890304",
     "eventSuggestion": "",
-    "youtubeId": "ChnS4hCoOzA"
+    "youtubeId": "ChnS4hCoOzA",
+    "isMalawian": false,
+    "program": null
   },
   {
     "id": 8,
@@ -173,7 +192,9 @@
     "delegation": "",
     "imdbId": "tt25436674",
     "eventSuggestion": "",
-    "youtubeId": "hXZTskjPVig"
+    "youtubeId": "hXZTskjPVig",
+    "isMalawian": false,
+    "program": null
   },
   {
     "id": 9,
@@ -195,7 +216,14 @@
     "delegation": "",
     "imdbId": "tt29513627",
     "eventSuggestion": "Public Screening",
-    "youtubeId": "YvvZrIw1NxQ"
+    "youtubeId": "YvvZrIw1NxQ",
+    "isMalawian": false,
+    "program": {
+      "day": "Saturday 19 September",
+      "time": "18:00",
+      "venue": "Pabwalo",
+      "slot": "Public Screening"
+    }
   },
   {
     "id": 10,
@@ -217,7 +245,9 @@
     "delegation": "",
     "imdbId": "tt21390800",
     "eventSuggestion": "",
-    "youtubeId": "Qgdjycg5ucA"
+    "youtubeId": "Qgdjycg5ucA",
+    "isMalawian": false,
+    "program": null
   },
   {
     "id": 11,
@@ -239,7 +269,14 @@
     "delegation": "",
     "imdbId": "tt23656050",
     "eventSuggestion": "Public Screening",
-    "youtubeId": "O9yZJWv8cdM"
+    "youtubeId": "O9yZJWv8cdM",
+    "isMalawian": false,
+    "program": {
+      "day": "Saturday 19 September",
+      "time": "20:00",
+      "venue": "Pabwalo",
+      "slot": "Public Screening"
+    }
   },
   {
     "id": 12,
@@ -261,7 +298,14 @@
     "delegation": "French",
     "imdbId": "tt26743414",
     "eventSuggestion": "Opening Night",
-    "youtubeId": "evoYNCdZGOQ"
+    "youtubeId": "evoYNCdZGOQ",
+    "isMalawian": false,
+    "program": {
+      "day": "Thursday 17 September",
+      "time": "21:00",
+      "venue": "EU Residence",
+      "slot": "Opening Feature"
+    }
   },
   {
     "id": 13,
@@ -283,7 +327,9 @@
     "delegation": "",
     "imdbId": "tt11296058",
     "eventSuggestion": "",
-    "youtubeId": "395Hy-M5LTY"
+    "youtubeId": "395Hy-M5LTY",
+    "isMalawian": false,
+    "program": null
   },
   {
     "id": 14,
@@ -305,7 +351,14 @@
     "delegation": "",
     "imdbId": "tt0296099",
     "eventSuggestion": "Public Screening",
-    "youtubeId": "ZTvM9s7rbSM"
+    "youtubeId": "ZTvM9s7rbSM",
+    "isMalawian": false,
+    "program": {
+      "day": "Saturday 19 September",
+      "time": "16:00",
+      "venue": "Pabwalo",
+      "slot": "Public Screening"
+    }
   },
   {
     "id": 15,
@@ -327,7 +380,14 @@
     "delegation": "",
     "imdbId": "tt34965515",
     "eventSuggestion": "Industry Day",
-    "youtubeId": "9150MCMSrgc"
+    "youtubeId": "9150MCMSrgc",
+    "isMalawian": false,
+    "program": {
+      "day": "Saturday 26 September",
+      "time": "14:00",
+      "venue": "Jacaranda Cultural Centre",
+      "slot": "Industry Screening"
+    }
   },
   {
     "id": 16,
@@ -349,7 +409,14 @@
     "delegation": "",
     "imdbId": "tt27672387",
     "eventSuggestion": "Public Screening",
-    "youtubeId": "CjHzIOQeZkk"
+    "youtubeId": "CjHzIOQeZkk",
+    "isMalawian": false,
+    "program": {
+      "day": "Saturday 19 September",
+      "time": "14:00",
+      "venue": "Pabwalo",
+      "slot": "Public Screening"
+    }
   },
   {
     "id": 17,
@@ -371,7 +438,9 @@
     "delegation": "",
     "imdbId": "tt30320576",
     "eventSuggestion": "",
-    "youtubeId": "i6eTxMSCgAs"
+    "youtubeId": "i6eTxMSCgAs",
+    "isMalawian": false,
+    "program": null
   },
   {
     "id": 18,
@@ -393,7 +462,14 @@
     "delegation": "",
     "imdbId": "tt33077462",
     "eventSuggestion": "Industry Day",
-    "youtubeId": "IerZ6N6RMQQ"
+    "youtubeId": "IerZ6N6RMQQ",
+    "isMalawian": false,
+    "program": {
+      "day": "Saturday 26 September",
+      "time": "16:00",
+      "venue": "Jacaranda Cultural Centre",
+      "slot": "Industry Screening"
+    }
   },
   {
     "id": 19,
@@ -415,7 +491,9 @@
     "delegation": "",
     "imdbId": "tt23638508",
     "eventSuggestion": "",
-    "youtubeId": "YuKy50-6WeU"
+    "youtubeId": "YuKy50-6WeU",
+    "isMalawian": false,
+    "program": null
   },
   {
     "id": 20,
@@ -437,7 +515,9 @@
     "delegation": "",
     "imdbId": "tt8286894",
     "eventSuggestion": "",
-    "youtubeId": "GGAWuMuumDQ"
+    "youtubeId": "GGAWuMuumDQ",
+    "isMalawian": false,
+    "program": null
   },
   {
     "id": 21,
@@ -459,7 +539,9 @@
     "delegation": "",
     "imdbId": "tt13821562",
     "eventSuggestion": "",
-    "youtubeId": "CT_MFXHLzSY"
+    "youtubeId": "CT_MFXHLzSY",
+    "isMalawian": false,
+    "program": null
   },
   {
     "id": 22,
@@ -481,7 +563,9 @@
     "delegation": "",
     "imdbId": "tt26256406",
     "eventSuggestion": "",
-    "youtubeId": "dcZJ5X0H0vM"
+    "youtubeId": "dcZJ5X0H0vM",
+    "isMalawian": false,
+    "program": null
   },
   {
     "id": 23,
@@ -503,7 +587,9 @@
     "delegation": "",
     "imdbId": "tt29730305",
     "eventSuggestion": "",
-    "youtubeId": "TsVpWX0nVyQ"
+    "youtubeId": "TsVpWX0nVyQ",
+    "isMalawian": false,
+    "program": null
   },
   {
     "id": 24,
@@ -525,7 +611,14 @@
     "delegation": "",
     "imdbId": "tt32264775",
     "eventSuggestion": "Family Day",
-    "youtubeId": "7S_c9xZ2aj0"
+    "youtubeId": "7S_c9xZ2aj0",
+    "isMalawian": false,
+    "program": {
+      "day": "Friday 18 September",
+      "time": "18:00",
+      "venue": "Pabwalo",
+      "slot": "Family Feature"
+    }
   },
   {
     "id": 25,
@@ -547,7 +640,14 @@
     "delegation": "",
     "imdbId": "tt27587485",
     "eventSuggestion": "Industry Day",
-    "youtubeId": "pxSeWimkAOI"
+    "youtubeId": "pxSeWimkAOI",
+    "isMalawian": false,
+    "program": {
+      "day": "Saturday 26 September",
+      "time": "18:00",
+      "venue": "Jacaranda Cultural Centre",
+      "slot": "Industry Screening"
+    }
   },
   {
     "id": 26,
@@ -569,7 +669,9 @@
     "delegation": "",
     "imdbId": "tt13471862",
     "eventSuggestion": "",
-    "youtubeId": "Yf2__DKXtAo"
+    "youtubeId": "Yf2__DKXtAo",
+    "isMalawian": false,
+    "program": null
   },
   {
     "id": 27,
@@ -591,7 +693,9 @@
     "delegation": "",
     "imdbId": "tt32601294",
     "eventSuggestion": "",
-    "youtubeId": "wcWr5SZDIog"
+    "youtubeId": "wcWr5SZDIog",
+    "isMalawian": false,
+    "program": null
   },
   {
     "id": 28,
@@ -613,7 +717,14 @@
     "delegation": "",
     "imdbId": "tt28450044",
     "eventSuggestion": "Family Day",
-    "youtubeId": "WrZ78xzlbf0"
+    "youtubeId": "WrZ78xzlbf0",
+    "isMalawian": false,
+    "program": {
+      "day": "Friday 18 September",
+      "time": "16:00",
+      "venue": "Pabwalo",
+      "slot": "Family Feature"
+    }
   },
   {
     "id": 29,
@@ -635,7 +746,9 @@
     "delegation": "",
     "imdbId": "tt27850647",
     "eventSuggestion": "",
-    "youtubeId": "01kJ9jhRVms"
+    "youtubeId": "01kJ9jhRVms",
+    "isMalawian": false,
+    "program": null
   },
   {
     "id": 30,
@@ -657,7 +770,9 @@
     "delegation": "",
     "imdbId": "tt15211028",
     "eventSuggestion": "",
-    "youtubeId": "R_xzWr0z29Y"
+    "youtubeId": "R_xzWr0z29Y",
+    "isMalawian": false,
+    "program": null
   },
   {
     "id": 31,
@@ -679,7 +794,9 @@
     "delegation": "French",
     "imdbId": "tt33030107",
     "eventSuggestion": "",
-    "youtubeId": "50P9YPu-TH0"
+    "youtubeId": "50P9YPu-TH0",
+    "isMalawian": false,
+    "program": null
   },
   {
     "id": 32,
@@ -701,7 +818,9 @@
     "delegation": "Belgian",
     "imdbId": "tt10140648",
     "eventSuggestion": "",
-    "youtubeId": "spwIQPpuMsw"
+    "youtubeId": "spwIQPpuMsw",
+    "isMalawian": false,
+    "program": null
   },
   {
     "id": 33,
@@ -723,6 +842,129 @@
     "delegation": "Spanish",
     "imdbId": "tt6793580",
     "eventSuggestion": "Family Day",
-    "youtubeId": "POxh1o6EufI"
+    "youtubeId": "POxh1o6EufI",
+    "isMalawian": false,
+    "program": {
+      "day": "Friday 18 September",
+      "time": "14:00",
+      "venue": "Pabwalo",
+      "slot": "Family Feature"
+    }
+  },
+  {
+    "id": 101,
+    "title": "Malawian Short Film – Opening Night",
+    "country": "Malawi",
+    "year": 2025,
+    "runtime": "TBC",
+    "director": "TBC",
+    "genres": ["Short"],
+    "languages": "TBC",
+    "poster": "",
+    "synopsis": "A Malawian short film to be announced. Check back for updates.",
+    "imdb": 0,
+    "rt": 0,
+    "meta": 0,
+    "combined": 0,
+    "festivalScore": 0,
+    "contentRisk": 0,
+    "delegation": "",
+    "imdbId": "",
+    "eventSuggestion": "",
+    "youtubeId": "",
+    "isMalawian": true,
+    "program": {
+      "day": "Thursday 17 September",
+      "time": "20:00",
+      "venue": "EU Residence",
+      "slot": "Malawian Short"
+    }
+  },
+  {
+    "id": 102,
+    "title": "Malawian Short Film – Family Day #1",
+    "country": "Malawi",
+    "year": 2025,
+    "runtime": "TBC",
+    "director": "TBC",
+    "genres": ["Short"],
+    "languages": "TBC",
+    "poster": "",
+    "synopsis": "A Malawian short film to be announced. Check back for updates.",
+    "imdb": 0,
+    "rt": 0,
+    "meta": 0,
+    "combined": 0,
+    "festivalScore": 0,
+    "contentRisk": 0,
+    "delegation": "",
+    "imdbId": "",
+    "eventSuggestion": "",
+    "youtubeId": "",
+    "isMalawian": true,
+    "program": {
+      "day": "Friday 18 September",
+      "time": "13:00",
+      "venue": "Pabwalo",
+      "slot": "Malawian Short"
+    }
+  },
+  {
+    "id": 103,
+    "title": "Malawian Short Film – Family Day #2",
+    "country": "Malawi",
+    "year": 2025,
+    "runtime": "TBC",
+    "director": "TBC",
+    "genres": ["Short"],
+    "languages": "TBC",
+    "poster": "",
+    "synopsis": "A Malawian short film to be announced. Check back for updates.",
+    "imdb": 0,
+    "rt": 0,
+    "meta": 0,
+    "combined": 0,
+    "festivalScore": 0,
+    "contentRisk": 0,
+    "delegation": "",
+    "imdbId": "",
+    "eventSuggestion": "",
+    "youtubeId": "",
+    "isMalawian": true,
+    "program": {
+      "day": "Friday 18 September",
+      "time": "17:00",
+      "venue": "Pabwalo",
+      "slot": "Malawian Short"
+    }
+  },
+  {
+    "id": 104,
+    "title": "Malawian Short Film – Public Screening",
+    "country": "Malawi",
+    "year": 2025,
+    "runtime": "TBC",
+    "director": "TBC",
+    "genres": ["Short"],
+    "languages": "TBC",
+    "poster": "",
+    "synopsis": "A Malawian short film to be announced. Check back for updates.",
+    "imdb": 0,
+    "rt": 0,
+    "meta": 0,
+    "combined": 0,
+    "festivalScore": 0,
+    "contentRisk": 0,
+    "delegation": "",
+    "imdbId": "",
+    "eventSuggestion": "",
+    "youtubeId": "",
+    "isMalawian": true,
+    "program": {
+      "day": "Saturday 19 September",
+      "time": "15:00",
+      "venue": "Pabwalo",
+      "slot": "Malawian Short"
+    }
   }
 ]
