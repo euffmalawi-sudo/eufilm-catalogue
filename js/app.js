@@ -1,8 +1,6 @@
-import { loadFilms } from './catalogue.js';
 import { applyFilters } from './filters.js';
 import { applySort } from './sorting.js';
-import { renderGrid } from './catalogue.js';
-import { updateStats } from './catalogue.js';
+import { renderGrid, updateStats } from './catalogue.js';
 
 let allFilms = [];
 let currentFiltered = [];
