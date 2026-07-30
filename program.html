@@ -39,7 +39,7 @@
         .program-item {
             display: flex;
             flex-wrap: wrap;
-            align-items: baseline;
+            align-items: center;
             padding: 0.8rem 0;
             border-bottom: 1px solid rgba(209,209,209,0.2);
             gap: 0.5rem 1.5rem;
@@ -82,6 +82,24 @@
             color: var(--eff-navy);
             border: 1px solid rgba(209,209,209,0.3);
         }
+        /* Booking button */
+        .booking-btn {
+            display: inline-block;
+            background: var(--eff-red);
+            color: white;
+            font-weight: 700;
+            font-size: 0.8rem;
+            padding: 0.3rem 1rem;
+            border-radius: 30px;
+            text-decoration: none;
+            transition: background 0.2s ease, transform 0.1s ease;
+            margin-left: 0.5rem;
+            white-space: nowrap;
+        }
+        .booking-btn:hover {
+            background: var(--eff-red-dark);
+            transform: scale(1.05);
+        }
         @media (max-width: 700px) {
             .program-item {
                 flex-direction: column;
@@ -98,7 +116,7 @@
 
     <div class="guide-container">
 
-        <!-- Header (same as index) -->
+        <!-- Header -->
         <header class="catalogue-header">
             <div class="logo-wrapper">
                 <img src="https://europeanfilmfestival.eu/wp-content/uploads/2024/03/logo-nero.webp" alt="Logo" onerror="this.style.display='none'">
@@ -124,6 +142,15 @@
     </div>
 
     <script>
+        // ============================================================
+        // YOUR GOOGLE FORM IDs – PUT YOUR REAL IDs HERE
+        // ============================================================
+        const FORM_ID = '1aHdxd5jUlLKMj6zL2bO37DOyIgZfETeGbHn_Uas5lCQ';   // e.g., '1FAIpQLSfz6M1qTq2K...'
+        const ENTRY_ID = 'entry.1162404058'; // e.g., 'entry.987654321'
+
+        // ============================================================
+        // LOAD PROGRAM FROM JSON
+        // ============================================================
         async function loadProgram() {
             try {
                 const res = await fetch('./data/films.json');
@@ -158,7 +185,6 @@
 
                 sortedDays.forEach(day => {
                     const items = days[day];
-                    // Sort by time
                     items.sort((a,b) => a.program.time.localeCompare(b.program.time));
 
                     const venue = items[0].program.venue;
@@ -173,12 +199,25 @@
                         const titleHtml = isMalawi ? `${f.title} <span class="malawi-badge">Malawi</span>` : f.title;
                         const directorHtml = f.director || 'TBC';
                         const slotHtml = f.program.slot ? `<span class="slot-tag">${f.program.slot}</span>` : '';
+
+                        // Check if this is a public screening (not EU Residence)
+                        const isPublic = venue !== 'EU Residence';
+
+                        // Build booking button if public
+                        let bookingBtn = '';
+                        if (isPublic && !isMalawi) {
+                            // Pre-fill the form with the film title
+                            const formUrl = `https://docs.google.com/forms/d/e/${FORM_ID}/viewform?${ENTRY_ID}=${encodeURIComponent(f.title)}`;
+                            bookingBtn = `<a href="${formUrl}" target="_blank" class="booking-btn">🎟️ Book Now</a>`;
+                        }
+
                         html += `
                             <div class="program-item">
                                 <span class="time">${f.program.time}</span>
                                 <span class="title">${titleHtml}</span>
                                 <span class="director">${directorHtml}</span>
                                 ${slotHtml}
+                                ${bookingBtn}
                             </div>
                         `;
                     });
@@ -194,6 +233,9 @@
             }
         }
 
+        // ============================================================
+        // RUN IT!
+        // ============================================================
         loadProgram();
     </script>
 
