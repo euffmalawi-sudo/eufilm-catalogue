@@ -10,11 +10,27 @@ export function openModal(film) {
 
     const qrUrl = `https://api.qrserver.com/v1/create-qr-code/?size=120x120&data=https://www.imdb.com/title/${film.imdbId}/`;
     
-    // FIXED: Correct YouTube embed URL for search results
-    const searchQuery = encodeURIComponent(`${film.title} official trailer`);
-    const trailerUrl = `https://www.youtube.com/embed?listType=search&list=${searchQuery}`;
-    // Fallback link if embed doesn't work
-    const youtubeSearchLink = `https://www.youtube.com/results?search_query=${searchQuery}`;
+    // ----- FIXED: Direct embed using youtubeId -----
+    let trailerHtml = '';
+    if (film.youtubeId && film.youtubeId !== '') {
+        trailerHtml = `
+            <div class="trailer-wrap">
+                <iframe 
+                    src="https://www.youtube.com/embed/${film.youtubeId}" 
+                    allowfullscreen 
+                    loading="lazy"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                ></iframe>
+            </div>
+        `;
+    } else {
+        trailerHtml = `
+            <div style="background:var(--eff-off-white);padding:2rem;text-align:center;border-radius:12px;color:#8a94ae;">
+                <i class="fas fa-video" style="font-size:2rem;display:block;margin-bottom:0.5rem;"></i>
+                <span>Trailer not yet added</span>
+            </div>
+        `;
+    }
 
     body.innerHTML = `
         <div class="modal-body">
@@ -45,15 +61,8 @@ export function openModal(film) {
                     <div class="item"><div class="label">Content Risk</div><div class="value" style="color:var(--eff-red);">${film.contentRisk}</div></div>
                 </div>
                 <div class="modal-trailer">
-                    <h4><i class="fas fa-video"></i> Trailer</h4>
-                    <div class="trailer-wrap">
-                        <iframe src="${trailerUrl}" allowfullscreen loading="lazy" sandbox="allow-scripts allow-same-origin allow-forms"></iframe>
-                    </div>
-                    <div style="text-align:center;margin-top:0.5rem;">
-                        <a href="${youtubeSearchLink}" target="_blank" style="color:var(--eff-red);font-weight:600;font-size:0.9rem;text-decoration:none;border:1px solid var(--eff-red);padding:0.3rem 1rem;border-radius:30px;display:inline-block;">
-                            <i class="fab fa-youtube"></i> Watch on YouTube
-                        </a>
-                    </div>
+                    <h4><i class="fas fa-video"></i> Official Trailer</h4>
+                    ${trailerHtml}
                 </div>
             </div>
         </div>
