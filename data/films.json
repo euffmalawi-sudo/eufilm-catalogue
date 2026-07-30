@@ -18,7 +18,8 @@
     "contentRisk": 0,
     "delegation": "",
     "imdbId": "tt21282260",
-    "eventSuggestion": "Opening Night"
+    "eventSuggestion": "Opening Night",
+    "youtubeId": "https://www.youtube.com/watch?v=1JyXPP_eWcQ"
   },
   {
     "id": 2,
@@ -39,7 +40,8 @@
     "contentRisk": 0,
     "delegation": "",
     "imdbId": "tt29572786",
-    "eventSuggestion": ""
+    "eventSuggestion": "",
+    "youtubeId": "https://www.youtube.com/watch?v=FU2BCIojw6k"
   },
   {
     "id": 3,
@@ -60,7 +62,8 @@
     "contentRisk": 0,
     "delegation": "",
     "imdbId": "tt27377297",
-    "eventSuggestion": ""
+    "eventSuggestion": "",
+    "youtubeId": "https://www.youtube.com/watch?v=PYkfh2FwVs4"
   },
   {
     "id": 4,
@@ -81,7 +84,8 @@
     "contentRisk": 0,
     "delegation": "",
     "imdbId": "tt27551416",
-    "eventSuggestion": ""
+    "eventSuggestion": "",
+    "youtubeId": "https://www.youtube.com/watch?v=HXhJYggwYYw"
   },
   {
     "id": 5,
@@ -102,7 +106,8 @@
     "contentRisk": 0,
     "delegation": "",
     "imdbId": "tt30308333",
-    "eventSuggestion": ""
+    "eventSuggestion": "",
+    "youtubeId": "https://www.youtube.com/watch?v=1m72zY3x5U4"
   },
   {
     "id": 6,
@@ -123,7 +128,8 @@
     "contentRisk": 0,
     "delegation": "",
     "imdbId": "tt6796762",
-    "eventSuggestion": ""
+    "eventSuggestion": "",
+    "youtubeId": "https://www.youtube.com/watch?v=uLU8CcMb8OQ"
   },
   {
     "id": 7,
@@ -144,7 +150,8 @@
     "contentRisk": 0,
     "delegation": "",
     "imdbId": "tt32890304",
-    "eventSuggestion": ""
+    "eventSuggestion": "",
+    "youtubeId": "https://www.youtube.com/watch?v=ChnS4hCoOzA"
   },
   {
     "id": 8,
@@ -165,7 +172,8 @@
     "contentRisk": -1,
     "delegation": "",
     "imdbId": "tt25436674",
-    "eventSuggestion": ""
+    "eventSuggestion": "",
+    "youtubeId": "https://www.youtube.com/watch?v=hXZTskjPVig"
   },
   {
     "id": 9,
@@ -186,7 +194,8 @@
     "contentRisk": -1,
     "delegation": "",
     "imdbId": "tt29513627",
-    "eventSuggestion": "Public Screening"
+    "eventSuggestion": "Public Screening",
+    "youtubeId": "https://www.youtube.com/watch?v=YvvZrIw1NxQ"
   },
   {
     "id": 10,
@@ -207,7 +216,8 @@
     "contentRisk": 0,
     "delegation": "",
     "imdbId": "tt21390800",
-    "eventSuggestion": ""
+    "eventSuggestion": "",
+    "youtubeId": "https://www.youtube.com/watch?v=Qgdjycg5ucA"
   },
   {
     "id": 11,
@@ -228,7 +238,8 @@
     "contentRisk": -1,
     "delegation": "",
     "imdbId": "tt23656050",
-    "eventSuggestion": "Public Screening"
+    "eventSuggestion": "Public Screening",
+    "youtubeId": "https://www.youtube.com/watch?v=O9yZJWv8cdM"
   },
   {
     "id": 12,
@@ -249,7 +260,8 @@
     "contentRisk": 0,
     "delegation": "French",
     "imdbId": "tt26743414",
-    "eventSuggestion": "Opening Night"
+    "eventSuggestion": "Opening Night",
+    "youtubeId": "https://www.youtube.com/watch?v=evoYNCdZGOQ"
   },
   {
     "id": 13,
@@ -270,13 +282,14 @@
     "contentRisk": 0,
     "delegation": "",
     "imdbId": "tt11296058",
-    "eventSuggestion": ""
+    "eventSuggestion": "",
+    "youtubeId": "https://www.youtube.com/watch?v=395Hy-M5LTY"
   },
   {
     "id": 14,
     "title": "Nha Fala",
     "country": "Portugal, France, Luxembourg, Guinea Bissau",
-    "year": 2022,
+    "year": 2002,
     "runtime": 110,
     "director": "Flora Gomes",
     "genres": ["Comedy", "Drama", "Musical", "Romance"],
@@ -291,7 +304,8 @@
     "contentRisk": 0,
     "delegation": "",
     "imdbId": "tt0296099",
-    "eventSuggestion": "Public Screening"
+    "eventSuggestion": "Public Screening",
+    "youtubeId": "https://www.youtube.com/results?search_query=Nha+Fala+official+trailer"
   },
   {
     "id": 15,
@@ -312,7 +326,8 @@
     "contentRisk": -1,
     "delegation": "",
     "imdbId": "tt34965515",
-    "eventSuggestion": "Industry Day"
+    "eventSuggestion": "Industry Day",
+    "youtubeId": "https://www.youtube.com/watch?v=9150MCMSrgc"
   },
   {
     "id": 16,
@@ -333,7 +348,8 @@
     "contentRisk": 0,
     "delegation": "",
     "imdbId": "tt27672387",
-    "eventSuggestion": "Public Screening"
+    "eventSuggestion": "Public Screening",
+    "youtubeId": "https://www.youtube.com/watch?v=CjHzIOQeZkk"
   },
   {
     "id": 17,
@@ -354,7 +370,8 @@
     "contentRisk": 0,
     "delegation": "",
     "imdbId": "tt30320576",
-    "eventSuggestion": ""
+    "eventSuggestion": "",
+    "youtubeId": "https://www.youtube.com/watch?v=i6eTxMSCgAs"
   },
   {
     "id": 18,
@@ -375,7 +392,8 @@
     "contentRisk": 0,
     "delegation": "",
     "imdbId": "tt33077462",
-    "eventSuggestion": "Industry Day"
+    "eventSuggestion": "Industry Day",
+    "youtubeId": "https://www.youtube.com/watch?v=IerZ6N6RMQQ"
   },
   {
     "id": 19,
@@ -396,7 +414,8 @@
     "contentRisk": 0,
     "delegation": "",
     "imdbId": "tt23638508",
-    "eventSuggestion": ""
+    "eventSuggestion": "",
+    "youtubeId": "https://www.youtube.com/watch?v=YuKy50-6WeU"
   },
   {
     "id": 20,
@@ -417,7 +436,8 @@
     "contentRisk": 0,
     "delegation": "",
     "imdbId": "tt8286894",
-    "eventSuggestion": ""
+    "eventSuggestion": "",
+    "youtubeId": "https://www.youtube.com/watch?v=GGAWuMuumDQ"
   },
   {
     "id": 21,
@@ -438,7 +458,8 @@
     "contentRisk": 0,
     "delegation": "",
     "imdbId": "tt13821562",
-    "eventSuggestion": ""
+    "eventSuggestion": "",
+    "youtubeId": "https://www.youtube.com/watch?v=CT_MFXHLzSY"
   },
   {
     "id": 22,
@@ -459,7 +480,8 @@
     "contentRisk": -1,
     "delegation": "",
     "imdbId": "tt26256406",
-    "eventSuggestion": ""
+    "eventSuggestion": "",
+    "youtubeId": "https://www.youtube.com/watch?v=dcZJ5X0H0vM"
   },
   {
     "id": 23,
@@ -480,7 +502,8 @@
     "contentRisk": 0,
     "delegation": "",
     "imdbId": "tt29730305",
-    "eventSuggestion": ""
+    "eventSuggestion": "",
+    "youtubeId": "https://www.youtube.com/watch?v=TsVpWX0nVyQ"
   },
   {
     "id": 24,
@@ -501,7 +524,8 @@
     "contentRisk": 0,
     "delegation": "",
     "imdbId": "tt32264775",
-    "eventSuggestion": "Family Day"
+    "eventSuggestion": "Family Day",
+    "youtubeId": "https://www.youtube.com/watch?v=7S_c9xZ2aj0"
   },
   {
     "id": 25,
@@ -522,7 +546,8 @@
     "contentRisk": 0,
     "delegation": "",
     "imdbId": "tt27587485",
-    "eventSuggestion": "Industry Day"
+    "eventSuggestion": "Industry Day",
+    "youtubeId": "https://www.youtube.com/watch?v=pxSeWimkAOI"
   },
   {
     "id": 26,
@@ -543,7 +568,8 @@
     "contentRisk": 0,
     "delegation": "",
     "imdbId": "tt13471862",
-    "eventSuggestion": ""
+    "eventSuggestion": "",
+    "youtubeId": "https://www.youtube.com/watch?v=Yf2__DKXtAo"
   },
   {
     "id": 27,
@@ -564,7 +590,8 @@
     "contentRisk": 0,
     "delegation": "",
     "imdbId": "tt32601294",
-    "eventSuggestion": ""
+    "eventSuggestion": "",
+    "youtubeId": "https://www.youtube.com/watch?v=wcWr5SZDIog"
   },
   {
     "id": 28,
@@ -585,7 +612,8 @@
     "contentRisk": 0,
     "delegation": "",
     "imdbId": "tt28450044",
-    "eventSuggestion": "Family Day"
+    "eventSuggestion": "Family Day",
+    "youtubeId": "https://www.youtube.com/watch?v=WrZ78xzlbf0"
   },
   {
     "id": 29,
@@ -606,7 +634,8 @@
     "contentRisk": 0,
     "delegation": "",
     "imdbId": "tt27850647",
-    "eventSuggestion": ""
+    "eventSuggestion": "",
+    "youtubeId": "https://www.youtube.com/watch?v=01kJ9jhRVms"
   },
   {
     "id": 30,
@@ -627,7 +656,8 @@
     "contentRisk": 0,
     "delegation": "",
     "imdbId": "tt15211028",
-    "eventSuggestion": ""
+    "eventSuggestion": "",
+    "youtubeId": "https://www.youtube.com/watch?v=R_xzWr0z29Y"
   },
   {
     "id": 31,
@@ -648,7 +678,8 @@
     "contentRisk": 0,
     "delegation": "French",
     "imdbId": "tt33030107",
-    "eventSuggestion": ""
+    "eventSuggestion": "",
+    "youtubeId": "https://www.youtube.com/watch?v=50P9YPu-TH0"
   },
   {
     "id": 32,
@@ -669,7 +700,8 @@
     "contentRisk": 0,
     "delegation": "Belgian",
     "imdbId": "tt10140648",
-    "eventSuggestion": ""
+    "eventSuggestion": "",
+    "youtubeId": "https://www.youtube.com/watch?v=spwIQPpuMsw"
   },
   {
     "id": 33,
@@ -690,6 +722,7 @@
     "contentRisk": 0,
     "delegation": "Spanish",
     "imdbId": "tt6793580",
-    "eventSuggestion": "Family Day"
+    "eventSuggestion": "Family Day",
+    "youtubeId": "https://www.youtube.com/watch?v=POxh1o6EufI"
   }
 ]
