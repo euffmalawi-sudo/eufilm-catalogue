@@ -1,0 +1,24 @@
+[
+  {
+    "id": 1,
+    "title": "Simin Zetwal",
+    "country": "Mauritius, Reunion",
+    "year": 2022,
+    "runtime": 93,
+    "director": "David Constantin",
+    "genres": ["Comedy", "Drama"],
+    "languages": "Haitian Creole",
+    "poster": "https://image.tmdb.org/t/p/w500/dBRVJX5hFOIbgmlp07860GvkiSb.jpg",
+    "synopsis": "In a working-class city of Mauritius...",
+    "imdb": 9.5,
+    "rt": 90.8,
+    "meta": 88,
+    "combined": 91.2,
+    "festivalScore": 5,
+    "contentRisk": 0,
+    "delegation": "",
+    "imdbId": "tt21282260",
+    "eventSuggestion": "Opening Night"
+  },
+  // ... all 33 films ...
+]
