@@ -225,6 +225,8 @@
       "slot": "Public Screening"
     }
   },
+  "dropdownLabel": "Life & Love – Saturday 19 Sep, 18:00"
+  }
   {
     "id": 10,
     "title": "Taamaden",
@@ -278,6 +280,8 @@
       "slot": "Public Screening"
     }
   },
+    "dropdownLabel": "Breathing Underwater – Saturday 19 Sep, 20:00"
+  }
   {
     "id": 12,
     "title": "Monsieur Aznavour",
@@ -360,6 +364,8 @@
       "slot": "Public Screening"
     }
   },
+    "dropdownLabel": "Nha Fala – Saturday 19 Sep, 16:00""
+  }
   {
     "id": 15,
     "title": "Mr. Nobody Against Putin",
@@ -389,6 +395,8 @@
       "slot": "Industry Screening"
     }
   },
+    "dropdownLabel": "Mr. Nobody Against Putin – Saturday 26 Sep, 14:00"
+  }
   {
     "id": 16,
     "title": "Jokes & Cigarettes",
@@ -418,6 +426,8 @@
       "slot": "Public Screening"
     }
   },
+    "dropdownLabel": "Jokes & Cigarettes – Saturday 19 Sep, 14:00"
+  }
   {
     "id": 17,
     "title": "A New Kind Of Wilderness",
@@ -471,6 +481,8 @@
       "slot": "Industry Screening"
     }
   },
+    "dropdownLabel": "Seven Days – Saturday 26 Sep, 16:00"
+  }
   {
     "id": 19,
     "title": "Songs Of Earth",
@@ -620,6 +632,8 @@
       "slot": "Family Feature"
     }
   },
+    "dropdownLabel": "A Boat In The Garden – Friday 18 Sep, 18:00"
+  }
   {
     "id": 25,
     "title": "Waves",
@@ -649,6 +663,8 @@
       "slot": "Industry Screening"
     }
   },
+    "dropdownLabel": "Waves – Saturday 26 Sep, 18:00"
+  }
   {
     "id": 26,
     "title": "A Happy Day",
@@ -726,6 +742,8 @@
       "slot": "Family Feature"
     }
   },
+    "dropdownLabel": "Jippie No More – Friday 18 Sep, 16:00"
+  }
   {
     "id": 29,
     "title": "Living Large",
@@ -851,6 +869,8 @@
       "slot": "Family Feature"
     }
   },
+    "dropdownLabel": "Campeones (Champions) – Friday 18 Sep, 14:00"
+  }
   {
     "id": 101,
     "title": "Malawian Short Film – Opening Night",
