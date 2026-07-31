@@ -8,8 +8,9 @@ export function openModal(film) {
     
     const genresHtml = film.genres.map(g => `<span class="genre-tag" style="background:var(--eff-off-white);padding:0.1rem 0.7rem;border-radius:20px;font-size:0.7rem;border:1px solid rgba(209,209,209,0.3);">${g}</span>`).join(' ');
 
-    const qrUrl = `https://api.qrserver.com/v1/create-qr-code/?size=120x120&data=https://www.imdb.com/title/${film.imdbId}/`;
-    
+    // IMDb link (replaces QR code)
+    const imdbLink = `https://www.imdb.com/title/${film.imdbId}/`;
+
     // ----- Direct embed using youtubeId -----
     let trailerHtml = '';
     if (film.youtubeId && film.youtubeId !== '') {
@@ -49,9 +50,14 @@ export function openModal(film) {
         <div class="modal-body">
             <div class="modal-poster">
                 <img src="${film.poster}" alt="${film.title}" onerror="this.src='https://placehold.co/300x450/f8f6f4/d1d1d1?text=No+Poster'">
-                <div class="modal-qr">
-                    <img src="${qrUrl}" alt="QR" width="100" height="100">
-                    <div class="qr-label"><i class="fas fa-qrcode"></i> Scan for IMDb</div>
+                <!-- IMDb Link Button (replaces QR code) -->
+                <div style="text-align:center; margin-top:12px;">
+                    <a href="${imdbLink}" target="_blank" rel="noopener noreferrer" 
+                       style="display:inline-block; background:var(--eff-red); color:white; font-weight:700; 
+                              padding:0.5rem 1.5rem; border-radius:30px; text-decoration:none; 
+                              font-size:0.85rem; transition:background 0.2s; border:2px solid var(--eff-red);">
+                        <i class="fab fa-imdb" style="margin-right:6px;"></i> View on IMDb
+                    </a>
                 </div>
             </div>
             <div class="modal-details">
