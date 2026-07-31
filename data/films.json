@@ -26,7 +26,12 @@
       "time": "19:00",
       "venue": "EU Residence",
       "slot": "Opening Feature"
-    }
+    },
+    "awards": [
+      "Best Editing - Carthage Film Festival",
+      "Special Mention - FESPACO",
+      "FIPRESCI Prize & Bronze Award - Luxor African Film Festival"
+    ]
   },
   {
     "id": 2,
@@ -50,7 +55,11 @@
     "eventSuggestion": "",
     "youtubeId": "FU2BCIojw6k",
     "isMalawian": false,
-    "program": null
+    "program": null,
+    "awards": [
+      "Best Cypriot Film & Best Performance - Cyprus Film Days International Festival",
+      "Special Jury Award for Performance - LA Greek Film Festival"
+    ]
   },
   {
     "id": 3,
@@ -74,7 +83,10 @@
     "eventSuggestion": "",
     "youtubeId": "PYkfh2FwVs4",
     "isMalawian": false,
-    "program": null
+    "program": null,
+    "awards": [
+      "Best African Documentary - Al Jazeera-Encounters Award"
+    ]
   },
   {
     "id": 4,
@@ -98,7 +110,8 @@
     "eventSuggestion": "",
     "youtubeId": "HXhJYggwYYw",
     "isMalawian": false,
-    "program": null
+    "program": null,
+    "awards": []
   },
   {
     "id": 5,
@@ -122,7 +135,12 @@
     "eventSuggestion": "",
     "youtubeId": "1m72zY3x5U4",
     "isMalawian": false,
-    "program": null
+    "program": null,
+    "awards": [
+      "Prize of the Ecumenical Jury - Berlinale",
+      "Best Feature Film - Lielais Kristaps Awards (Latvia)",
+      "Best Director - Lielais Kristaps Awards (Latvia)"
+    ]
   },
   {
     "id": 6,
@@ -146,7 +164,12 @@
     "eventSuggestion": "",
     "youtubeId": "uLU8CcMb8OQ",
     "isMalawian": false,
-    "program": null
+    "program": null,
+    "awards": [
+      "Best Director - IndieLisboa International Independent Film Festival",
+      "Best Screenplay - IndieLisboa International Independent Film Festival",
+      "Best Performance - Olhar de Cinema (Brazil)"
+    ]
   },
   {
     "id": 7,
@@ -170,7 +193,11 @@
     "eventSuggestion": "",
     "youtubeId": "ChnS4hCoOzA",
     "isMalawian": false,
-    "program": null
+    "program": null,
+    "awards": [
+      "Best Screenplay - Shanghai International Film Festival",
+      "Multiple awards (4 wins) - Polish Film Festival in Gdynia"
+    ]
   },
   {
     "id": 8,
@@ -194,7 +221,8 @@
     "eventSuggestion": "",
     "youtubeId": "hXZTskjPVig",
     "isMalawian": false,
-    "program": null
+    "program": null,
+    "awards": []
   },
   {
     "id": 9,
@@ -224,7 +252,10 @@
       "venue": "Pabwalo",
       "slot": "Public Screening"
     },
-    "dropdownLabel": "Life & Love – Saturday 19 Sep, 18:00"
+    "dropdownLabel": "Life & Love – Saturday 19 Sep, 18:00",
+    "awards": [
+      "Best Baltic Film - Tallinn Black Nights Film Festival"
+    ]
   },
   {
     "id": 10,
@@ -248,7 +279,10 @@
     "eventSuggestion": "",
     "youtubeId": "Qgdjycg5ucA",
     "isMalawian": false,
-    "program": null
+    "program": null,
+    "awards": [
+      "Best Documentary - Africa Movie Academy Awards"
+    ]
   },
   {
     "id": 11,
@@ -278,7 +312,11 @@
       "venue": "Pabwalo",
       "slot": "Public Screening"
     },
-    "dropdownLabel": "Breathing Underwater – Saturday 19 Sep, 20:00"
+    "dropdownLabel": "Breathing Underwater – Saturday 19 Sep, 20:00",
+    "awards": [
+      "Special Jury Prize - Lecce European Film Festival",
+      "Cineuropa Award - Lecce European Film Festival"
+    ]
   },
   {
     "id": 12,
@@ -307,7 +345,10 @@
       "time": "21:00",
       "venue": "EU Residence",
       "slot": "Opening Feature"
-    }
+    },
+    "awards": [
+      "Best Costume Design - César Awards"
+    ]
   },
   {
     "id": 13,
@@ -331,7 +372,12 @@
     "eventSuggestion": "",
     "youtubeId": "395Hy-M5LTY",
     "isMalawian": false,
-    "program": null
+    "program": null,
+    "awards": [
+      "Best Film - Amanda Awards",
+      "Special Jury Award for Creative Storytelling - Sundance Film Festival",
+      "Best Documentary - BFI London Film Festival"
+    ]
   },
   {
     "id": 14,
@@ -361,7 +407,12 @@
       "venue": "Pabwalo",
       "slot": "Public Screening"
     },
-    "dropdownLabel": "Nha Fala – Saturday 19 Sep, 16:00"
+    "dropdownLabel": "Nha Fala – Saturday 19 Sep, 16:00",
+    "awards": [
+      "City of Rome Prize - Venice Film Festival",
+      "City of Amiens Prize - Amiens International Film Festival",
+      "Intercultural Communication Prize - Views of Africa Festival"
+    ]
   },
   {
     "id": 15,
@@ -391,7 +442,12 @@
       "venue": "Jacaranda Cultural Centre",
       "slot": "Industry Screening"
     },
-    "dropdownLabel": "Mr. Nobody Against Putin – Saturday 26 Sep, 14:00"
+    "dropdownLabel": "Mr. Nobody Against Putin – Saturday 26 Sep, 14:00",
+    "awards": [
+      "Best Documentary Feature - Academy Awards",
+      "Best Documentary - BAFTA",
+      "Peabody Award - Peabody Awards"
+    ]
   },
   {
     "id": 16,
@@ -421,7 +477,12 @@
       "venue": "Pabwalo",
       "slot": "Public Screening"
     },
-    "dropdownLabel": "Jokes & Cigarettes – Saturday 19 Sep, 14:00"
+    "dropdownLabel": "Jokes & Cigarettes – Saturday 19 Sep, 14:00",
+    "awards": [
+      "Best Actor - Goya Awards",
+      "Best Actress - Gaudí Awards",
+      "Best Actor - Feroz Awards"
+    ]
   },
   {
     "id": 17,
@@ -445,7 +506,11 @@
     "eventSuggestion": "",
     "youtubeId": "i6eTxMSCgAs",
     "isMalawian": false,
-    "program": null
+    "program": null,
+    "awards": [
+      "World Cinema Grand Jury Prize: Documentary - Sundance Film Festival",
+      "Best Documentary - Golden Panda Awards"
+    ]
   },
   {
     "id": 18,
@@ -475,7 +540,10 @@
       "venue": "Jacaranda Cultural Centre",
       "slot": "Industry Screening"
     },
-    "dropdownLabel": "Seven Days – Saturday 26 Sep, 16:00"
+    "dropdownLabel": "Seven Days – Saturday 26 Sep, 16:00",
+    "awards": [
+      "3rd Prize - Farhang Foundation Short Film Festival"
+    ]
   },
   {
     "id": 19,
@@ -499,7 +567,10 @@
     "eventSuggestion": "",
     "youtubeId": "YuKy50-6WeU",
     "isMalawian": false,
-    "program": null
+    "program": null,
+    "awards": [
+      "Best Original Score (Documentary) - International Film Music Critics Association (ISFMF)"
+    ]
   },
   {
     "id": 20,
@@ -523,7 +594,13 @@
     "eventSuggestion": "",
     "youtubeId": "GGAWuMuumDQ",
     "isMalawian": false,
-    "program": null
+    "program": null,
+    "awards": [
+      "Best Actress - FESPACO",
+      "Audience Award - Sydney Film Festival",
+      "Grand Jury Award - Milan International LGBT Film Festival",
+      "Silver Hugo - Chicago International Film Festival"
+    ]
   },
   {
     "id": 21,
@@ -547,7 +624,14 @@
     "eventSuggestion": "",
     "youtubeId": "CT_MFXHLzSY",
     "isMalawian": false,
-    "program": null
+    "program": null,
+    "awards": [
+      "European Comedy Award - European Film Awards",
+      "Audience Award - SXSW",
+      "Crystal Bear - Special Mention - Berlinale",
+      "Best Director - Amanda Awards",
+      "Best Actress - Amanda Awards"
+    ]
   },
   {
     "id": 22,
@@ -571,7 +655,11 @@
     "eventSuggestion": "",
     "youtubeId": "dcZJ5X0H0vM",
     "isMalawian": false,
-    "program": null
+    "program": null,
+    "awards": [
+      "Bright Horizons Award - Melbourne International Film Festival",
+      "Best Directing Prize - Marrakech Film Festival"
+    ]
   },
   {
     "id": 23,
@@ -595,7 +683,11 @@
     "eventSuggestion": "",
     "youtubeId": "TsVpWX0nVyQ",
     "isMalawian": false,
-    "program": null
+    "program": null,
+    "awards": [
+      "Best First Feature Award - Stockholm International Film Festival",
+      "Best Leading Actor - Austrian Film Awards"
+    ]
   },
   {
     "id": 24,
@@ -625,7 +717,11 @@
       "venue": "Pabwalo",
       "slot": "Family Feature"
     },
-    "dropdownLabel": "A Boat In The Garden – Friday 18 Sep, 18:00"
+    "dropdownLabel": "A Boat In The Garden – Friday 18 Sep, 18:00",
+    "awards": [
+      "Special Distinction Prize - Bucheon International Animation Festival",
+      "Best Animated Feature Film - Cartoons On The Bay - Pulcinella Award"
+    ]
   },
   {
     "id": 25,
@@ -655,7 +751,13 @@
       "venue": "Jacaranda Cultural Centre",
       "slot": "Industry Screening"
     },
-    "dropdownLabel": "Waves – Saturday 26 Sep, 18:00"
+    "dropdownLabel": "Waves – Saturday 26 Sep, 18:00",
+    "awards": [
+      "Best Feature Film - Czech Lion Awards",
+      "Best Director - Czech Lion Awards",
+      "Best Screenplay - Czech Lion Awards",
+      "Audience Award - Karlovy Vary International Film Festival"
+    ]
   },
   {
     "id": 26,
@@ -679,7 +781,12 @@
     "eventSuggestion": "",
     "youtubeId": "Yf2__DKXtAo",
     "isMalawian": false,
-    "program": null
+    "program": null,
+    "awards": [
+      "Best Director - Duhok International Film Festival",
+      "Best Cinematography - Duhok International Film Festival",
+      "FIPRESCI Prize - Duhok International Film Festival"
+    ]
   },
   {
     "id": 27,
@@ -703,7 +810,12 @@
     "eventSuggestion": "",
     "youtubeId": "wcWr5SZDIog",
     "isMalawian": false,
-    "program": null
+    "program": null,
+    "awards": [
+      "Audience Prize - Bucheon International Animation Festival",
+      "Best Nordic-Baltic Animated Youth Film - Fredrikstad Animation Festival",
+      "Best Animated Short - Canadian Screen Award"
+    ]
   },
   {
     "id": 28,
@@ -733,7 +845,11 @@
       "venue": "Pabwalo",
       "slot": "Family Feature"
     },
-    "dropdownLabel": "Jippie No More – Friday 18 Sep, 16:00"
+    "dropdownLabel": "Jippie No More – Friday 18 Sep, 16:00",
+    "awards": [
+      "Audience Award - Cinekid Festival",
+      "Youth Jury Award - Cinekid Festival"
+    ]
   },
   {
     "id": 29,
@@ -757,7 +873,11 @@
     "eventSuggestion": "",
     "youtubeId": "01kJ9jhRVms",
     "isMalawian": false,
-    "program": null
+    "program": null,
+    "awards": [
+      "Best Feature Award - European Children's Film Association (ECFA)",
+      "Jury Award - Annecy International Animation Film Festival"
+    ]
   },
   {
     "id": 30,
@@ -781,7 +901,10 @@
     "eventSuggestion": "",
     "youtubeId": "R_xzWr0z29Y",
     "isMalawian": false,
-    "program": null
+    "program": null,
+    "awards": [
+      "International Grand Jury Prize - Animayo Gran Canaria Festival"
+    ]
   },
   {
     "id": 31,
@@ -805,7 +928,8 @@
     "eventSuggestion": "",
     "youtubeId": "50P9YPu-TH0",
     "isMalawian": false,
-    "program": null
+    "program": null,
+    "awards": []
   },
   {
     "id": 32,
@@ -829,7 +953,8 @@
     "eventSuggestion": "",
     "youtubeId": "spwIQPpuMsw",
     "isMalawian": false,
-    "program": null
+    "program": null,
+    "awards": []
   },
   {
     "id": 33,
@@ -859,7 +984,8 @@
       "venue": "Pabwalo",
       "slot": "Family Feature"
     },
-    "dropdownLabel": "Campeones (Champions) – Friday 18 Sep, 14:00"
+    "dropdownLabel": "Campeones (Champions) – Friday 18 Sep, 14:00",
+    "awards": []
   },
   {
     "id": 101,
@@ -888,7 +1014,8 @@
       "time": "20:00",
       "venue": "EU Residence",
       "slot": "Malawian Short"
-    }
+    },
+    "awards": []
   },
   {
     "id": 102,
@@ -917,7 +1044,8 @@
       "time": "13:00",
       "venue": "Pabwalo",
       "slot": "Malawian Short"
-    }
+    },
+    "awards": []
   },
   {
     "id": 103,
@@ -946,7 +1074,8 @@
       "time": "17:00",
       "venue": "Pabwalo",
       "slot": "Malawian Short"
-    }
+    },
+    "awards": []
   },
   {
     "id": 104,
@@ -975,6 +1104,7 @@
       "time": "15:00",
       "venue": "Pabwalo",
       "slot": "Malawian Short"
-    }
+    },
+    "awards": []
   }
 ]
