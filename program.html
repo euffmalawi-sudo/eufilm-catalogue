@@ -207,7 +207,7 @@
                         let bookingBtn = '';
                         if (isPublic && !isMalawi) {
                             // Pre-fill the form with the film title
-                            const formUrl = `https://docs.google.com/forms/d/e/${FORM_ID}/viewform?${ENTRY_ID}=${encodeURIComponent(f.title)}`;
+                            const formUrl = `https://docs.google.com/forms/d/e/${FORM_ID}/viewform?${ENTRY_ID}=${encodeURIComponent(f.dropdownLabel || f.title)}`;
                             bookingBtn = `<a href="${formUrl}" target="_blank" class="booking-btn">🎟️ Book Now</a>`;
                         }
 
