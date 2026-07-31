@@ -10,7 +10,7 @@ export function openModal(film) {
 
     const qrUrl = `https://api.qrserver.com/v1/create-qr-code/?size=120x120&data=https://www.imdb.com/title/${film.imdbId}/`;
     
-    // ----- FIXED: Direct embed using youtubeId -----
+    // ----- Direct embed using youtubeId -----
     let trailerHtml = '';
     if (film.youtubeId && film.youtubeId !== '') {
         trailerHtml = `
@@ -28,6 +28,19 @@ export function openModal(film) {
             <div style="background:var(--eff-off-white);padding:2rem;text-align:center;border-radius:12px;color:#8a94ae;">
                 <i class="fas fa-video" style="font-size:2rem;display:block;margin-bottom:0.5rem;"></i>
                 <span>Trailer not yet added</span>
+            </div>
+        `;
+    }
+
+    // --- AWARDS BLOCK ---
+    let awardsHtml = '';
+    if (film.awards && film.awards.length > 0) {
+        awardsHtml = `
+            <div style="margin: 1rem 0; padding: 0.8rem 1rem; background: var(--eff-gold); color: white; border-radius: 8px;">
+                <strong><i class="fas fa-trophy"></i> Awards:</strong>
+                <ul style="margin: 0.2rem 0 0 1rem; padding: 0; list-style: disc;">
+                    ${film.awards.map(a => `<li>${a}</li>`).join('')}
+                </ul>
             </div>
         `;
     }
@@ -52,6 +65,10 @@ export function openModal(film) {
                 <div><strong>Country:</strong> ${film.country} | <strong>Runtime:</strong> ${film.runtime}m | <strong>Languages:</strong> ${film.languages || 'N/A'}</div>
                 <div style="margin:0.5rem 0;">${genresHtml}</div>
                 <div class="synopsis">${film.synopsis}</div>
+
+                <!-- AWARDS DISPLAY -->
+                ${awardsHtml}
+
                 <div class="modal-scores">
                     <div class="item"><div class="label">Combined</div><div class="value combined">${film.combined}</div></div>
                     <div class="item"><div class="label">IMDb</div><div class="value">${film.imdb}</div></div>
