@@ -223,10 +223,9 @@
       "time": "18:00",
       "venue": "Pabwalo",
       "slot": "Public Screening"
-    }
+    },
+    "dropdownLabel": "Life & Love – Saturday 19 Sep, 18:00"
   },
-  "dropdownLabel": "Life & Love – Saturday 19 Sep, 18:00"
-  }
   {
     "id": 10,
     "title": "Taamaden",
@@ -278,10 +277,9 @@
       "time": "20:00",
       "venue": "Pabwalo",
       "slot": "Public Screening"
-    }
-  },
+    },
     "dropdownLabel": "Breathing Underwater – Saturday 19 Sep, 20:00"
-  }
+  },
   {
     "id": 12,
     "title": "Monsieur Aznavour",
@@ -362,10 +360,9 @@
       "time": "16:00",
       "venue": "Pabwalo",
       "slot": "Public Screening"
-    }
+    },
+    "dropdownLabel": "Nha Fala – Saturday 19 Sep, 16:00"
   },
-    "dropdownLabel": "Nha Fala – Saturday 19 Sep, 16:00""
-  }
   {
     "id": 15,
     "title": "Mr. Nobody Against Putin",
@@ -393,10 +390,9 @@
       "time": "14:00",
       "venue": "Jacaranda Cultural Centre",
       "slot": "Industry Screening"
-    }
-  },
+    },
     "dropdownLabel": "Mr. Nobody Against Putin – Saturday 26 Sep, 14:00"
-  }
+  },
   {
     "id": 16,
     "title": "Jokes & Cigarettes",
@@ -424,10 +420,9 @@
       "time": "14:00",
       "venue": "Pabwalo",
       "slot": "Public Screening"
-    }
-  },
+    },
     "dropdownLabel": "Jokes & Cigarettes – Saturday 19 Sep, 14:00"
-  }
+  },
   {
     "id": 17,
     "title": "A New Kind Of Wilderness",
@@ -479,10 +474,9 @@
       "time": "16:00",
       "venue": "Jacaranda Cultural Centre",
       "slot": "Industry Screening"
-    }
-  },
+    },
     "dropdownLabel": "Seven Days – Saturday 26 Sep, 16:00"
-  }
+  },
   {
     "id": 19,
     "title": "Songs Of Earth",
@@ -630,10 +624,9 @@
       "time": "18:00",
       "venue": "Pabwalo",
       "slot": "Family Feature"
-    }
-  },
+    },
     "dropdownLabel": "A Boat In The Garden – Friday 18 Sep, 18:00"
-  }
+  },
   {
     "id": 25,
     "title": "Waves",
@@ -661,10 +654,9 @@
       "time": "18:00",
       "venue": "Jacaranda Cultural Centre",
       "slot": "Industry Screening"
-    }
-  },
+    },
     "dropdownLabel": "Waves – Saturday 26 Sep, 18:00"
-  }
+  },
   {
     "id": 26,
     "title": "A Happy Day",
@@ -740,10 +732,9 @@
       "time": "16:00",
       "venue": "Pabwalo",
       "slot": "Family Feature"
-    }
-  },
+    },
     "dropdownLabel": "Jippie No More – Friday 18 Sep, 16:00"
-  }
+  },
   {
     "id": 29,
     "title": "Living Large",
@@ -867,10 +858,9 @@
       "time": "14:00",
       "venue": "Pabwalo",
       "slot": "Family Feature"
-    }
-  },
+    },
     "dropdownLabel": "Campeones (Champions) – Friday 18 Sep, 14:00"
-  }
+  },
   {
     "id": 101,
     "title": "Malawian Short Film – Opening Night",
