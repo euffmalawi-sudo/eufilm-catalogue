@@ -18,15 +18,10 @@
     "contentRisk": 0,
     "delegation": "",
     "imdbId": "tt21282260",
-    "eventSuggestion": "Opening Night",
+    "eventSuggestion": "",
     "youtubeId": "1JyXPP_eWcQ",
     "isMalawian": false,
-    "program": {
-      "day": "Thursday 17 September",
-      "time": "19:00",
-      "venue": "EU Residence",
-      "slot": "Opening Feature"
-    },
+    "program": null,
     "awards": [
       "Best Editing - Carthage Film Festival",
       "Special Mention - FESPACO",
@@ -243,16 +238,10 @@
     "contentRisk": -1,
     "delegation": "",
     "imdbId": "tt29513627",
-    "eventSuggestion": "Public Screening",
+    "eventSuggestion": "",
     "youtubeId": "YvvZrIw1NxQ",
     "isMalawian": false,
-    "program": {
-      "day": "Saturday 19 September",
-      "time": "18:00",
-      "venue": "Pabwalo",
-      "slot": "Public Screening"
-    },
-    "dropdownLabel": "Life & Love – Saturday 19 Sep, 18:00",
+    "program": null,
     "awards": [
       "Best Baltic Film - Tallinn Black Nights Film Festival"
     ]
@@ -303,16 +292,10 @@
     "contentRisk": -1,
     "delegation": "",
     "imdbId": "tt23656050",
-    "eventSuggestion": "Public Screening",
+    "eventSuggestion": "",
     "youtubeId": "O9yZJWv8cdM",
     "isMalawian": false,
-    "program": {
-      "day": "Saturday 19 September",
-      "time": "20:00",
-      "venue": "Pabwalo",
-      "slot": "Public Screening"
-    },
-    "dropdownLabel": "Breathing Underwater – Saturday 19 Sep, 20:00",
+    "program": null,
     "awards": [
       "Special Jury Prize - Lecce European Film Festival",
       "Cineuropa Award - Lecce European Film Festival"
@@ -337,15 +320,10 @@
     "contentRisk": 0,
     "delegation": "French",
     "imdbId": "tt26743414",
-    "eventSuggestion": "Opening Night",
+    "eventSuggestion": "",
     "youtubeId": "evoYNCdZGOQ",
     "isMalawian": false,
-    "program": {
-      "day": "Thursday 17 September",
-      "time": "21:00",
-      "venue": "EU Residence",
-      "slot": "Opening Feature"
-    },
+    "program": null,
     "awards": [
       "Best Costume Design - César Awards"
     ]
@@ -398,16 +376,10 @@
     "contentRisk": 0,
     "delegation": "",
     "imdbId": "tt0296099",
-    "eventSuggestion": "Public Screening",
+    "eventSuggestion": "",
     "youtubeId": "ZTvM9s7rbSM",
     "isMalawian": false,
-    "program": {
-      "day": "Saturday 19 September",
-      "time": "16:00",
-      "venue": "Pabwalo",
-      "slot": "Public Screening"
-    },
-    "dropdownLabel": "Nha Fala – Saturday 19 Sep, 16:00",
+    "program": null,
     "awards": [
       "City of Rome Prize - Venice Film Festival",
       "City of Amiens Prize - Amiens International Film Festival",
@@ -433,16 +405,10 @@
     "contentRisk": -1,
     "delegation": "",
     "imdbId": "tt34965515",
-    "eventSuggestion": "Industry Day",
+    "eventSuggestion": "",
     "youtubeId": "9150MCMSrgc",
     "isMalawian": false,
-    "program": {
-      "day": "Saturday 26 September",
-      "time": "14:00",
-      "venue": "Jacaranda Cultural Centre",
-      "slot": "Industry Screening"
-    },
-    "dropdownLabel": "Mr. Nobody Against Putin – Saturday 26 Sep, 14:00",
+    "program": null,
     "awards": [
       "Best Documentary Feature - Academy Awards",
       "Best Documentary - BAFTA",
@@ -468,16 +434,10 @@
     "contentRisk": 0,
     "delegation": "",
     "imdbId": "tt27672387",
-    "eventSuggestion": "Public Screening",
+    "eventSuggestion": "",
     "youtubeId": "CjHzIOQeZkk",
     "isMalawian": false,
-    "program": {
-      "day": "Saturday 19 September",
-      "time": "14:00",
-      "venue": "Pabwalo",
-      "slot": "Public Screening"
-    },
-    "dropdownLabel": "Jokes & Cigarettes – Saturday 19 Sep, 14:00",
+    "program": null,
     "awards": [
       "Best Actor - Goya Awards",
       "Best Actress - Gaudí Awards",
@@ -503,10 +463,15 @@
     "contentRisk": 0,
     "delegation": "",
     "imdbId": "tt30320576",
-    "eventSuggestion": "",
+    "eventSuggestion": "Saturday 12 Sep",
     "youtubeId": "i6eTxMSCgAs",
     "isMalawian": false,
-    "program": null,
+    "program": {
+      "day": "Saturday 12 September",
+      "time": "16:30",
+      "venue": "Jacaranda Cultural Centre, Blantyre",
+      "slot": "European Feature"
+    },
     "awards": [
       "World Cinema Grand Jury Prize: Documentary - Sundance Film Festival",
       "Best Documentary - Golden Panda Awards"
@@ -531,16 +496,10 @@
     "contentRisk": 0,
     "delegation": "",
     "imdbId": "tt33077462",
-    "eventSuggestion": "Industry Day",
+    "eventSuggestion": "",
     "youtubeId": "IerZ6N6RMQQ",
     "isMalawian": false,
-    "program": {
-      "day": "Saturday 26 September",
-      "time": "16:00",
-      "venue": "Jacaranda Cultural Centre",
-      "slot": "Industry Screening"
-    },
-    "dropdownLabel": "Seven Days – Saturday 26 Sep, 16:00",
+    "program": null,
     "awards": [
       "3rd Prize - Farhang Foundation Short Film Festival"
     ]
@@ -652,10 +611,15 @@
     "contentRisk": -1,
     "delegation": "",
     "imdbId": "tt26256406",
-    "eventSuggestion": "",
+    "eventSuggestion": "Saturday 12 Sep",
     "youtubeId": "dcZJ5X0H0vM",
     "isMalawian": false,
-    "program": null,
+    "program": {
+      "day": "Saturday 12 September",
+      "time": "13:00",
+      "venue": "Jacaranda Cultural Centre, Blantyre",
+      "slot": "European Feature"
+    },
     "awards": [
       "Bright Horizons Award - Melbourne International Film Festival",
       "Best Directing Prize - Marrakech Film Festival"
@@ -708,16 +672,15 @@
     "contentRisk": 0,
     "delegation": "",
     "imdbId": "tt32264775",
-    "eventSuggestion": "Family Day",
+    "eventSuggestion": "Saturday 12 Sep",
     "youtubeId": "7S_c9xZ2aj0",
     "isMalawian": false,
     "program": {
-      "day": "Friday 18 September",
-      "time": "18:00",
-      "venue": "Pabwalo",
-      "slot": "Family Feature"
+      "day": "Saturday 12 September",
+      "time": "15:10",
+      "venue": "Jacaranda Cultural Centre, Blantyre",
+      "slot": "European Feature"
     },
-    "dropdownLabel": "A Boat In The Garden – Friday 18 Sep, 18:00",
     "awards": [
       "Special Distinction Prize - Bucheon International Animation Festival",
       "Best Animated Feature Film - Cartoons On The Bay - Pulcinella Award"
@@ -742,16 +705,10 @@
     "contentRisk": 0,
     "delegation": "",
     "imdbId": "tt27587485",
-    "eventSuggestion": "Industry Day",
+    "eventSuggestion": "",
     "youtubeId": "pxSeWimkAOI",
     "isMalawian": false,
-    "program": {
-      "day": "Saturday 26 September",
-      "time": "18:00",
-      "venue": "Jacaranda Cultural Centre",
-      "slot": "Industry Screening"
-    },
-    "dropdownLabel": "Waves – Saturday 26 Sep, 18:00",
+    "program": null,
     "awards": [
       "Best Feature Film - Czech Lion Awards",
       "Best Director - Czech Lion Awards",
@@ -778,10 +735,15 @@
     "contentRisk": 0,
     "delegation": "",
     "imdbId": "tt13471862",
-    "eventSuggestion": "",
+    "eventSuggestion": "Saturday 19 Sep",
     "youtubeId": "Yf2__DKXtAo",
     "isMalawian": false,
-    "program": null,
+    "program": {
+      "day": "Saturday 19 September",
+      "time": "11:00",
+      "venue": "Pabwalo National Library",
+      "slot": "European Feature"
+    },
     "awards": [
       "Best Director - Duhok International Film Festival",
       "Best Cinematography - Duhok International Film Festival",
@@ -807,10 +769,15 @@
     "contentRisk": 0,
     "delegation": "",
     "imdbId": "tt32601294",
-    "eventSuggestion": "",
+    "eventSuggestion": "Saturday 12 Sep",
     "youtubeId": "wcWr5SZDIog",
     "isMalawian": false,
-    "program": null,
+    "program": {
+      "day": "Saturday 12 September",
+      "time": "14:30",
+      "venue": "Jacaranda Cultural Centre, Blantyre",
+      "slot": "European Short"
+    },
     "awards": [
       "Audience Prize - Bucheon International Animation Festival",
       "Best Nordic-Baltic Animated Youth Film - Fredrikstad Animation Festival",
@@ -836,16 +803,15 @@
     "contentRisk": 0,
     "delegation": "",
     "imdbId": "tt28450044",
-    "eventSuggestion": "Family Day",
+    "eventSuggestion": "Saturday 19 Sep",
     "youtubeId": "WrZ78xzlbf0",
     "isMalawian": false,
     "program": {
-      "day": "Friday 18 September",
-      "time": "16:00",
-      "venue": "Pabwalo",
-      "slot": "Family Feature"
+      "day": "Saturday 19 September",
+      "time": "13:00",
+      "venue": "Pabwalo National Library",
+      "slot": "European Feature"
     },
-    "dropdownLabel": "Jippie No More – Friday 18 Sep, 16:00",
     "awards": [
       "Audience Award - Cinekid Festival",
       "Youth Jury Award - Cinekid Festival"
@@ -870,10 +836,15 @@
     "contentRisk": 0,
     "delegation": "",
     "imdbId": "tt27850647",
-    "eventSuggestion": "",
+    "eventSuggestion": "Saturday 19 Sep",
     "youtubeId": "01kJ9jhRVms",
     "isMalawian": false,
-    "program": null,
+    "program": {
+      "day": "Saturday 19 September",
+      "time": "15:00",
+      "venue": "Pabwalo National Library",
+      "slot": "European Feature"
+    },
     "awards": [
       "Best Feature Award - European Children's Film Association (ECFA)",
       "Jury Award - Annecy International Animation Film Festival"
@@ -898,10 +869,15 @@
     "contentRisk": 0,
     "delegation": "",
     "imdbId": "tt15211028",
-    "eventSuggestion": "",
+    "eventSuggestion": "Thursday 17 Sep",
     "youtubeId": "R_xzWr0z29Y",
     "isMalawian": false,
-    "program": null,
+    "program": {
+      "day": "Thursday 17 September",
+      "time": "21:30",
+      "venue": "EU Residence",
+      "slot": "European Short"
+    },
     "awards": [
       "International Grand Jury Prize - Animayo Gran Canaria Festival"
     ]
@@ -911,7 +887,7 @@
     "title": "The Mohican",
     "country": "France",
     "year": 2025,
-    "runtime": 87,
+    "runtime": 116,
     "director": "Frédéric Farrucci",
     "genres": ["Crime", "Drama", "Thriller"],
     "languages": "Corsican, French",
@@ -925,10 +901,15 @@
     "contentRisk": 0,
     "delegation": "French",
     "imdbId": "tt33030107",
-    "eventSuggestion": "",
+    "eventSuggestion": "Thursday 17 Sep",
     "youtubeId": "50P9YPu-TH0",
     "isMalawian": false,
-    "program": null,
+    "program": {
+      "day": "Thursday 17 September",
+      "time": "19:30",
+      "venue": "EU Residence",
+      "slot": "European Feature"
+    },
     "awards": []
   },
   {
@@ -950,10 +931,15 @@
     "contentRisk": 0,
     "delegation": "Belgian",
     "imdbId": "tt10140648",
-    "eventSuggestion": "",
+    "eventSuggestion": "Saturday 19 Sep",
     "youtubeId": "spwIQPpuMsw",
     "isMalawian": false,
-    "program": null,
+    "program": {
+      "day": "Saturday 19 September",
+      "time": "14:40",
+      "venue": "Pabwalo National Library",
+      "slot": "European Short"
+    },
     "awards": []
   },
   {
@@ -975,21 +961,20 @@
     "contentRisk": 0,
     "delegation": "Spanish",
     "imdbId": "tt6793580",
-    "eventSuggestion": "Family Day",
+    "eventSuggestion": "Friday 18 Sep",
     "youtubeId": "POxh1o6EufI",
     "isMalawian": false,
     "program": {
       "day": "Friday 18 September",
-      "time": "14:00",
-      "venue": "Pabwalo",
-      "slot": "Family Feature"
+      "time": "15:00",
+      "venue": "Lilongwe Girls School / Good Shepherd School (TBC)",
+      "slot": "European Feature"
     },
-    "dropdownLabel": "Campeones (Champions) – Friday 18 Sep, 14:00",
     "awards": []
   },
   {
     "id": 101,
-    "title": "Malawian Short Film – Opening Night",
+    "title": "Malawian Short Film – Saturday 12 Sep",
     "country": "Malawi",
     "year": 2025,
     "runtime": "TBC",
@@ -1006,20 +991,20 @@
     "contentRisk": 0,
     "delegation": "",
     "imdbId": "",
-    "eventSuggestion": "",
+    "eventSuggestion": "Saturday 12 Sep",
     "youtubeId": "",
     "isMalawian": true,
     "program": {
-      "day": "Thursday 17 September",
-      "time": "20:00",
-      "venue": "EU Residence",
+      "day": "Saturday 12 September",
+      "time": "18:00",
+      "venue": "Jacaranda Cultural Centre, Blantyre",
       "slot": "Malawian Short"
     },
     "awards": []
   },
   {
     "id": 102,
-    "title": "Malawian Short Film – Family Day #1",
+    "title": "Malawian Short Film – Thursday 17 Sep",
     "country": "Malawi",
     "year": 2025,
     "runtime": "TBC",
@@ -1036,20 +1021,15 @@
     "contentRisk": 0,
     "delegation": "",
     "imdbId": "",
-    "eventSuggestion": "",
+    "eventSuggestion": "Thursday 17 Sep",
     "youtubeId": "",
     "isMalawian": true,
-    "program": {
-      "day": "Friday 18 September",
-      "time": "13:00",
-      "venue": "Pabwalo",
-      "slot": "Malawian Short"
-    },
+    "program": null,
     "awards": []
   },
   {
     "id": 103,
-    "title": "Malawian Short Film – Family Day #2",
+    "title": "Malawian Short Film – Friday 18 Sep",
     "country": "Malawi",
     "year": 2025,
     "runtime": "TBC",
@@ -1066,20 +1046,20 @@
     "contentRisk": 0,
     "delegation": "",
     "imdbId": "",
-    "eventSuggestion": "",
+    "eventSuggestion": "Friday 18 Sep",
     "youtubeId": "",
     "isMalawian": true,
     "program": {
       "day": "Friday 18 September",
-      "time": "17:00",
-      "venue": "Pabwalo",
+      "time": "17:30",
+      "venue": "Lilongwe Girls School / Good Shepherd School (TBC)",
       "slot": "Malawian Short"
     },
     "awards": []
   },
   {
     "id": 104,
-    "title": "Malawian Short Film – Public Screening",
+    "title": "Malawian Short Film – Saturday 19 Sep",
     "country": "Malawi",
     "year": 2025,
     "runtime": "TBC",
@@ -1096,29 +1076,29 @@
     "contentRisk": 0,
     "delegation": "",
     "imdbId": "",
-    "eventSuggestion": "",
+    "eventSuggestion": "Saturday 19 Sep",
     "youtubeId": "",
     "isMalawian": true,
     "program": {
       "day": "Saturday 19 September",
-      "time": "15:00",
-      "venue": "Pabwalo",
+      "time": "18:20",
+      "venue": "Pabwalo National Library",
       "slot": "Malawian Short"
     },
     "awards": []
-  }
-    {
-    "id": 108,
-    "title": "Tarrac",
+  },
+  {
+    "id": 105,
+    "title": "Terrac",
     "country": "Ireland",
-    "year": 2023,
-    "runtime": 96,
-    "director": "Declan Recks",
-    "genres": ["Drama"],
-    "languages": "Irish Gaelic",
+    "year": 2025,
+    "runtime": "TBC",
+    "director": "TBC",
+    "genres": ["Short", "Drama"],
+    "languages": "English",
     "poster": "https://www.themoviedb.org/t/p/w1280/kDlTHA0HuVOXd27YsV4aNhejxi6.jpg",
-    "synopsis": "Aoife Ní Bhraoin returns to her home on the Dingle Peninsula in the Kerry Gaeltacht to help her father, Breandán 'The Bear' Ó Braoin, recover from a heart attack. As they navigate their strained relationship, Aoife confronts the grief of her mother's death and finds purpose training with a local rowing crew for a prestigious naomhóg race.",
-    "imdb": 7.2,
+    "synopsis": "An Irish short film – details to be announced. Replaces Pearl Diver at the EU Residence screening.",
+    "imdb": 7.3,
     "rt": 0,
     "meta": 0,
     "combined": 0,
@@ -1127,13 +1107,73 @@
     "delegation": "",
     "imdbId": "tt10653008",
     "eventSuggestion": "Thursday 17 Sep",
-    "youtubeId": "",
+    "youtubeId": "c8IZoqqLrrc",
     "isMalawian": false,
     "program": {
       "day": "Thursday 17 September",
       "time": "21:30",
       "venue": "EU Residence",
       "slot": "European Short"
+    },
+    "awards": []
+  },
+  {
+    "id": 106,
+    "title": "Banjo Boys",
+    "country": "Malawi, United Kingdom",
+    "year": 2025,
+    "runtime": 25,
+    "director": "TBC",
+    "genres": ["Documentary", "Music"],
+    "languages": "English, Chichewa",
+    "poster": "",
+    "synopsis": "A documentary following the Madalitso Band. Featuring a live performance by the band after the screening.",
+    "imdb": 0,
+    "rt": 0,
+    "meta": 0,
+    "combined": 0,
+    "festivalScore": 0,
+    "contentRisk": 0,
+    "delegation": "",
+    "imdbId": "",
+    "eventSuggestion": "Thursday 17 Sep",
+    "youtubeId": "",
+    "isMalawian": true,
+    "program": {
+      "day": "Thursday 17 September",
+      "time": "21:45",
+      "venue": "EU Residence",
+      "slot": "European Feature"
+    },
+    "awards": []
+  },
+  {
+    "id": 107,
+    "title": "UK/British Film – Saturday 19 Sep",
+    "country": "United Kingdom",
+    "year": 2025,
+    "runtime": "TBC",
+    "director": "TBC",
+    "genres": ["Drama"],
+    "languages": "English",
+    "poster": "",
+    "synopsis": "A British film to be announced. Check back for updates.",
+    "imdb": 0,
+    "rt": 0,
+    "meta": 0,
+    "combined": 0,
+    "festivalScore": 0,
+    "contentRisk": 0,
+    "delegation": "",
+    "imdbId": "",
+    "eventSuggestion": "Saturday 19 Sep",
+    "youtubeId": "",
+    "isMalawian": false,
+    "program": {
+      "day": "Saturday 19 September",
+      "time": "16:20",
+      "venue": "Pabwalo National Library",
+      "slot": "European Feature"
     },
     "awards": []
   }
