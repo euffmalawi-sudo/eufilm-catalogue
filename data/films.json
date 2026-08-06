@@ -1107,4 +1107,34 @@
     },
     "awards": []
   }
+    {
+    "id": 108,
+    "title": "Tarrac",
+    "country": "Ireland",
+    "year": 2023,
+    "runtime": 96,
+    "director": "Declan Recks",
+    "genres": ["Drama"],
+    "languages": "Irish Gaelic",
+    "poster": "https://www.themoviedb.org/t/p/w1280/kDlTHA0HuVOXd27YsV4aNhejxi6.jpg",
+    "synopsis": "Aoife Ní Bhraoin returns to her home on the Dingle Peninsula in the Kerry Gaeltacht to help her father, Breandán 'The Bear' Ó Braoin, recover from a heart attack. As they navigate their strained relationship, Aoife confronts the grief of her mother's death and finds purpose training with a local rowing crew for a prestigious naomhóg race.",
+    "imdb": 7.2,
+    "rt": 0,
+    "meta": 0,
+    "combined": 0,
+    "festivalScore": 0,
+    "contentRisk": 0,
+    "delegation": "",
+    "imdbId": "tt10653008",
+    "eventSuggestion": "Thursday 17 Sep",
+    "youtubeId": "",
+    "isMalawian": false,
+    "program": {
+      "day": "Thursday 17 September",
+      "time": "21:30",
+      "venue": "EU Residence",
+      "slot": "European Short"
+    },
+    "awards": []
+  }
 ]
