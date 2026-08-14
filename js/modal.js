@@ -19,6 +19,7 @@ export function openModal(film) {
 
     const imdbLink = `https://www.imdb.com/title/${film.imdbId}/`;
 
+    // ----- TRAILER -----
     let trailerHtml = '';
     if (film.youtubeId && film.youtubeId !== '') {
         trailerHtml = `
@@ -40,6 +41,7 @@ export function openModal(film) {
         `;
     }
 
+    // ----- AWARDS -----
     let awardsHtml = '';
     if (film.awards && film.awards.length > 0) {
         awardsHtml = `
@@ -52,7 +54,7 @@ export function openModal(film) {
         `;
     }
 
-    // Booking button (only if film has a program)
+    // ----- BOOKING BUTTON -----
     let bookingHtml = '';
     if (film.program && FORM_ID && ENTRY_ID) {
         const label = film.dropdownLabel || film.title;
@@ -64,6 +66,7 @@ export function openModal(film) {
         `;
     }
 
+    // ----- MODAL HTML -----
     body.innerHTML = `
         <div class="modal-body">
             <div class="modal-poster">
