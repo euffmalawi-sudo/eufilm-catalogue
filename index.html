@@ -244,6 +244,78 @@
       .toolbar div { justify-content: space-between; }
       .modal-body { padding: 20px; margin: 10px; }
     }
+    /* NEW: Day Grouping Styles */
+.day-section {
+  margin-bottom: 48px;
+}
+.day-header {
+  font-size: 1.8rem;
+  color: #ffd700;
+  border-bottom: 3px solid #2a3a6a;
+  padding-bottom: 12px;
+  margin-bottom: 24px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  justify-content: space-between;
+}
+.day-header .date-badge {
+  background: #ffd700;
+  color: #0a0e1a;
+  font-size: 0.9rem;
+  padding: 4px 16px;
+  border-radius: 30px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+.film-grid-inner {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 28px;
+}
+/* Override the old grid to allow block layout for sections */
+#filmGrid {
+  display: block;
+}
+
+/* NEW: Embedded Video Trailer */
+.video-wrapper {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+  height: 0;
+  overflow: hidden;
+  margin: 16px 0 20px 0;
+  border-radius: 12px;
+  background: #000;
+}
+.video-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* NEW: Book Now Button */
+.booking-btn {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 12px 32px;
+  background: #ffd700;
+  color: #0a0e1a;
+  border-radius: 40px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: 0.2s;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+}
+.booking-btn:hover {
+  background: #ffed4a;
+  transform: scale(1.02);
+}
   </style>
 </head>
 <body>
