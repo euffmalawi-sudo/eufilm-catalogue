@@ -258,25 +258,25 @@
   },
   {
     "id": 9,
-    "title": "Jippie No More",
-    "country": "Netherlands",
-    "year": 2023,
-    "runtime": 95,
-    "director": "Margien Rogaar",
-    "genres": ["Comedy", "Drama", "Family"],
-    "languages": "Dutch",
-    "poster": "https://image.tmdb.org/t/p/w500/v09rCd3dBRjzLZgVe0JZag5e9Kw.jpg",
-    "synopsis": "Jaap Peter, a lively 16 year old boy, eagerly prepares for his older sister's wedding at their beloved grandfather's country house. As the whole family rallies together to create the perfect celebration, Jaap Peter falls in love for the first time. But when the girl of his dreams is smitten with his younger sister instead, Jaap Peter is disheartened. Through the chaos and tender moments, Jaap Peter learns that his presence and the unbreakable bond of his family are vital in ensuring the wedding's success.",
-    "imdb": 6.0,
+    "title": "Peacock",
+    "country": "Austria, Germany",
+    "year": 2024,
+    "runtime": 102,
+    "director": "Bernhard Wenger",
+    "genres": ["Comedy", "Drama"],
+    "languages": "German, English",
+    "poster": "https://m.media-amazon.com/images/M/MV5BOTJmOTg0MWYtYWFmMC00MTk3LTk4ZjgtZTgwM2ZjMTYzOWRlXkEyXkFqcGc@._V1_.jpg",
+    "synopsis": "Matthias is a master of pretense – from cultured boyfriend to perfect son or marital coach, he makes a career of being someone else. Professionally adept at pretending daily, his true challenge begins when he has to be himself. A smartly written, intelligent debut feature from writer-director Bernhard Wenger.",
+    "imdb": 7.0,
     "rt": 0,
     "meta": 0,
     "combined": 0,
     "festivalScore": 0,
     "contentRisk": 0,
     "delegation": "",
-    "imdbId": "tt28450044",
+    "imdbId": "tt29730305",
     "eventSuggestion": "Saturday 19 Sep",
-    "youtubeId": "WrZ78xzlbf0",
+    "youtubeId": "TsVpWX0nVyQ",
     "isMalawian": false,
     "program": {
       "day": "Saturday 19 September",
@@ -284,6 +284,12 @@
       "venue": "Pabwalo National Library",
       "slot": "European Feature"
     },
+    "dropdownLabel": "Peacock – Saturday 19 Sep, 13:00",
+    "awards": [
+      "Best First Feature Award - Stockholm International Film Festival",
+      "Best Leading Actor - Austrian Film Awards"
+    ]
+  },
     "awards": [
       "Audience Award - Cinekid Festival",
       "Youth Jury Award - Cinekid Festival"
