@@ -1,5 +1,14 @@
 import { openModal } from './modal.js';
 
+// These will be set from app.js
+let FORM_ID = '';
+let ENTRY_ID = '';
+
+export function setBookingIds(formId, entryId) {
+    FORM_ID = formId;
+    ENTRY_ID = entryId;
+}
+
 export function renderGrid(films) {
     const grid = document.getElementById('catalogueGrid');
     const noResults = document.getElementById('noResults');
@@ -15,6 +24,19 @@ export function renderGrid(films) {
     films.forEach(film => {
         const badgeClass = film.combined >= 70 ? 'green' : 'yellow';
         const badgeText = film.combined >= 70 ? '✓' : '⌛';
+        
+        // Booking button (only if film has a program)
+        let bookingHtml = '';
+        if (film.program && FORM_ID && ENTRY_ID) {
+            const label = film.dropdownLabel || film.title;
+            const bookingUrl = `https://docs.google.com/forms/d/e/${FORM_ID}/viewform?${ENTRY_ID}=${encodeURIComponent(label)}`;
+            bookingHtml = `
+                <div class="card-booking">
+                    <a href="${bookingUrl}" target="_blank" class="booking-btn-sm">🎟️ Book Now</a>
+                </div>
+            `;
+        }
+
         html += `
             <div class="film-card" data-id="${film.id}">
                 <div class="poster-wrap">
@@ -27,24 +49,33 @@ export function renderGrid(films) {
                         <span>${film.year}</span>
                         <span>${film.runtime}m</span>
                     </div>
+                    ${bookingHtml}
                 </div>
             </div>
         `;
     });
     grid.innerHTML = html;
 
-    // Attach click listeners
+    // Attach click listeners to open modal (only on the card, not on the button)
     grid.querySelectorAll('.film-card').forEach(card => {
         const id = parseInt(card.dataset.id);
         const film = films.find(f => f.id === id);
-        if (film) card.addEventListener('click', () => openModal(film));
+        if (film) {
+            // Click on card opens modal, but if click is on the booking button, don't open modal
+            card.addEventListener('click', (e) => {
+                if (e.target.closest('.booking-btn-sm')) return;
+                openModal(film);
+            });
+        }
     });
 }
 
 export function updateStats(allFilms, filtered) {
-    document.getElementById('totalCount').textContent = allFilms.length;
-    const green = allFilms.filter(f => f.combined >= 70).length;
-    const yellow = allFilms.filter(f => f.combined < 70).length;
-    document.getElementById('greenCount').textContent = green;
-    document.getElementById('yellowCount').textContent = yellow;
+    // Count unique days from all films with program
+    const days = new Set();
+    allFilms.forEach(f => {
+        if (f.program) days.add(f.program.day);
+    });
+    document.getElementById('dayCount').textContent = days.size;
+    document.getElementById('filmCount').textContent = allFilms.filter(f => f.program).length;
 }
