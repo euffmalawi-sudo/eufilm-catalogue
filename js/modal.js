@@ -3,15 +3,19 @@ export function openModal(film) {
   const body = document.getElementById('modalBody');
   if (!container || !body) return;
 
-  // Build YouTube link if youtubeId exists
-  const trailerLink = film.youtubeId ? `https://www.youtube.com/watch?v=${film.youtubeId}` : null;
+  // --- EMBEDDED TRAILER (YouTube iframe) ---
+  const trailerHtml = film.youtubeId ? `
+    <div class="video-wrapper">
+      <iframe src="https://www.youtube.com/embed/${film.youtubeId}" title="${film.title} trailer" frameborder="0" allowfullscreen></iframe>
+    </div>
+  ` : '';
 
-  // Format Awards list
+  // --- AWARDS ---
   const awardsHtml = film.awards && film.awards.length > 0 
     ? `<p><strong>🏆 Awards:</strong><br>${film.awards.map(a => `&bull; ${a}`).join('<br>')}</p>` 
     : '';
 
-  // Format Program details
+  // --- PROGRAM DETAILS ---
   const program = film.program || {};
   const programHtml = `
     <div style="background:#0d1b3e; padding:14px 18px; border-radius:12px; margin:14px 0; border-left:4px solid #ffd700;">
@@ -20,6 +24,17 @@ export function openModal(film) {
       <p style="margin:4px 0; color:#ffd700;">🎬 ${program.slot || ''}</p>
     </div>
   `;
+
+  // --- BOOK NOW BUTTON (Google Form Pre-fill) ---
+  // Your provided Google Form details
+  const GOOGLE_FORM_ID = '1FAIpQLSdOSqgGyZCzydXeK8iLIXmZCjmsiK5IW3q8iw83QDPsKUPYVQ';
+  const ENTRY_ID = '1162404058';
+  
+  // Generate the pre-filled URL with the film's title
+  const bookingUrl = `https://docs.google.com/forms/d/e/${GOOGLE_FORM_ID}/viewform?usp=pp_url&entry.${ENTRY_ID}=${encodeURIComponent(film.title)}`;
+  
+  // Always show the "Book Now" button linking to the form
+  const bookingHtml = `<a href="${bookingUrl}" target="_blank" class="booking-btn">🎟️ Book Now</a>`;
 
   body.innerHTML = `
     <button id="closeModalBtn" class="modal-close">&times;</button>
@@ -37,9 +52,11 @@ export function openModal(film) {
       
       ${programHtml}
       
+      ${trailerHtml}
+      
       ${awardsHtml}
       
-      ${trailerLink ? `<a href="${trailerLink}" target="_blank" class="trailer-link">🎬 Watch Trailer</a>` : ''}
+      ${bookingHtml}
     </div>
   `;
 
