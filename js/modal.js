@@ -1,3 +1,12 @@
+// These will be set from app.js
+let FORM_ID = '';
+let ENTRY_ID = '';
+
+export function setBookingIds(formId, entryId) {
+    FORM_ID = formId;
+    ENTRY_ID = entryId;
+}
+
 export function openModal(film) {
     const container = document.getElementById('modalContainer');
     const body = document.getElementById('modalBody');
@@ -8,10 +17,8 @@ export function openModal(film) {
     
     const genresHtml = film.genres.map(g => `<span class="genre-tag" style="background:var(--eff-off-white);padding:0.1rem 0.7rem;border-radius:20px;font-size:0.7rem;border:1px solid rgba(209,209,209,0.3);">${g}</span>`).join(' ');
 
-    // IMDb link (replaces QR code)
     const imdbLink = `https://www.imdb.com/title/${film.imdbId}/`;
 
-    // ----- Direct embed using youtubeId -----
     let trailerHtml = '';
     if (film.youtubeId && film.youtubeId !== '') {
         trailerHtml = `
@@ -33,7 +40,6 @@ export function openModal(film) {
         `;
     }
 
-    // --- AWARDS BLOCK ---
     let awardsHtml = '';
     if (film.awards && film.awards.length > 0) {
         awardsHtml = `
@@ -46,11 +52,22 @@ export function openModal(film) {
         `;
     }
 
+    // Booking button (only if film has a program)
+    let bookingHtml = '';
+    if (film.program && FORM_ID && ENTRY_ID) {
+        const label = film.dropdownLabel || film.title;
+        const bookingUrl = `https://docs.google.com/forms/d/e/${FORM_ID}/viewform?${ENTRY_ID}=${encodeURIComponent(label)}`;
+        bookingHtml = `
+            <div class="modal-booking">
+                <a href="${bookingUrl}" target="_blank" class="booking-btn-lg">🎟️ Book Now</a>
+            </div>
+        `;
+    }
+
     body.innerHTML = `
         <div class="modal-body">
             <div class="modal-poster">
                 <img src="${film.poster}" alt="${film.title}" onerror="this.src='https://placehold.co/300x450/f8f6f4/d1d1d1?text=No+Poster'">
-                <!-- IMDb Link Button (replaces QR code) -->
                 <div style="text-align:center; margin-top:12px;">
                     <a href="${imdbLink}" target="_blank" rel="noopener noreferrer" 
                        style="display:inline-block; background:var(--eff-red); color:white; font-weight:700; 
@@ -72,17 +89,17 @@ export function openModal(film) {
                 <div style="margin:0.5rem 0;">${genresHtml}</div>
                 <div class="synopsis">${film.synopsis}</div>
 
-                <!-- AWARDS DISPLAY -->
                 ${awardsHtml}
 
                 <div class="modal-scores">
-                    <div class="item"><div class="label">Combined</div><div class="value combined">${film.combined}</div></div>
                     <div class="item"><div class="label">IMDb</div><div class="value">${film.imdb}</div></div>
                     <div class="item"><div class="label">Rotten Tomatoes</div><div class="value gold">${film.rt}%</div></div>
                     <div class="item"><div class="label">Metacritic</div><div class="value blue">${film.meta}</div></div>
-                    <div class="item"><div class="label">Festival</div><div class="value gold">${film.festivalScore}</div></div>
                     <div class="item"><div class="label">Content Risk</div><div class="value" style="color:var(--eff-red);">${film.contentRisk}</div></div>
                 </div>
+
+                ${bookingHtml}
+
                 <div class="modal-trailer">
                     <h4><i class="fas fa-video"></i> Official Trailer</h4>
                     ${trailerHtml}
