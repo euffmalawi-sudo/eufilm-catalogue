@@ -1,19 +1,12 @@
-export function applySort(films, sortType) {
-    const sorted = [...films];
-    switch(sortType) {
-        case 'title':
-            sorted.sort((a,b) => a.title.localeCompare(b.title));
-            break;
-        case 'year':
-            sorted.sort((a,b) => b.year - a.year);
-            break;
-        case 'runtime':
-            sorted.sort((a,b) => a.runtime - b.runtime);
-            break;
-        case 'combined':
-        default:
-            sorted.sort((a,b) => b.combined - a.combined);
-            break;
-    }
-    return sorted;
+// js/sorting.js
+export function setupSorting(films) {
+  const sortSelect = document.getElementById('sortBy');
+  if (!sortSelect) return;
+  sortSelect.addEventListener('change', () => {
+    const val = sortSelect.value;
+    let sorted = [...films];
+    if (val === 'title') sorted.sort((a, b) => a.title.localeCompare(b.title));
+    else if (val === 'year') sorted.sort((a, b) => (b.year || 0) - (a.year || 0));
+    import('./catalogue.js').then(module => module.renderCatalogue(sorted));
+  });
 }
