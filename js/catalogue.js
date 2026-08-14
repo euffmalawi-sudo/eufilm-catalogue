@@ -61,7 +61,6 @@ export function renderGrid(films) {
         const id = parseInt(card.dataset.id);
         const film = films.find(f => f.id === id);
         if (film) {
-            // Click on card opens modal, but if click is on the booking button, don't open modal
             card.addEventListener('click', (e) => {
                 if (e.target.closest('.booking-btn-sm')) return;
                 openModal(film);
