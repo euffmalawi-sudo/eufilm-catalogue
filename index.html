@@ -2,617 +2,296 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>EU Film Festival Malawi 2026</title>
   <style>
-    /* ----- RESET & BASE ----- */
+    /* ---------- DARK THEME WITH GOLD ACCENTS ---------- */
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
     }
+
     body {
-      font-family: 'Segoe UI', Roboto, system-ui, -apple-system, sans-serif;
-      background: #f4f7fc;
-      color: #1e2b3c;
-      padding: 2rem 1rem;
+      background: #0a0e1a;
+      color: #e8edf5;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      padding: 20px;
+      min-height: 100vh;
     }
+
     .container {
       max-width: 1300px;
       margin: 0 auto;
     }
 
-    /* ----- HEADER ----- */
+    /* HEADER */
     .header {
+      background: linear-gradient(145deg, #0d1b3e, #1a2a5e);
+      padding: 30px 20px 25px;
+      border-radius: 16px;
       text-align: center;
-      padding: 2rem 1rem 1.5rem;
-      background: linear-gradient(145deg, #003399, #002266);
-      color: white;
-      border-radius: 28px;
-      margin-bottom: 3rem;
-      box-shadow: 0 12px 30px rgba(0, 51, 153, 0.3);
+      border-bottom: 5px solid #ffd700;
+      margin-bottom: 30px;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.6);
     }
+
+    .festival-logo {
+      max-width: 180px;
+      height: auto;
+      margin-bottom: 12px;
+      border-radius: 12px;
+    }
+
     .header h1 {
-      font-size: 2.8rem;
-      font-weight: 700;
-      letter-spacing: -0.5px;
+      font-size: 2.6rem;
+      letter-spacing: 1px;
     }
     .header h1 span {
-      color: #ffcc00;
+      color: #ffd700;
     }
     .header p {
       font-size: 1.2rem;
-      opacity: 0.9;
-      margin-top: 0.4rem;
-    }
-    .header .flag-bar {
-      width: 180px;
-      height: 6px;
-      background: linear-gradient(90deg, #003399 50%, #ffcc00 50%);
-      margin: 1rem auto 0;
-      border-radius: 8px;
+      opacity: 0.85;
+      margin-top: 6px;
+      color: #b0c4de;
     }
 
-    /* ----- DAY SECTIONS ----- */
-    .day-section {
-      margin-bottom: 3.5rem;
-    }
-    .day-section h2 {
-      font-size: 2rem;
-      font-weight: 600;
-      background: #fff;
-      display: inline-block;
-      padding: 0.4rem 2rem;
+    /* TOOLBAR (filters & sort) */
+    .toolbar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      justify-content: center;
+      background: #111b33;
+      padding: 16px 24px;
       border-radius: 40px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.04);
-      margin-bottom: 1.5rem;
-      border-left: 6px solid #ffcc00;
+      margin-bottom: 35px;
+      border: 1px solid #2a3a6a;
     }
-    .day-section h2 small {
-      font-weight: 400;
-      font-size: 1rem;
-      color: #555;
-      margin-left: 10px;
+    .toolbar div {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .toolbar label {
+      color: #b0c4de;
+      font-weight: 600;
+    }
+    .toolbar select {
+      background: #1a2540;
+      color: #e8edf5;
+      border: 1px solid #3a4a7a;
+      padding: 8px 16px;
+      border-radius: 30px;
+      font-size: 0.95rem;
+      cursor: pointer;
+      min-width: 130px;
+    }
+    .toolbar select:focus {
+      outline: 2px solid #ffd700;
+      border-color: transparent;
     }
 
-    /* ----- FILM GRID ----- */
-    .film-grid {
+    /* FILM GRID */
+    #filmGrid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-      gap: 2rem;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 28px;
+      margin-top: 10px;
     }
 
-    /* ----- FILM CARD ----- */
+    /* FILM CARD */
     .film-card {
-      background: #ffffff;
-      border-radius: 24px;
+      background: #1a2540;
+      border-radius: 16px;
       overflow: hidden;
-      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
-      transition: transform 0.25s ease, box-shadow 0.25s ease;
+      border: 1px solid #2a3a6a;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
+      transition: all 0.25s ease;
       display: flex;
       flex-direction: column;
-      border: 1px solid rgba(0, 51, 153, 0.06);
     }
     .film-card:hover {
       transform: translateY(-6px);
-      box-shadow: 0 14px 35px rgba(0, 51, 153, 0.12);
+      box-shadow: 0 14px 35px rgba(255, 215, 0, 0.15);
+      border-color: #ffd700;
     }
-    .film-poster {
+    .film-card img {
       width: 100%;
-      aspect-ratio: 2 / 3;
-      background: #e9edf2;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      overflow: hidden;
-    }
-    .film-poster img {
-      width: 100%;
-      height: 100%;
+      height: 320px;
       object-fit: cover;
-      display: block;
+      background: #0d1b3e;
     }
-    .film-poster .no-poster {
-      font-size: 0.9rem;
-      color: #888;
-      text-align: center;
-      padding: 1rem;
+    .film-card .film-title {
+      color: #ffd700;
+      font-size: 1.2rem;
+      padding: 12px 16px 4px;
     }
-
-    .film-info {
-      padding: 1.4rem 1.6rem 1.6rem;
-      flex: 1;
-      display: flex;
-      flex-direction: column;
+    .film-card .film-director {
+      padding: 0 16px;
+      font-size: 0.95rem;
+      color: #b0c4de;
     }
-    .film-title {
-      font-size: 1.3rem;
+    .film-card .film-year {
+      padding: 0 16px 10px;
+      font-size: 0.85rem;
+      color: #7a8ab0;
+    }
+    .details-btn {
+      margin: 8px 16px 16px;
+      padding: 10px 0;
+      background: transparent;
+      border: 2px solid #ffd700;
+      color: #ffd700;
       font-weight: 700;
-      color: #003399;
-      margin-bottom: 0.2rem;
-      line-height: 1.3;
-    }
-    .film-meta {
-      font-size: 0.9rem;
-      color: #4a5b6e;
-      margin-bottom: 0.5rem;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.25rem 1rem;
-    }
-    .film-meta span {
-      background: #f0f3f8;
-      padding: 0.1rem 0.7rem;
-      border-radius: 20px;
-    }
-    .film-director {
-      font-size: 0.95rem;
-      color: #1e2b3c;
-      margin-bottom: 0.5rem;
-    }
-    .film-director strong {
-      font-weight: 600;
-    }
-    .film-synopsis {
-      font-size: 0.92rem;
-      line-height: 1.5;
-      color: #2d3e55;
-      margin: 0.6rem 0 0.8rem;
-      flex: 1;
-    }
-    .film-program {
-      background: #f8faff;
-      border-radius: 16px;
-      padding: 0.7rem 1rem;
-      margin: 0.5rem 0 1rem;
-      border-left: 4px solid #ffcc00;
-      font-size: 0.9rem;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      align-items: center;
-    }
-    .film-program .venue {
-      font-weight: 500;
-    }
-    .film-program .time {
-      font-weight: 600;
-      color: #003399;
-    }
-
-    .booking-btn {
-      display: inline-block;
-      background: #003399;
-      color: #fff;
-      font-weight: 600;
-      padding: 0.7rem 1.6rem;
-      border-radius: 60px;
-      text-decoration: none;
-      font-size: 0.95rem;
-      text-align: center;
-      transition: background 0.15s ease, transform 0.1s ease;
-      border: none;
+      border-radius: 40px;
       cursor: pointer;
-      align-self: flex-start;
-      margin-top: 0.2rem;
-      letter-spacing: 0.3px;
-    }
-    .booking-btn:hover {
-      background: #002277;
-      transform: scale(1.02);
-    }
-    .booking-btn:active {
-      transform: scale(0.97);
-    }
-
-    .malawian-badge {
-      display: inline-block;
-      background: #ffcc00;
-      color: #003399;
-      font-size: 0.65rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      padding: 0.15rem 0.7rem;
-      border-radius: 30px;
-      margin-left: 8px;
-      vertical-align: middle;
-      letter-spacing: 0.4px;
-    }
-
-    /* ----- FOOTER ----- */
-    .footer {
-      text-align: center;
-      margin-top: 4rem;
-      padding: 2rem 0 1rem;
-      border-top: 2px solid rgba(0, 51, 153, 0.1);
-      color: #4a5b6e;
+      transition: 0.2s;
       font-size: 0.95rem;
     }
-    .footer .eu-logo {
-      font-weight: 700;
-      color: #003399;
-    }
-    .footer .eu-logo span {
-      color: #ffcc00;
+    .details-btn:hover {
+      background: #ffd700;
+      color: #0a0e1a;
     }
 
-    /* ----- RESPONSIVE ----- */
-    @media (max-width: 700px) {
-      .header h1 {
-        font-size: 2rem;
-      }
-      .film-grid {
-        grid-template-columns: 1fr;
-        gap: 1.5rem;
-      }
-      .film-program {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 0.2rem;
-      }
-      .day-section h2 {
-        font-size: 1.5rem;
-        padding: 0.3rem 1.2rem;
-      }
+    /* MODAL */
+    .modal-container {
+      display: none;
+      position: fixed;
+      top: 0; left: 0; width: 100%; height: 100%;
+      background: rgba(0, 0, 0, 0.85);
+      backdrop-filter: blur(6px);
+      justify-content: center;
+      align-items: center;
+      z-index: 999;
+      padding: 20px;
     }
-    @media (min-width: 701px) and (max-width: 1000px) {
-      .film-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
+    .modal-body {
+      background: #111b33;
+      max-width: 680px;
+      width: 100%;
+      max-height: 90vh;
+      overflow-y: auto;
+      padding: 30px 35px;
+      border-radius: 24px;
+      border: 1px solid #ffd700;
+      box-shadow: 0 20px 60px rgba(255, 215, 0, 0.2);
+      position: relative;
+    }
+    .modal-body::-webkit-scrollbar {
+      width: 6px;
+    }
+    .modal-body::-webkit-scrollbar-track {
+      background: #0d1b3e;
+      border-radius: 10px;
+    }
+    .modal-body::-webkit-scrollbar-thumb {
+      background: #ffd700;
+      border-radius: 10px;
+    }
+
+    .modal-close {
+      position: absolute;
+      top: 12px;
+      right: 20px;
+      font-size: 2.4rem;
+      background: none;
+      border: none;
+      color: #b0c4de;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+    .modal-close:hover {
+      color: #ffd700;
+      transform: rotate(90deg);
+    }
+    .modal-content h2 {
+      color: #ffd700;
+      font-size: 2rem;
+      margin-bottom: 12px;
+      border-bottom: 2px solid #2a3a6a;
+      padding-bottom: 10px;
+    }
+    .modal-content p {
+      margin: 8px 0;
+      line-height: 1.6;
+      color: #d0ddf0;
+    }
+    .modal-content p strong {
+      color: #ffd700;
+    }
+    .trailer-link {
+      display: inline-block;
+      margin-top: 16px;
+      padding: 12px 28px;
+      border-radius: 40px;
+      font-weight: 700;
+      text-decoration: none;
+      transition: 0.2s;
+      background: #2a3a6a;
+      color: #e8edf5;
+    }
+    .trailer-link:hover {
+      background: #3a4a8a;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 600px) {
+      .header h1 { font-size: 1.8rem; }
+      .festival-logo { max-width: 130px; }
+      .toolbar { flex-direction: column; align-items: stretch; border-radius: 20px; }
+      .toolbar div { justify-content: space-between; }
+      .modal-body { padding: 20px; margin: 10px; }
     }
   </style>
 </head>
 <body>
-  <div class="container">
+<div class="container">
 
-    <!-- HEADER -->
-    <header class="header">
-      <h1>🇪🇺 EU <span>Film Festival</span> Malawi</h1>
-      <p>12 – 19 September 2026 • Blantyre &amp; Lilongwe</p>
-      <div class="flag-bar"></div>
-    </header>
+  <!-- HEADER WITH LOGO -->
+  <header class="header">
+    <img src="euro-flim-1-1024x574.jpg" alt="EU Film Festival Logo" class="festival-logo" />
+    <h1>🇪🇺 EU <span>Film Festival</span> Malawi</h1>
+    <p>12 – 19 September 2026 • Blantyre &amp; Lilongwe</p>
+  </header>
 
-    <!-- ===================== DAY 1: SATURDAY 12 SEPT ===================== -->
-    <section class="day-section">
-      <h2>📅 Saturday 12 September <small>Jacaranda Cultural Centre, Blantyre</small></h2>
-      <div class="film-grid">
-
-        <!-- 1. Banel & Adama -->
-        <div class="film-card">
-          <div class="film-poster">
-            <img src="https://image.tmdb.org/t/p/w500/s7qnEdfpdLYWWw8CFs0dqQftt9Y.jpg" alt="Banel & Adama" loading="lazy" />
-          </div>
-          <div class="film-info">
-            <div class="film-title">Banel &amp; Adama</div>
-            <div class="film-meta"><span>2023</span><span>87 min</span><span>France, Mali, Senegal</span></div>
-            <div class="film-director"><strong>Director:</strong> Ramata-Toulaye Sy</div>
-            <div class="film-synopsis">Chaos ensues shortly after a young man in a remote village in northern Senegal refuses to accept his role as the new village chief.</div>
-            <div class="film-program">
-              <span class="time">⏰ 13:00</span>
-              <span class="venue">📍 Jacaranda Cultural Centre</span>
-            </div>
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLSdOSqgGyZCzydXeK8iLIXmZCjmsiK5IW3q8iw83QDPsKUPYVQ/viewform?entry.1162404058=Banel%20%26%20Adama%20%28Sat%2012%20Sep%2C%2013%3A00%29" target="_blank" class="booking-btn">🎟️ Book Now</a>
-          </div>
-        </div>
-
-        <!-- 2. Maybe Elephants -->
-        <div class="film-card">
-          <div class="film-poster">
-            <img src="https://image.tmdb.org/t/p/w500/5P4KxYLvmhFAcDxNOYK5IExuE02.jpg" alt="Maybe Elephants" loading="lazy" />
-          </div>
-          <div class="film-info">
-            <div class="film-title">Maybe Elephants</div>
-            <div class="film-meta"><span>2024</span><span>17 min</span><span>Canada, Norway</span></div>
-            <div class="film-director"><strong>Director:</strong> Torill Kove</div>
-            <div class="film-synopsis">Three rebellious teenage daughters, a restless mother, a father struggling with potatoes, and maybe some elephants, find themselves in Nairobi. What could possibly go wrong?</div>
-            <div class="film-program">
-              <span class="time">⏰ 14:30</span>
-              <span class="venue">📍 Jacaranda Cultural Centre</span>
-            </div>
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLSdOSqgGyZCzydXeK8iLIXmZCjmsiK5IW3q8iw83QDPsKUPYVQ/viewform?entry.1162404058=Maybe%20Elephants%20%28Sat%2012%20Sep%2C%2014%3A30%29" target="_blank" class="booking-btn">🎟️ Book Now</a>
-          </div>
-        </div>
-
-        <!-- 3. A Boat In The Garden -->
-        <div class="film-card">
-          <div class="film-poster">
-            <img src="https://image.tmdb.org/t/p/w500/rvOxmytad13dZPCxV0PYbhA0cwm.jpg" alt="A Boat In The Garden" loading="lazy" />
-          </div>
-          <div class="film-info">
-            <div class="film-title">A Boat In The Garden</div>
-            <div class="film-meta"><span>2024</span><span>75 min</span><span>France, Luxembourg</span></div>
-            <div class="film-director"><strong>Director:</strong> Jean-Francois Laguionie</div>
-            <div class="film-synopsis">I can tell you about my father's voyage on his boat, because I was with him all the time. It was a rather strange voyage, with no ocean or sea crossing… The boat stayed at home.</div>
-            <div class="film-program">
-              <span class="time">⏰ 15:10</span>
-              <span class="venue">📍 Jacaranda Cultural Centre</span>
-            </div>
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLSdOSqgGyZCzydXeK8iLIXmZCjmsiK5IW3q8iw83QDPsKUPYVQ/viewform?entry.1162404058=A%20Boat%20In%20The%20Garden%20%28Sat%2012%20Sep%2C%2015%3A10%29" target="_blank" class="booking-btn">🎟️ Book Now</a>
-          </div>
-        </div>
-
-        <!-- 4. A New Kind Of Wilderness -->
-        <div class="film-card">
-          <div class="film-poster">
-            <img src="https://image.tmdb.org/t/p/w500/4Wd3wMa3IHS5AAtn1v1uxL438ty.jpg" alt="A New Kind Of Wilderness" loading="lazy" />
-          </div>
-          <div class="film-info">
-            <div class="film-title">A New Kind Of Wilderness</div>
-            <div class="film-meta"><span>2024</span><span>84 min</span><span>Norway</span></div>
-            <div class="film-director"><strong>Director:</strong> Silje Evensmo Jacobsen</div>
-            <div class="film-synopsis">In a forest in Norway, a family lives an isolated lifestyle in an attempt to be wild and free, but a tragic event changes everything, forcing them to adjust to modern society.</div>
-            <div class="film-program">
-              <span class="time">⏰ 16:30</span>
-              <span class="venue">📍 Jacaranda Cultural Centre</span>
-            </div>
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLSdOSqgGyZCzydXeK8iLIXmZCjmsiK5IW3q8iw83QDPsKUPYVQ/viewform?entry.1162404058=A%20New%20Kind%20Of%20Wilderness%20%28Sat%2012%20Sep%2C%2016%3A30%29" target="_blank" class="booking-btn">🎟️ Book Now</a>
-          </div>
-        </div>
-
-        <!-- 5. Malawian Short Film – Sat 12 Sep -->
-        <div class="film-card">
-          <div class="film-poster">
-            <div class="no-poster">🎬<br />Malawian Short<br />(TBC)</div>
-          </div>
-          <div class="film-info">
-            <div class="film-title">Malawian Short Film <span class="malawian-badge">Malawi</span></div>
-            <div class="film-meta"><span>2025</span><span>TBC</span><span>Malawi</span></div>
-            <div class="film-director"><strong>Director:</strong> TBC</div>
-            <div class="film-synopsis">A Malawian short film to be announced. Check back for updates.</div>
-            <div class="film-program">
-              <span class="time">⏰ 18:00</span>
-              <span class="venue">📍 Jacaranda Cultural Centre</span>
-            </div>
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLSdOSqgGyZCzydXeK8iLIXmZCjmsiK5IW3q8iw83QDPsKUPYVQ/viewform?entry.1162404058=Malawian%20Short%20Film%20%E2%80%93%20Sat%2012%20Sep%20%2818%3A00%29" target="_blank" class="booking-btn">🎟️ Book Now</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===================== DAY 2: THURSDAY 17 SEPT ===================== -->
-    <section class="day-section">
-      <h2>📅 Thursday 17 September <small>EU Residence, Blantyre</small></h2>
-      <div class="film-grid">
-
-        <!-- 6. The Mohican -->
-        <div class="film-card">
-          <div class="film-poster">
-            <img src="https://image.tmdb.org/t/p/w500/oBs48d2NY7gcjDOCwZfAn8CvW4h.jpg" alt="The Mohican" loading="lazy" />
-          </div>
-          <div class="film-info">
-            <div class="film-title">The Mohican</div>
-            <div class="film-meta"><span>2025</span><span>116 min</span><span>France</span></div>
-            <div class="film-director"><strong>Director:</strong> Frédéric Farrucci</div>
-            <div class="film-synopsis">Joseph is one of the last coastal shepherds in Corsica. His land is coveted by the underworld, but when he leaves the godfather's son between life and death, he becomes the prey of a merciless hunt.</div>
-            <div class="film-program">
-              <span class="time">⏰ 19:30</span>
-              <span class="venue">📍 EU Residence</span>
-            </div>
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLSdOSqgGyZCzydXeK8iLIXmZCjmsiK5IW3q8iw83QDPsKUPYVQ/viewform?entry.1162404058=The%20Mohican%20%28Thu%2017%20Sep%2C%2019%3A30%29" target="_blank" class="booking-btn">🎟️ Book Now</a>
-          </div>
-        </div>
-
-        <!-- 7. Tarrac -->
-        <div class="film-card">
-          <div class="film-poster">
-            <img src="https://www.themoviedb.org/t/p/w1280/yrYFI1wjqkxhoFSEClU37HX81XX.jpg" alt="Tarrac" loading="lazy" />
-          </div>
-          <div class="film-info">
-            <div class="film-title">Tarrac</div>
-            <div class="film-meta"><span>2023</span><span>96 min</span><span>Ireland</span></div>
-            <div class="film-director"><strong>Director:</strong> Declan Recks</div>
-            <div class="film-synopsis">Aoife returns to the Dingle Peninsula to help her father recover from a heart attack. As they navigate their strained relationship, she finds purpose training with a local rowing crew.</div>
-            <div class="film-program">
-              <span class="time">⏰ 21:30</span>
-              <span class="venue">📍 EU Residence</span>
-            </div>
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLSdOSqgGyZCzydXeK8iLIXmZCjmsiK5IW3q8iw83QDPsKUPYVQ/viewform?entry.1162404058=Tarrac%20%28Thu%2017%20Sep%2C%2021%3A30%29" target="_blank" class="booking-btn">🎟️ Book Now</a>
-          </div>
-        </div>
-
-        <!-- 8. Banjo Boys -->
-        <div class="film-card">
-          <div class="film-poster">
-            <img src="https://www.themoviedb.org/t/p/w1280/6CmwyWw15chXWgBcYi5qBYtcIGc.jpg" alt="Banjo Boys" loading="lazy" />
-          </div>
-          <div class="film-info">
-            <div class="film-title">Banjo Boys <span class="malawian-badge">Malawi</span></div>
-            <div class="film-meta"><span>2025</span><span>25 min</span><span>Malawi, UK</span></div>
-            <div class="film-director"><strong>Director:</strong> TBC</div>
-            <div class="film-synopsis">A documentary following the Madalitso Band. Featuring a live performance by the band after the screening.</div>
-            <div class="film-program">
-              <span class="time">⏰ 21:45</span>
-              <span class="venue">📍 EU Residence</span>
-            </div>
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLSdOSqgGyZCzydXeK8iLIXmZCjmsiK5IW3q8iw83QDPsKUPYVQ/viewform?entry.1162404058=Banjo%20Boys%20%28Thu%2017%20Sep%2C%2021%3A45%29" target="_blank" class="booking-btn">🎟️ Book Now</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===================== DAY 3: FRIDAY 18 SEPT ===================== -->
-    <section class="day-section">
-      <h2>📅 Friday 18 September <small>Lilongwe Girls School / Good Shepherd (TBC)</small></h2>
-      <div class="film-grid">
-
-        <!-- 9. Campeones (Champions) -->
-        <div class="film-card">
-          <div class="film-poster">
-            <img src="https://www.themoviedb.org/t/p/w1280/m5z4Ud6Ya5EY3Eg3OBbVBaDKWK.jpg" alt="Campeones" loading="lazy" />
-          </div>
-          <div class="film-info">
-            <div class="film-title">Campeones (Champions)</div>
-            <div class="film-meta"><span>2018</span><span>124 min</span><span>Spain</span></div>
-            <div class="film-director"><strong>Director:</strong> Javier Fesser</div>
-            <div class="film-synopsis">A disgraced basketball coach is sentenced to community service coaching a team of players with intellectual disabilities. He learns about teamwork, compassion, and the true meaning of winning.</div>
-            <div class="film-program">
-              <span class="time">⏰ 15:00</span>
-              <span class="venue">📍 Lilongwe Girls / Good Shepherd (TBC)</span>
-            </div>
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLSdOSqgGyZCzydXeK8iLIXmZCjmsiK5IW3q8iw83QDPsKUPYVQ/viewform?entry.1162404058=Campeones%20%28Champions%29%20%28Fri%2018%20Sep%2C%2015%3A00%29" target="_blank" class="booking-btn">🎟️ Book Now</a>
-          </div>
-        </div>
-
-        <!-- 10. Malawian Short Film – Fri 18 Sep -->
-        <div class="film-card">
-          <div class="film-poster">
-            <div class="no-poster">🎬<br />Malawian Short<br />(TBC)</div>
-          </div>
-          <div class="film-info">
-            <div class="film-title">Malawian Short Film <span class="malawian-badge">Malawi</span></div>
-            <div class="film-meta"><span>2025</span><span>TBC</span><span>Malawi</span></div>
-            <div class="film-director"><strong>Director:</strong> TBC</div>
-            <div class="film-synopsis">A Malawian short film to be announced. Check back for updates.</div>
-            <div class="film-program">
-              <span class="time">⏰ 17:30</span>
-              <span class="venue">📍 Lilongwe Girls / Good Shepherd (TBC)</span>
-            </div>
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLSdOSqgGyZCzydXeK8iLIXmZCjmsiK5IW3q8iw83QDPsKUPYVQ/viewform?entry.1162404058=Malawian%20Short%20Film%20%E2%80%93%20Fri%2018%20Sep%20%2817%3A30%29" target="_blank" class="booking-btn">🎟️ Book Now</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===================== DAY 4: SATURDAY 19 SEPT ===================== -->
-    <section class="day-section">
-      <h2>📅 Saturday 19 September <small>Pabwalo National Library, Lilongwe</small></h2>
-      <div class="film-grid">
-
-        <!-- 11. A Happy Day -->
-        <div class="film-card">
-          <div class="film-poster">
-            <img src="https://image.tmdb.org/t/p/w500/84kwsjwSwkvGrQo6T7PTmKtJVNt.jpg" alt="A Happy Day" loading="lazy" />
-          </div>
-          <div class="film-info">
-            <div class="film-title">A Happy Day</div>
-            <div class="film-meta"><span>2023</span><span>113 min</span><span>Denmark, Norway</span></div>
-            <div class="film-director"><strong>Director:</strong> Hisham Zaman</div>
-            <div class="film-synopsis">Three teenage friends stuck in a frozen, hopeless place come up with a plan to escape over the mountain. But when one falls in love, their plan begins to unravel.</div>
-            <div class="film-program">
-              <span class="time">⏰ 11:00</span>
-              <span class="venue">📍 Pabwalo National Library</span>
-            </div>
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLSdOSqgGyZCzydXeK8iLIXmZCjmsiK5IW3q8iw83QDPsKUPYVQ/viewform?entry.1162404058=A%20Happy%20Day%20%28Sat%2019%20Sep%2C%2011%3A00%29" target="_blank" class="booking-btn">🎟️ Book Now</a>
-          </div>
-        </div>
-
-        <!-- 12. Peacock -->
-        <div class="film-card">
-          <div class="film-poster">
-            <img src="https://m.media-amazon.com/images/M/MV5BOTJmOTg0MWYtYWFmMC00MTk3LTk4ZjgtZTgwM2ZjMTYzOWRlXkEyXkFqcGc@._V1_.jpg" alt="Peacock" loading="lazy" />
-          </div>
-          <div class="film-info">
-            <div class="film-title">Peacock</div>
-            <div class="film-meta"><span>2024</span><span>102 min</span><span>Austria, Germany</span></div>
-            <div class="film-director"><strong>Director:</strong> Bernhard Wenger</div>
-            <div class="film-synopsis">Matthias is a master of pretense – from cultured boyfriend to perfect son, he makes a career of being someone else. His true challenge begins when he has to be himself.</div>
-            <div class="film-program">
-              <span class="time">⏰ 13:00</span>
-              <span class="venue">📍 Pabwalo National Library</span>
-            </div>
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLSdOSqgGyZCzydXeK8iLIXmZCjmsiK5IW3q8iw83QDPsKUPYVQ/viewform?entry.1162404058=Peacock%20%28Sat%2019%20Sep%2C%2013%3A00%29" target="_blank" class="booking-btn">🎟️ Book Now</a>
-          </div>
-        </div>
-
-        <!-- 13. Nuit Chérie (Sweet Night) -->
-        <div class="film-card">
-          <div class="film-poster">
-            <img src="https://image.tmdb.org/t/p/w500/lJwiRMci6F8cwjqbc8x0AVH7GGf.jpg" alt="Nuit Chérie" loading="lazy" />
-          </div>
-          <div class="film-info">
-            <div class="film-title">Nuit Chérie (Sweet Night)</div>
-            <div class="film-meta"><span>2024</span><span>16 min</span><span>Belgium</span></div>
-            <div class="film-director"><strong>Director:</strong> Lia Bertels</div>
-            <div class="film-synopsis">During the Himalayan winter, a bear cannot fall asleep. When a white monkey suggests he go eat some honey at his aunt's, a beautiful winter night opens upon them.</div>
-            <div class="film-program">
-              <span class="time">⏰ 14:40</span>
-              <span class="venue">📍 Pabwalo National Library</span>
-            </div>
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLSdOSqgGyZCzydXeK8iLIXmZCjmsiK5IW3q8iw83QDPsKUPYVQ/viewform?entry.1162404058=Nuit%20Ch%C3%A9rie%20%28Sweet%20Night%29%20%28Sat%2019%20Sep%2C%2014%3A40%29" target="_blank" class="booking-btn">🎟️ Book Now</a>
-          </div>
-        </div>
-
-        <!-- 14. Living Large -->
-        <div class="film-card">
-          <div class="film-poster">
-            <img src="https://image.tmdb.org/t/p/w500/vezwk5UoGlAz3DT4TBrXwqVRhg1.jpg" alt="Living Large" loading="lazy" />
-          </div>
-          <div class="film-info">
-            <div class="film-title">Living Large</div>
-            <div class="film-meta"><span>2024</span><span>80 min</span><span>Czech Republic, France, Slovakia</span></div>
-            <div class="film-director"><strong>Director:</strong> Kristina Dufkov</div>
-            <div class="film-synopsis">A 12-year-old boy faces bullying due to his weight and decides to adopt a healthier lifestyle, learning that true confidence comes from embracing who you are.</div>
-            <div class="film-program">
-              <span class="time">⏰ 15:00</span>
-              <span class="venue">📍 Pabwalo National Library</span>
-            </div>
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLSdOSqgGyZCzydXeK8iLIXmZCjmsiK5IW3q8iw83QDPsKUPYVQ/viewform?entry.1162404058=Living%20Large%20%28Sat%2019%20Sep%2C%2015%3A00%29" target="_blank" class="booking-btn">🎟️ Book Now</a>
-          </div>
-        </div>
-
-        <!-- 15. UK/British Film – Sat 19 Sep -->
-        <div class="film-card">
-          <div class="film-poster">
-            <div class="no-poster">🇬🇧<br />UK Film<br />(TBC)</div>
-          </div>
-          <div class="film-info">
-            <div class="film-title">UK/British Film</div>
-            <div class="film-meta"><span>2025</span><span>TBC</span><span>United Kingdom</span></div>
-            <div class="film-director"><strong>Director:</strong> TBC</div>
-            <div class="film-synopsis">A British film to be announced. Check back for updates.</div>
-            <div class="film-program">
-              <span class="time">⏰ 16:20</span>
-              <span class="venue">📍 Pabwalo National Library</span>
-            </div>
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLSdOSqgGyZCzydXeK8iLIXmZCjmsiK5IW3q8iw83QDPsKUPYVQ/viewform?entry.1162404058=UK%2FBritish%20Film%20%E2%80%93%20Sat%2019%20Sep%20%2816%3A20%29" target="_blank" class="booking-btn">🎟️ Book Now</a>
-          </div>
-        </div>
-
-        <!-- 16. Malawian Short Film – Sat 19 Sep -->
-        <div class="film-card">
-          <div class="film-poster">
-            <div class="no-poster">🎬<br />Malawian Short<br />(TBC)</div>
-          </div>
-          <div class="film-info">
-            <div class="film-title">Malawian Short Film <span class="malawian-badge">Malawi</span></div>
-            <div class="film-meta"><span>2025</span><span>TBC</span><span>Malawi</span></div>
-            <div class="film-director"><strong>Director:</strong> TBC</div>
-            <div class="film-synopsis">A Malawian short film to be announced. Check back for updates.</div>
-            <div class="film-program">
-              <span class="time">⏰ 17:50</span>
-              <span class="venue">📍 Pabwalo National Library</span>
-            </div>
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLSdOSqgGyZCzydXeK8iLIXmZCjmsiK5IW3q8iw83QDPsKUPYVQ/viewform?entry.1162404058=Malawian%20Short%20Film%20%E2%80%93%20Sat%2019%20Sep%20%2817%3A50%29" target="_blank" class="booking-btn">🎟️ Book Now</a>
-          </div>
-        </div>
-
-        <!-- 17. Nasty -->
-        <div class="film-card">
-          <div class="film-poster">
-            <img src="https://www.themoviedb.org/t/p/w1280/xWNJW9YwB5Sbrbbscra3EZS9VP4.jpg" alt="Nasty" loading="lazy" />
-          </div>
-          <div class="film-info">
-            <div class="film-title">Nasty</div>
-            <div class="film-meta"><span>2024</span><span>103 min</span><span>Romania</span></div>
-            <div class="film-director"><strong>Directors:</strong> Tudor Giurgiu, Cristian Pascariu, Tudor D. Popescu</div>
-            <div class="film-synopsis">A documentary exploring the life and career of Ilie Năstase, the legendary Romanian tennis player. It portrays his victories, controversies, and enduring influence as a tennis rebel icon.</div>
-            <div class="film-program">
-              <span class="time">⏰ 18:20</span>
-              <span class="venue">📍 Pabwalo National Library</span>
-            </div>
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLSdOSqgGyZCzydXeK8iLIXmZCjmsiK5IW3q8iw83QDPsKUPYVQ/viewform?entry.1162404058=Nasty%20%28Sat%2019%20Sep%2C%2018%3A20%29" target="_blank" class="booking-btn">🎟️ Book Now</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- FOOTER -->
-    <footer class="footer">
-      <p class="eu-logo">🇪🇺 <span>EU</span> Film Festival Malawi 2026</p>
-      <p style="margin-top: 0.3rem; font-size: 0.85rem;">Presented by the Delegation of the European Union to Malawi</p>
-      <p style="margin-top: 0.8rem; font-size: 0.8rem; opacity: 0.7;">All screenings are free and open to the public. Seating is limited.</p>
-    </footer>
-
+  <!-- TOOLBAR (Filters + Sort) -->
+  <div class="toolbar">
+    <div>
+      <label for="filterCountry">🌍 Country</label>
+      <select id="filterCountry">
+        <option value="all">All</option>
+      </select>
+    </div>
+    <div>
+      <label for="filterDay">📅 Day</label>
+      <select id="filterDay">
+        <option value="all">All</option>
+      </select>
+    </div>
+    <div>
+      <label for="sortBy">🔀 Sort</label>
+      <select id="sortBy">
+        <option value="title">Title A–Z</option>
+        <option value="year">Year (Newest)</option>
+      </select>
+    </div>
   </div>
+
+  <!-- FILM GRID -->
+  <div id="filmGrid"></div>
+
+  <!-- MODAL CONTAINER -->
+  <div id="modalContainer" class="modal-container">
+    <div id="modalBody" class="modal-body">
+      <button id="closeModalBtn" class="modal-close">&times;</button>
+    </div>
+  </div>
+
+</div>
+
+<!-- SCRIPTS -->
+<script type="module" src="./js/app.js"></script>
 </body>
 </html>
