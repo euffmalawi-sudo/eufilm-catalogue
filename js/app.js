@@ -4,8 +4,8 @@ import { applyFilters } from './filters.js';
 import { applySort } from './sorting.js';
 
 // ----- CONFIGURE YOUR GOOGLE FORM IDs HERE -----
-const FORM_ID = 'YOUR_FORM_ID';        // <-- paste your form ID
-const ENTRY_ID = 'YOUR_ENTRY_ID';      // <-- paste your entry ID
+const FORM_ID = '1FAIpQLSdOSqgGyZCzydXeK8iLIXmZCjmsiK5IW3q8iw83QDPsKUPYVQ';        // <-- paste your form ID
+const ENTRY_ID = '1162404058';      // <-- paste your entry ID
 // ------------------------------------------------
 
 // Pass booking IDs to both modules
