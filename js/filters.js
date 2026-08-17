@@ -1,61 +1,98 @@
 import { renderCatalogue } from './catalogue.js';
 
+let currentFilms = [];
+
 export function setupFilters(films) {
-  const countryFilter = document.getElementById('filterCountry');
-  const dayFilter = document.getElementById('filterDay');
-
-  // --- Populate Country dropdown ---
-  const countries = new Set();
-  films.forEach(f => {
-    f.country.split(',').forEach(c => countries.add(c.trim()));
-  });
-  // Sort alphabetically
-  const sortedCountries = Array.from(countries).sort();
-  sortedCountries.forEach(c => {
-    const opt = document.createElement('option');
-    opt.value = c;
-    opt.textContent = c;
-    countryFilter.appendChild(opt);
-  });
-
-  // --- Populate Day dropdown ---
-  const days = new Set();
-  films.forEach(f => {
-    if (f.program && f.program.day) days.add(f.program.day);
-  });
-  // Sort days chronologically (optional, but keeps it tidy)
-  const sortedDays = Array.from(days).sort();
-  sortedDays.forEach(d => {
+  currentFilms = films;
+  const searchInput = document.getElementById('searchInput');
+  const filterDate = document.getElementById('filterDate');
+  const filterVenue = document.getElementById('filterVenue');
+  const filterGenre = document.getElementById('filterGenre');
+  
+  // Populate Date dropdown
+  const dates = new Set();
+  films.forEach(f => { if (f.program?.day) dates.add(f.program.day); });
+  dates.forEach(d => {
     const opt = document.createElement('option');
     opt.value = d;
     opt.textContent = d;
-    dayFilter.appendChild(opt);
+    filterDate.appendChild(opt);
   });
 
-  // --- Apply Filters ---
-  function applyFilters() {
-    const countryVal = countryFilter.value;
-    const dayVal = dayFilter.value;
+  // Populate Venue dropdown
+  const venues = new Set();
+  films.forEach(f => { if (f.program?.venue) venues.add(f.program.venue); });
+  venues.forEach(v => {
+    const opt = document.createElement('option');
+    opt.value = v;
+    opt.textContent = v;
+    filterVenue.appendChild(opt);
+  });
 
-    let filtered = films.filter(f => {
-      let matchCountry = true;
-      if (countryVal !== 'all') {
-        matchCountry = f.country.split(',').map(c => c.trim()).includes(countryVal);
-      }
+  // Populate Genre dropdown
+  const genres = new Set();
+  films.forEach(f => { if (f.genres) f.genres.forEach(g => genres.add(g)); });
+  genres.forEach(g => {
+    const opt = document.createElement('option');
+    opt.value = g;
+    opt.textContent = g;
+    filterGenre.appendChild(opt);
+  });
 
-      let matchDay = true;
-      if (dayVal !== 'all') {
-        matchDay = f.program && f.program.day === dayVal;
-      }
+  // Event listeners
+  searchInput.addEventListener('input', applyFilters);
+  filterDate.addEventListener('change', applyFilters);
+  filterVenue.addEventListener('change', applyFilters);
+  filterGenre.addEventListener('change', applyFilters);
 
-      return matchCountry && matchDay;
+  // Toggle buttons (Origin & Type)
+  document.querySelectorAll('#originToggle button').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('#originToggle button').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      applyFilters();
     });
+  });
+  document.querySelectorAll('#typeToggle button').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('#typeToggle button').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      applyFilters();
+    });
+  });
+}
 
-    // Save the filtered list globally so sorting can use it
-    window.__currentFiltered = filtered;
-    renderCatalogue(filtered);
-  }
+export function applyFilters() {
+  const searchVal = document.getElementById('searchInput').value.toLowerCase().trim();
+  const dateVal = document.getElementById('filterDate').value;
+  const venueVal = document.getElementById('filterVenue').value;
+  const genreVal = document.getElementById('filterGenre').value;
+  
+  const originActive = document.querySelector('#originToggle button.active');
+  const originVal = originActive ? originActive.dataset.value : 'all';
+  
+  const typeActive = document.querySelector('#typeToggle button.active');
+  const typeVal = typeActive ? typeActive.dataset.value : 'all';
 
-  countryFilter.addEventListener('change', applyFilters);
-  dayFilter.addEventListener('change', applyFilters);
+  const filtered = currentFilms.filter(f => {
+    // Title search
+    if (searchVal && !f.title.toLowerCase().includes(searchVal)) return false;
+    // Date
+    if (dateVal !== 'all' && f.program?.day !== dateVal) return false;
+    // Venue
+    if (venueVal !== 'all' && f.program?.venue !== venueVal) return false;
+    // Genre
+    if (genreVal !== 'all' && (!f.genres || !f.genres.includes(genreVal))) return false;
+    // Origin
+    if (originVal === 'eu' && f.isMalawian === true) return false;
+    if (originVal === 'mw' && f.isMalawian !== true) return false;
+    // Type (Feature/Short)
+    if (typeVal !== 'all' && f.program?.slot) {
+      if (!f.program.slot.includes(typeVal)) return false;
+    }
+    return true;
+  });
+
+  window.__currentFiltered = filtered;
+  renderCatalogue(filtered);
 }
