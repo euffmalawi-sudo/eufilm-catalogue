@@ -26,12 +26,18 @@ async function loadFilms() {
     // 4. Setup Carousel
     setupCarousel(films);
 
-    // 5. Quick Book button logic
+    // 5. Quick Book button logic (Direct to Google Form)
     document.getElementById('quickBookBtn').addEventListener('click', () => {
       const title = document.getElementById('quickFilmSelect').value;
-      if (!title) { alert('Please select a film first.'); return; }
-      const film = films.find(f => f.title === title);
-      if (film) openModal(film);
+      if (!title) { 
+        alert('Please select a film first.'); 
+        return; 
+      }
+      // Google Form pre-fill URL
+      const GOOGLE_FORM_ID = '1FAIpQLSdOSqgGyZCzydXeK8iLIXmZCjmsiK5IW3q8iw83QDPsKUPYVQ';
+      const ENTRY_ID = '1162404058';
+      const url = `https://docs.google.com/forms/d/e/${GOOGLE_FORM_ID}/viewform?usp=pp_url&entry.${ENTRY_ID}=${encodeURIComponent(title)}`;
+      window.open(url, '_blank');
     });
 
     // 6. Nav Venue filter
