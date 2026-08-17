@@ -54,10 +54,26 @@ async function loadFilms() {
 
 function populateQuickSelects(films) {
   const filmSelect = document.getElementById('quickFilmSelect');
-  films.sort((a,b) => a.title.localeCompare(b.title)).forEach(f => {
+  // Sort by date/time (Saturday 12th first, etc.)
+  const dayOrder = ['Saturday 12 September', 'Thursday 17 September', 'Friday 18 September', 'Saturday 19 September'];
+  films.sort((a, b) => {
+    const dayA = a.program?.day || '';
+    const dayB = b.program?.day || '';
+    const idxA = dayOrder.indexOf(dayA);
+    const idxB = dayOrder.indexOf(dayB);
+    if (idxA !== idxB) return (idxA === -1 ? 999 : idxA) - (idxB === -1 ? 999 : idxB);
+    const timeA = a.program?.time || '00:00';
+    const timeB = b.program?.time || '00:00';
+    return timeA.localeCompare(timeB);
+  });
+
+  films.forEach(f => {
     const opt = document.createElement('option');
     opt.value = f.title;
-    opt.textContent = f.title;
+    // Display format: "Title (Day, Time)"
+    const day = f.program?.day || 'TBD';
+    const time = f.program?.time || 'TBD';
+    opt.textContent = `${f.title} (${day}, ${time})`;
     filmSelect.appendChild(opt);
   });
 }
