@@ -156,7 +156,7 @@
     "isMalawian": false,
     "program": {
       "day": "Thursday 17 September",
-      "time": "19:00",
+      "time": "19:24",
       "venue": "EU Residence",
       "slot": "European Feature"
     },
@@ -185,9 +185,9 @@
     "youtubeId": "",
     "isMalawian": false,
     "program": {
-      "day": "Thursday 17 September",
-      "time": "21:16",
-      "venue": "EU Residence",
+      "day": "Saturday 19 September",
+      "time": "13:08",
+      "venue": "Pabwalo National Library",
       "slot": "European Short"
     },
     "awards": []
@@ -280,7 +280,7 @@
     "isMalawian": false,
     "program": {
       "day": "Saturday 19 September",
-      "time": "14:58",
+      "time": "15:30",
       "venue": "Pabwalo National Library",
       "slot": "European Feature"
     },
@@ -314,7 +314,7 @@
     "isMalawian": false,
     "program": {
       "day": "Saturday 19 September",
-      "time": "14:40",
+      "time": "14:59",
       "venue": "Pabwalo National Library",
       "slot": "European Short"
     },
@@ -377,7 +377,7 @@
     "isMalawian": false,
     "program": {
       "day": "Saturday 19 September",
-      "time": "17:00",
+      "time": "17:27",
       "venue": "Pabwalo National Library",
       "slot": "European Feature"
     },
@@ -407,7 +407,7 @@
     "isMalawian": false,
     "program": {
       "day": "Saturday 19 September",
-      "time": "18:55",
+      "time": "19:12",
       "venue": "Pabwalo National Library",
       "slot": "European Feature"
     },
@@ -467,10 +467,10 @@
     "isMalawian": false,
     "program": {
       "day": "Thursday 17 September",
-      "time": "18:53",
+      "time": "19:00",
       "venue": "EU Residence",
       "slot": "European Short"
-    },
+},
     "awards": []
   },
   {
@@ -497,7 +497,7 @@
     "isMalawian": true,
     "program": {
       "day": "Saturday 19 September",
-      "time": "21:24",
+      "time": "21:10",
       "venue": "Pabwalo National Library",
       "slot": "Malawian Short"
     },
@@ -527,7 +527,7 @@
     "isMalawian": true,
     "program": {
       "day": "Thursday 17 September",
-      "time": "23:12",
+      "time": "21:35",
       "venue": "EU Residence",
       "slot": "Malawian Feature"
     },
