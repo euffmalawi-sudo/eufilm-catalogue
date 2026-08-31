@@ -151,11 +151,11 @@
     "contentRisk": 0,
     "delegation": "French",
     "imdbId": "tt33030107",
-    "eventSuggestion": "Thursday 17 Sep",
+    "eventSuggestion": "Friday 18 Sep",
     "youtubeId": "50P9YPu-TH0",
     "isMalawian": false,
     "program": {
-      "day": "Thursday 17 September",
+      "day": "Friday 18 September",
       "time": "19:24",
       "venue": "EU Residence",
       "slot": "European Feature"
@@ -181,7 +181,7 @@
     "contentRisk": 0,
     "delegation": "",
     "imdbId": "tt10653008",
-    "eventSuggestion": "Thursday 17 Sep",
+    "eventSuggestion": "Saturday 19 Sep",
     "youtubeId": "",
     "isMalawian": false,
     "program": {
@@ -211,11 +211,11 @@
     "contentRisk": 0,
     "delegation": "Spanish",
     "imdbId": "tt6793580",
-    "eventSuggestion": "Friday 18 Sep",
+    "eventSuggestion": "Sunday 20 Sep",
     "youtubeId": "POxh1o6EufI",
     "isMalawian": false,
     "program": {
-      "day": "Friday 18 September",
+      "day": "Sunday 20 September",
       "time": "15:00",
       "venue": "Lilongwe Girls School / Good Shepherd School (TBC)",
       "slot": "European Feature"
@@ -413,7 +413,7 @@
     },
     "awards": []
   },
-    {
+  {
     "id": 14,
     "title": "Monsieur Aznavour",
     "country": "France",
@@ -443,7 +443,7 @@
     },
     "awards": []
   },
-      {
+  {
     "id": 15,
     "title": "Pearl Diver",
     "country": "Norway",
@@ -462,15 +462,15 @@
     "contentRisk": 0,
     "delegation": "",
     "imdbId": "tt15211028",
-    "eventSuggestion": "Saturday 12 Sep",
+    "eventSuggestion": "Friday 18 Sep",
     "youtubeId": "R_xzWr0z29Y",
     "isMalawian": false,
     "program": {
-      "day": "Thursday 17 September",
+      "day": "Friday 18 September",
       "time": "19:00",
       "venue": "EU Residence",
       "slot": "European Short"
-},
+    },
     "awards": []
   },
   {
@@ -483,7 +483,7 @@
     "genres": ["Short"],
     "languages": "TBC",
     "poster": "amina.jpeg",
-    "synopsis": "When Amina arrives at school visibly distressed, her best friend Angella gently encourages her to reveal the secret she has been carrying. Through painful flashbacks, Amina recounts how poverty and her mother’s failing marriage have led to her repeated sexual abuse by her stepfather. When a sudden revelation threatens to shatter what remains of her family, Amina is forced to confront the devastating consequences of a secret that can no longer be hidden.",
+    "synopsis": "When Amina arrives at school visibly distressed, her best friend Angella gently encourages her to reveal the secret she has been carrying. Through painful flashbacks, Amina recounts how poverty and her mother's failing marriage have led to her repeated sexual abuse by her stepfather. When a sudden revelation threatens to shatter what remains of her family, Amina is forced to confront the devastating consequences of a secret that can no longer be hidden.",
     "imdb": 0,
     "rt": 0,
     "meta": 0,
@@ -492,7 +492,7 @@
     "contentRisk": 0,
     "delegation": "",
     "imdbId": "",
-    "eventSuggestion": "Saturday 12 Sep",
+    "eventSuggestion": "Saturday 19 Sep",
     "youtubeId": "",
     "isMalawian": true,
     "program": {
@@ -522,11 +522,11 @@
     "contentRisk": 0,
     "delegation": "",
     "imdbId": "tt18212612",
-    "eventSuggestion": "Thursday 17 Sep",
+    "eventSuggestion": "Friday 18 Sep",
     "youtubeId": "0LrjHhsxh98",
     "isMalawian": true,
     "program": {
-      "day": "Thursday 17 September",
+      "day": "Friday 18 September",
       "time": "21:35",
       "venue": "EU Residence",
       "slot": "Malawian Feature"
@@ -552,11 +552,11 @@
     "contentRisk": 0,
     "delegation": "",
     "imdbId": "",
-    "eventSuggestion": "Friday 18 Sep",
+    "eventSuggestion": "Sunday 20 Sep",
     "youtubeId": "XiYZNZMkGJ4",
     "isMalawian": true,
     "program": {
-      "day": "Friday 18 September",
+      "day": "Sunday 20 September",
       "time": "17:30",
       "venue": "Lilongwe Girls School / Good Shepherd School (TBC)",
       "slot": "Malawian Short"
@@ -582,13 +582,13 @@
     "contentRisk": 0,
     "delegation": "",
     "imdbId": "",
-    "eventSuggestion": "Saturday 19 Sep",
+    "eventSuggestion": "Saturday 12 Sep",
     "youtubeId": "",
     "isMalawian": true,
     "program": {
       "day": "Saturday 12 September",
       "time": "18:38",
-      "venue": "Jacaranda Cultural Centre",
+      "venue": "Jacaranda Cultural Center",
       "slot": "Malawian Short"
     },
     "awards": []
