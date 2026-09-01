@@ -54,9 +54,14 @@ async function loadFilms() {
 
 function populateQuickSelects(films) {
   const filmSelect = document.getElementById('quickFilmSelect');
+  if (!filmSelect) return;
+
+  // --- FILTER OUT EU RESIDENCE FILMS (Friday 18 September) ---
+  const filteredFilms = films.filter(f => f.program?.day !== 'Friday 18 September');
+
   // Sort by date/time (Saturday 12th first, etc.)
-  const dayOrder = ['Saturday 12 September', 'Thursday 17 September', 'Friday 18 September', 'Saturday 19 September'];
-  films.sort((a, b) => {
+  const dayOrder = ['Saturday 12 September', 'Thursday 17 September', 'Friday 18 September', 'Saturday 19 September', 'Sunday 20 September'];
+  filteredFilms.sort((a, b) => {
     const dayA = a.program?.day || '';
     const dayB = b.program?.day || '';
     const idxA = dayOrder.indexOf(dayA);
@@ -66,6 +71,24 @@ function populateQuickSelects(films) {
     const timeB = b.program?.time || '00:00';
     return timeA.localeCompare(timeB);
   });
+
+  // Clear existing options and add default
+  filmSelect.innerHTML = '';
+  const defaultOption = document.createElement('option');
+  defaultOption.value = '';
+  defaultOption.textContent = 'Select a Film to Book...';
+  filmSelect.appendChild(defaultOption);
+
+  // Add filtered films to dropdown
+  filteredFilms.forEach(f => {
+    const opt = document.createElement('option');
+    opt.value = f.title;
+    const day = f.program?.day || 'TBD';
+    const time = f.program?.time || 'TBD';
+    opt.textContent = `${f.title} (${day}, ${time})`;
+    filmSelect.appendChild(opt);
+  });
+}
 
   films.forEach(f => {
     const opt = document.createElement('option');
