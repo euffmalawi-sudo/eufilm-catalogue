@@ -35,8 +35,21 @@ async function loadFilms() {
       }
       // Google Form pre-fill URL
       const GOOGLE_FORM_ID = '1FAIpQLSdOSqgGyZCzydXeK8iLIXmZCjmsiK5IW3q8iw83QDPsKUPYVQ';
-      const ENTRY_ID = '1162404058';
-      const url = `https://docs.google.com/forms/d/e/${GOOGLE_FORM_ID}/viewform?usp=pp_url&entry.${ENTRY_ID}=${encodeURIComponent(title)}`;
+      const DATE_ENTRY_ID = '1185226796';
+      const FILM_ENTRY_ID = '1162404058';
+      
+      // Find the selected film to get its data
+      const film = allFilms.find(f => f.title === title);
+      if (!film) {
+        alert('Film not found. Please try again.');
+        return;
+      }
+      
+      // Build the pre-filled URL with both fields
+      const dateValue = `${film.program?.day || 'TBD'} - ${film.program?.venue || 'TBD'}`;
+      const filmValue = `${film.title} – ${film.program?.time || 'TBD'}`;
+      
+      const url = `https://docs.google.com/forms/d/e/${GOOGLE_FORM_ID}/viewform?usp=pp_url&entry.${DATE_ENTRY_ID}=${encodeURIComponent(dateValue)}&entry.${FILM_ENTRY_ID}=${encodeURIComponent(filmValue)}`;
       window.open(url, '_blank');
     });
 
@@ -47,8 +60,8 @@ async function loadFilms() {
     });
 
   } catch (error) {
-    console.error(error);
-    document.getElementById('filmGrid').innerHTML = '<p style="text-align:center;padding:40px;">⚠️ Failed to load films.</p>';
+    console.error('Failed to load films:', error);
+    document.getElementById('filmGrid').innerHTML = '<p style="text-align:center;padding:40px;">⚠️ Failed to load films. Please refresh the page.</p>';
   }
 }
 
@@ -59,8 +72,8 @@ function populateQuickSelects(films) {
   // --- FILTER OUT EU RESIDENCE FILMS (Friday 18 September) ---
   const filteredFilms = films.filter(f => f.program?.day !== 'Friday 18 September');
 
-  // Sort by date/time (Saturday 12th first, etc.)
-  const dayOrder = ['Saturday 12 September', 'Thursday 17 September', 'Friday 18 September', 'Saturday 19 September', 'Sunday 20 September'];
+  // Sort by date/time
+  const dayOrder = ['Saturday 12 September', 'Saturday 19 September', 'Sunday 20 September'];
   filteredFilms.sort((a, b) => {
     const dayA = a.program?.day || '';
     const dayB = b.program?.day || '';
@@ -90,20 +103,11 @@ function populateQuickSelects(films) {
   });
 }
 
-  films.forEach(f => {
-    const opt = document.createElement('option');
-    opt.value = f.title;
-    // Display format: "Title (Day, Time)"
-    const day = f.program?.day || 'TBD';
-    const time = f.program?.time || 'TBD';
-    opt.textContent = `${f.title} (${day}, ${time})`;
-    filmSelect.appendChild(opt);
-  });
-}
-
 function setupCarousel(films) {
   const track = document.getElementById('carouselTrack');
-  const posters = films.filter(f => f.poster && f.poster.trim() !== '').slice(0, 8); // limit to 8
+  if (!track) return;
+  
+  const posters = films.filter(f => f.poster && f.poster.trim() !== '').slice(0, 8);
 
   let slidesHtml = posters.map(f => `
     <div class="carousel-slide">
@@ -136,14 +140,22 @@ function setupCarousel(films) {
     track.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
   };
 
-  document.getElementById('nextBtn').addEventListener('click', () => {
-    if (currentIndex < maxIndex) { currentIndex++; updateCarousel(); }
-    else { currentIndex = 0; updateCarousel(); }
-  });
-  document.getElementById('prevBtn').addEventListener('click', () => {
-    if (currentIndex > 0) { currentIndex--; updateCarousel(); }
-    else { currentIndex = maxIndex; updateCarousel(); }
-  });
+  const prevBtn = document.getElementById('prevBtn');
+  const nextBtn = document.getElementById('nextBtn');
+  
+  if (prevBtn) {
+    prevBtn.addEventListener('click', () => {
+      if (currentIndex > 0) { currentIndex--; updateCarousel(); }
+      else { currentIndex = maxIndex; updateCarousel(); }
+    });
+  }
+  
+  if (nextBtn) {
+    nextBtn.addEventListener('click', () => {
+      if (currentIndex < maxIndex) { currentIndex++; updateCarousel(); }
+      else { currentIndex = 0; updateCarousel(); }
+    });
+  }
 
   window.addEventListener('resize', () => {
     const newVisible = window.innerWidth > 900 ? 4 : (window.innerWidth > 600 ? 2 : 1);
@@ -163,4 +175,5 @@ function setupCarousel(films) {
   setTimeout(updateCarousel, 100);
 }
 
+// Load films when the page loads
 loadFilms();
