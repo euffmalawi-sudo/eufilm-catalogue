@@ -157,7 +157,7 @@
       font-weight: 700;
       font-size: 1.1rem;
       color: #F5C518;
-      min-width: 100px;
+      min-width: 130px;
     }
     .timeline-item .event-detail {
       flex: 1;
@@ -184,6 +184,8 @@
     .timeline-item.performance .time { color: #D32F2F; }
     .timeline-item.film { border-left-color: #1A3B7D; }
     .timeline-item.film .time { color: #1A3B7D; }
+    .timeline-item.intermission { border-left-color: #555; background: #111; }
+    .timeline-item.intermission .time { color: #777; }
 
     /* ---------- FILM GRID ---------- */
     .films-section {
@@ -379,7 +381,7 @@
       .nav-links { justify-content: space-around; flex-wrap: wrap; gap: 10px; }
       .event-header h1 { font-size: 1.8rem; }
       .timeline-item { flex-wrap: wrap; gap: 8px; }
-      .timeline-item .time { min-width: 80px; font-size: 0.95rem; }
+      .timeline-item .time { min-width: 100px; font-size: 0.9rem; }
       #filmGrid { grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 16px; }
       .film-card img { height: 240px; }
       .modal-body { padding: 20px; margin: 10px; }
@@ -420,7 +422,7 @@
 
       <!-- Performance -->
       <div class="timeline-item performance">
-        <div class="time">19:00 – 19:15</div>
+        <div class="time">18:00 – 18:15</div>
         <div class="event-detail">
           <div class="title">🎵 Live Performance</div>
           <div class="sub">Opening act to kick off the evening</div>
@@ -428,9 +430,19 @@
         <div class="duration">15 min</div>
       </div>
 
-      <!-- Banjo Boys -->
+      <!-- Intermission -->
+      <div class="timeline-item intermission">
+        <div class="time">18:15 – 18:20</div>
+        <div class="event-detail">
+          <div class="title">☕ Intermission</div>
+          <div class="sub">5-minute break</div>
+        </div>
+        <div class="duration">5 min</div>
+      </div>
+
+      <!-- Banjo Boys (FIRST FILM) -->
       <div class="timeline-item film">
-        <div class="time">19:30 – 20:45</div>
+        <div class="time">18:20 – 19:35</div>
         <div class="event-detail">
           <div class="title">🎬 Banjo Boys</div>
           <div class="sub">Malawi / UK • Documentary, Music • 75 min</div>
@@ -439,43 +451,43 @@
       </div>
 
       <!-- Intermission -->
-      <div class="timeline-item" style="border-left-color:#666; background:#111;">
-        <div class="time" style="color:#666;">20:45 – 20:55</div>
+      <div class="timeline-item intermission">
+        <div class="time">19:35 – 19:45</div>
         <div class="event-detail">
-          <div class="title" style="color:#888;">☕ Intermission</div>
+          <div class="title">☕ Intermission</div>
           <div class="sub">10-minute break</div>
         </div>
         <div class="duration">10 min</div>
       </div>
 
-      <!-- The Mohican -->
+      <!-- Pearl Diver (SECOND FILM) -->
       <div class="timeline-item film">
-        <div class="time">20:55 – 22:51</div>
-        <div class="event-detail">
-          <div class="title">🎬 The Mohican</div>
-          <div class="sub">France • Crime, Drama, Thriller • 116 min</div>
-        </div>
-        <div class="duration">116 min</div>
-      </div>
-
-      <!-- Intermission -->
-      <div class="timeline-item" style="border-left-color:#666; background:#111;">
-        <div class="time" style="color:#666;">22:51 – 23:01</div>
-        <div class="event-detail">
-          <div class="title" style="color:#888;">☕ Intermission</div>
-          <div class="sub">10-minute break</div>
-        </div>
-        <div class="duration">10 min</div>
-      </div>
-
-      <!-- Pearl Diver -->
-      <div class="timeline-item film">
-        <div class="time">23:01 – 23:10</div>
+        <div class="time">19:45 – 19:54</div>
         <div class="event-detail">
           <div class="title">🎬 Pearl Diver</div>
           <div class="sub">Norway • Animation, Short, Drama • 9 min</div>
         </div>
         <div class="duration">9 min</div>
+      </div>
+
+      <!-- Intermission -->
+      <div class="timeline-item intermission">
+        <div class="time">19:54 – 20:04</div>
+        <div class="event-detail">
+          <div class="title">☕ Intermission</div>
+          <div class="sub">10-minute break</div>
+        </div>
+        <div class="duration">10 min</div>
+      </div>
+
+      <!-- The Mohican (THIRD FILM) -->
+      <div class="timeline-item film">
+        <div class="time">20:04 – 22:00</div>
+        <div class="event-detail">
+          <div class="title">🎬 The Mohican</div>
+          <div class="sub">France • Crime, Drama, Thriller • 116 min</div>
+        </div>
+        <div class="duration">116 min</div>
       </div>
 
     </div>
@@ -519,34 +531,9 @@
       "isMalawian": true,
       "program": {
         "day": "Friday 18 September",
-        "time": "19:30",
+        "time": "18:20",
         "venue": "EU Residence",
         "slot": "Malawian Feature"
-      },
-      "awards": []
-    },
-    {
-      "id": 5,
-      "title": "The Mohican",
-      "country": "France",
-      "year": 2025,
-      "runtime": 116,
-      "director": "Frédéric Farrucci",
-      "genres": ["Crime", "Drama", "Thriller"],
-      "languages": "Corsican, French",
-      "poster": "https://image.tmdb.org/t/p/w500/oBs48d2NY7gcjDOCwZfAn8CvW4h.jpg",
-      "synopsis": "Joseph is one of the last coastal shepherds in Corsica. His land is coveted by the underworld for a real estate project but he chooses not to give in. When he leaves the man who came to intimidate him, the godfather's own son, between life and death, he becomes the prey of a merciless hunt.",
-      "imdb": 6.537,
-      "rt": 0,
-      "meta": 0,
-      "delegation": "French",
-      "youtubeId": "50P9YPu-TH0",
-      "isMalawian": false,
-      "program": {
-        "day": "Friday 18 September",
-        "time": "20:55",
-        "venue": "EU Residence",
-        "slot": "European Feature"
       },
       "awards": []
     },
@@ -569,9 +556,34 @@
       "isMalawian": false,
       "program": {
         "day": "Friday 18 September",
-        "time": "23:01",
+        "time": "19:45",
         "venue": "EU Residence",
         "slot": "European Short"
+      },
+      "awards": []
+    },
+    {
+      "id": 5,
+      "title": "The Mohican",
+      "country": "France",
+      "year": 2025,
+      "runtime": 116,
+      "director": "Frédéric Farrucci",
+      "genres": ["Crime", "Drama", "Thriller"],
+      "languages": "Corsican, French",
+      "poster": "https://image.tmdb.org/t/p/w500/oBs48d2NY7gcjDOCwZfAn8CvW4h.jpg",
+      "synopsis": "Joseph is one of the last coastal shepherds in Corsica. His land is coveted by the underworld for a real estate project but he chooses not to give in. When he leaves the man who came to intimidate him, the godfather's own son, between life and death, he becomes the prey of a merciless hunt.",
+      "imdb": 6.537,
+      "rt": 0,
+      "meta": 0,
+      "delegation": "French",
+      "youtubeId": "50P9YPu-TH0",
+      "isMalawian": false,
+      "program": {
+        "day": "Friday 18 September",
+        "time": "20:04",
+        "venue": "EU Residence",
+        "slot": "European Feature"
       },
       "awards": []
     }
@@ -636,9 +648,11 @@
 
     const GOOGLE_FORM_ID = '1FAIpQLSdOSqgGyZCzydXeK8iLIXmZCjmsiK5IW3q8iw83QDPsKUPYVQ';
     const DATE_ENTRY_ID = '1185226796';
+    const FILM_ENTRY_ID = '1162404058';
 
-    // Pre-fill ONLY the date – the form will auto-navigate to the correct section
-    const bookingUrl = `https://docs.google.com/forms/d/e/${GOOGLE_FORM_ID}/viewform?usp=pp_url&entry.${DATE_ENTRY_ID}=${encodeURIComponent(film.program.day)}`;
+    const dateValue = `${film.program?.day || 'TBD'} - ${film.program?.venue || 'TBD'}`;
+    const filmValue = `${film.title} – ${film.program?.time || 'TBD'}`;
+    const bookingUrl = `https://docs.google.com/forms/d/e/${GOOGLE_FORM_ID}/viewform?usp=pp_url&entry.${DATE_ENTRY_ID}=${encodeURIComponent(dateValue)}&entry.${FILM_ENTRY_ID}=${encodeURIComponent(filmValue)}`;
 
     const trailerHtml = film.youtubeId ? `
       <div class="video-wrapper">
