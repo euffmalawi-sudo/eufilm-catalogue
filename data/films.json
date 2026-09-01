@@ -156,7 +156,7 @@
     "isMalawian": false,
     "program": {
       "day": "Friday 18 September",
-      "time": "19:24",
+      "time": "20:55",
       "venue": "EU Residence",
       "slot": "European Feature"
     },
@@ -467,7 +467,7 @@
     "isMalawian": false,
     "program": {
       "day": "Friday 18 September",
-      "time": "19:00",
+      "time": "23:01",
       "venue": "EU Residence",
       "slot": "European Short"
     },
@@ -508,7 +508,7 @@
     "title": "Banjo Boys",
     "country": "Malawi, United Kingdom",
     "year": 2025,
-    "runtime": 25,
+    "runtime": 75,
     "director": "Johan Nayar",
     "genres": ["Documentary", "Music"],
     "languages": "English, Chichewa",
@@ -527,7 +527,7 @@
     "isMalawian": true,
     "program": {
       "day": "Friday 18 September",
-      "time": "21:35",
+      "time": "19:30",
       "venue": "EU Residence",
       "slot": "Malawian Feature"
     },
