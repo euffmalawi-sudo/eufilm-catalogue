@@ -4,19 +4,38 @@ export function openModal(film) {
   if (!container || !body) return;
 
   const GOOGLE_FORM_ID = '1FAIpQLSdOSqgGyZCzydXeK8iLIXmZCjmsiK5IW3q8iw83QDPsKUPYVQ';
-  const ENTRY_ID = '1162404058';
-  const bookingUrl = `https://docs.google.com/forms/d/e/${GOOGLE_FORM_ID}/viewform?usp=pp_url&entry.${ENTRY_ID}=${encodeURIComponent(film.title)}`;
+  const DATE_ENTRY_ID = '1185226796';
+  const FILM_ENTRY_ID = '1162404058';
 
+  // --- FORMAT THE DATE + VENUE VALUE ---
+  // Example: "Sat 12 September - Jacaranda Cultural Centre"
+  const dateValue = film.program?.day 
+    ? film.program.day.replace('Saturday', 'Sat').replace('Sunday', 'Sun').replace('Friday', 'Fri') + ' - ' + film.program.venue?.replace(' Cultural Centre', '').replace(' National Library', ' Library').replace(' / Good Shepherd School (TBC)', '')
+    : 'TBD';
+  
+  // Simple version: use the full day name as-is
+  // const dateValue = `${film.program?.day || 'TBD'} - ${film.program?.venue || 'TBD'}`;
+
+  // --- FORMAT THE FILM + TIME VALUE ---
+  // Example: "Banel & Adama – 13:00"
+  const filmValue = `${film.title} – ${film.program?.time || 'TBD'}`;
+
+  // Build the pre-filled URL with BOTH fields
+  const bookingUrl = `https://docs.google.com/forms/d/e/${GOOGLE_FORM_ID}/viewform?usp=pp_url&entry.${DATE_ENTRY_ID}=${encodeURIComponent(dateValue)}&entry.${FILM_ENTRY_ID}=${encodeURIComponent(filmValue)}`;
+
+  // --- EMBEDDED TRAILER (YouTube iframe) ---
   const trailerHtml = film.youtubeId ? `
     <div class="video-wrapper">
       <iframe src="https://www.youtube.com/embed/${film.youtubeId}" title="${film.title} trailer" frameborder="0" allowfullscreen></iframe>
     </div>
   ` : '';
 
+  // --- AWARDS ---
   const awardsHtml = film.awards && film.awards.length > 0 
     ? `<p><strong>🏆 Awards</strong></p><ul class="awards-list">${film.awards.map(a => `<li>${a}</li>`).join('')}</ul>` 
     : '';
 
+  // --- PROGRAM DETAILS ---
   const program = film.program || {};
   const programHtml = `
     <div class="program-box">
