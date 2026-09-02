@@ -24,10 +24,10 @@ async function loadFilms() {
     setupFilters(films);
     setupSorting(films);
 
-    // 3. Populate Quick Book dropdowns (Lilongwe films are filtered out)
+    // 3. Populate Quick Book dropdowns
     populateQuickSelects(films);
 
-    // 4. Quick Book button (conditional – only if the element exists)
+    // 4. Quick Book button
     const quickBookBtn = document.getElementById('quickBookBtn');
     if (quickBookBtn) {
       quickBookBtn.addEventListener('click', () => {
@@ -49,11 +49,9 @@ async function loadFilms() {
         const url = `https://docs.google.com/forms/d/e/${GOOGLE_FORM_ID}/viewform?usp=pp_url&entry.${DATE_ENTRY_ID}=${encodeURIComponent(dateValue)}&entry.${FILM_ENTRY_ID}=${encodeURIComponent(filmValue)}`;
         window.open(url, '_blank');
       });
-    } else {
-      console.warn('Quick Book button not found – skipping event listener.');
     }
 
-    // 5. Nav Venue filter (conditional – only if the element exists)
+    // 5. Nav Venue filter (conditional)
     const navVenueSelect = document.getElementById('navVenueSelect');
     if (navVenueSelect) {
       navVenueSelect.addEventListener('change', (e) => {
@@ -78,7 +76,6 @@ function populateQuickSelects(films) {
     f.program?.day !== 'Sunday 20 September'
   );
 
-  // Sort by date/time
   const dayOrder = ['Saturday 12 September', 'Saturday 19 September'];
   filteredFilms.sort((a, b) => {
     const dayA = a.program?.day || '';
@@ -107,5 +104,4 @@ function populateQuickSelects(films) {
   });
 }
 
-// Load films
 loadFilms();
