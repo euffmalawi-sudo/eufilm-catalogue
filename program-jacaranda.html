@@ -1,0 +1,1007 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Jacaranda Film Day – EU Film Festival Malawi 2026</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz@14..32&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    /* ---------- RESET & BASE ---------- */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      background: #0B0B0B;
+      color: #E8E8E8;
+      font-family: 'Inter', sans-serif;
+      padding: 20px;
+      min-height: 100vh;
+    }
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    a { text-decoration: none; color: inherit; }
+    button { cursor: pointer; font-family: 'Inter', sans-serif; }
+
+    /* ---------- SCROLLBAR ---------- */
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-track { background: #181818; }
+    ::-webkit-scrollbar-thumb { background: #333; border-radius: 10px; }
+    ::-webkit-scrollbar-thumb:hover { background: #F5C518; }
+
+    /* ---------- NAVIGATION ---------- */
+    .navbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 18px 0;
+      border-bottom: 1px solid #222;
+      margin-bottom: 30px;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+    .nav-logo img {
+      height: 45px;
+      width: auto;
+      border-radius: 6px;
+    }
+    .nav-logo span {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: #fff;
+      letter-spacing: 0.5px;
+    }
+    .nav-logo span small {
+      font-weight: 400;
+      font-size: 0.8rem;
+      color: #aaa;
+      display: block;
+      margin-top: -2px;
+    }
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+      font-weight: 500;
+      font-size: 0.95rem;
+      color: #ccc;
+    }
+    .nav-links a:hover { color: #F5C518; transition: 0.2s; }
+    .nav-links a.active { color: #F5C518; }
+
+    /* ---------- EVENT HEADER ---------- */
+    .event-header {
+      background: linear-gradient(145deg, #111, #1a1a2e);
+      border-radius: 16px;
+      padding: 30px 35px;
+      margin-bottom: 35px;
+      border-left: 5px solid #1A3B7D;
+      text-align: center;
+    }
+    .event-header h1 {
+      font-family: 'Poppins', sans-serif;
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 6px;
+    }
+    .event-header h1 span { color: #F5C518; }
+    .event-header .event-meta {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 10px;
+      color: #b0b0b0;
+      font-size: 1.1rem;
+    }
+    .event-header .event-meta .badge {
+      background: #1A3B7D;
+      color: #fff;
+      padding: 6px 18px;
+      border-radius: 30px;
+      font-weight: 600;
+      font-size: 0.85rem;
+    }
+    .event-header .event-meta .badge-gold {
+      background: #F5C518;
+      color: #0B0B0B;
+    }
+    .event-header .event-meta .badge-workshop {
+      background: #D32F2F;
+    }
+    .event-header .event-meta .badge-lunch {
+      background: #2E7D32;
+    }
+
+    /* ---------- TIMETABLE ---------- */
+    .timetable {
+      background: #141414;
+      border-radius: 16px;
+      padding: 25px 30px;
+      margin-bottom: 40px;
+      border: 1px solid #2a2a2a;
+    }
+    .timetable h2 {
+      font-family: 'Poppins', sans-serif;
+      font-size: 1.4rem;
+      color: #F5C518;
+      margin-bottom: 18px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .timetable h2 i { font-style: normal; font-size: 1.6rem; }
+    .timeline {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .timeline-item {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      padding: 14px 18px;
+      background: #1a1a1a;
+      border-radius: 12px;
+      border-left: 4px solid #333;
+      transition: 0.2s;
+    }
+    .timeline-item:hover { border-left-color: #F5C518; background: #222; }
+    .timeline-item .time {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 700;
+      font-size: 1.1rem;
+      color: #F5C518;
+      min-width: 130px;
+    }
+    .timeline-item .event-detail {
+      flex: 1;
+    }
+    .timeline-item .event-detail .title {
+      font-weight: 600;
+      font-size: 1.05rem;
+      color: #fff;
+    }
+    .timeline-item .event-detail .sub {
+      font-size: 0.85rem;
+      color: #888;
+    }
+    .timeline-item .duration {
+      font-size: 0.8rem;
+      color: #666;
+      white-space: nowrap;
+      background: #0B0B0B;
+      padding: 4px 14px;
+      border-radius: 30px;
+      border: 1px solid #2a2a2a;
+    }
+    .timeline-item.workshop { 
+      border-left-color: #D32F2F; 
+      background: #1a1a2e;
+    }
+    .timeline-item.workshop .time { color: #D32F2F; }
+    .timeline-item.lunch { 
+      border-left-color: #2E7D32; 
+      background: #1a2e1a;
+    }
+    .timeline-item.lunch .time { color: #4CAF50; }
+    .timeline-item.film { border-left-color: #1A3B7D; }
+    .timeline-item.film .time { color: #1A3B7D; }
+    .timeline-item.intermission { border-left-color: #555; background: #111; }
+    .timeline-item.intermission .time { color: #777; }
+
+    /* ---------- FILM GRID ---------- */
+    .films-section {
+      margin-top: 10px;
+    }
+    .films-section h2 {
+      font-family: 'Poppins', sans-serif;
+      font-size: 1.6rem;
+      color: #fff;
+      margin-bottom: 20px;
+    }
+    .films-section h2 span { color: #F5C518; }
+    #filmGrid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 28px;
+    }
+
+    /* ---------- FILM CARD ---------- */
+    .film-card {
+      background: #151515;
+      border-radius: 14px;
+      overflow: hidden;
+      border: 1px solid #252525;
+      transition: all 0.3s ease;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.6);
+    }
+    .film-card:hover {
+      transform: translateY(-8px);
+      border-color: #F5C518;
+      box-shadow: 0 12px 30px rgba(245, 197, 24, 0.08);
+    }
+    .film-card img {
+      width: 100%;
+      height: 320px;
+      object-fit: cover;
+      background: #0B0B0B;
+    }
+    .film-card .card-body {
+      padding: 14px 16px 16px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+    .film-card .film-title {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 600;
+      font-size: 1.1rem;
+      color: #fff;
+      line-height: 1.3;
+      margin-bottom: 4px;
+    }
+    .film-card .film-meta {
+      font-size: 0.85rem;
+      color: #888;
+      margin-bottom: 6px;
+    }
+    .film-card .film-meta span { margin-right: 8px; }
+    .film-card .badge-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin: 6px 0 12px;
+    }
+    .badge {
+      font-size: 0.6rem;
+      font-weight: 700;
+      padding: 2px 12px;
+      border-radius: 30px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .badge-eu { background: #1A3B7D; color: #fff; }
+    .badge-mw { background: #D32F2F; color: #fff; }
+    .badge-feature { background: #333; color: #ccc; }
+    .badge-short { background: #444; color: #ddd; }
+    .details-btn {
+      margin-top: auto;
+      padding: 10px 0;
+      background: transparent;
+      border: 1.5px solid #F5C518;
+      color: #F5C518;
+      font-weight: 700;
+      border-radius: 40px;
+      transition: 0.2s;
+      font-size: 0.9rem;
+      font-family: 'Inter', sans-serif;
+    }
+    .details-btn:hover {
+      background: #F5C518;
+      color: #0B0B0B;
+    }
+
+    /* ---------- MODAL ---------- */
+    .modal-container {
+      display: none;
+      position: fixed;
+      top: 0; left: 0; width: 100%; height: 100%;
+      background: rgba(0, 0, 0, 0.92);
+      backdrop-filter: blur(8px);
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+      padding: 20px;
+    }
+    .modal-body {
+      background: #151515;
+      max-width: 720px;
+      width: 100%;
+      max-height: 90vh;
+      overflow-y: auto;
+      padding: 30px 35px;
+      border-radius: 24px;
+      border: 1px solid #2a2a2a;
+      box-shadow: 0 25px 60px rgba(0,0,0,0.8);
+      position: relative;
+    }
+    .modal-body::-webkit-scrollbar { width: 4px; }
+    .modal-body::-webkit-scrollbar-thumb { background: #F5C518; }
+    .modal-close {
+      position: absolute;
+      top: 12px;
+      right: 20px;
+      font-size: 2.2rem;
+      background: none;
+      border: none;
+      color: #aaa;
+      cursor: pointer;
+      transition: 0.2s;
+      line-height: 1;
+    }
+    .modal-close:hover { color: #F5C518; transform: rotate(90deg); }
+    .modal-content h2 {
+      font-family: 'Poppins', sans-serif;
+      font-size: 2rem;
+      color: #fff;
+      margin-bottom: 12px;
+      border-bottom: 2px solid #2a2a2a;
+      padding-bottom: 12px;
+    }
+    .modal-content p {
+      margin: 8px 0;
+      line-height: 1.6;
+      color: #ccc;
+    }
+    .modal-content p strong { color: #F5C518; }
+    .modal-content .video-wrapper {
+      position: relative;
+      padding-bottom: 56.25%;
+      height: 0;
+      overflow: hidden;
+      margin: 18px 0;
+      border-radius: 12px;
+      background: #000;
+    }
+    .modal-content .video-wrapper iframe {
+      position: absolute;
+      top: 0; left: 0; width: 100%; height: 100%;
+      border: none;
+    }
+    .modal-content .booking-btn {
+      display: inline-block;
+      margin-top: 12px;
+      padding: 12px 36px;
+      background: #F5C518;
+      color: #0B0B0B;
+      border-radius: 40px;
+      font-weight: 700;
+      transition: 0.2s;
+      border: none;
+      font-size: 1rem;
+      font-family: 'Poppins', sans-serif;
+    }
+    .modal-content .booking-btn:hover { background: #ffe066; transform: scale(1.02); }
+    .modal-content .program-box {
+      background: #0B0B0B;
+      padding: 14px 18px;
+      border-radius: 12px;
+      margin: 14px 0;
+      border-left: 4px solid #1A3B7D;
+    }
+    .modal-content .awards-list {
+      color: #ddd;
+      margin: 6px 0 12px;
+      padding-left: 18px;
+    }
+
+    /* ---------- FOOTER ---------- */
+    .footer {
+      margin-top: 60px;
+      padding: 30px 0 20px;
+      border-top: 1px solid #2a2a2a;
+      text-align: center;
+    }
+    .footer-logos-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 24px 32px;
+      margin-bottom: 24px;
+      padding: 0 20px;
+    }
+    .footer-logos-wrapper a {
+      display: inline-block;
+      transition: transform 0.25s ease, opacity 0.25s ease;
+      opacity: 0.7;
+      line-height: 0;
+    }
+    .footer-logos-wrapper a:hover {
+      transform: scale(1.10);
+      opacity: 1;
+    }
+    .footer-logos-wrapper img {
+      height: 50px;
+      width: auto;
+      max-width: 120px;
+      object-fit: contain;
+      filter: grayscale(100%) brightness(200%) contrast(1.2);
+      transition: filter 0.3s ease;
+    }
+    .footer-logos-wrapper a:hover img {
+      filter: grayscale(0%) brightness(100%) contrast(1);
+    }
+    .footer-text {
+      color: #666;
+      font-size: 0.85rem;
+      margin-top: 8px;
+    }
+
+    /* ---------- RESPONSIVE ---------- */
+    @media (max-width: 768px) {
+      .navbar { flex-direction: column; align-items: stretch; gap: 10px; }
+      .nav-links { justify-content: space-around; flex-wrap: wrap; gap: 10px; }
+      .event-header h1 { font-size: 1.8rem; }
+      .timeline-item { flex-wrap: wrap; gap: 8px; }
+      .timeline-item .time { min-width: 100px; font-size: 0.9rem; }
+      #filmGrid { grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 16px; }
+      .film-card img { height: 240px; }
+      .modal-body { padding: 20px; margin: 10px; }
+      .footer-logos-wrapper { gap: 16px 20px; }
+      .footer-logos-wrapper img { height: 40px; max-width: 90px; }
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+
+  <!-- ========== NAVIGATION ========== -->
+  <nav class="navbar">
+    <div class="nav-logo">
+      <img src="euro-flim-1-1024x574.jpg" alt="EU Film Festival Logo" />
+      <span>EU Film Fest <small>Malawi 2026</small></span>
+    </div>
+    <div class="nav-links">
+      <a href="index.html">Catalogue</a>
+      <a href="program.html">Opening Reception</a>
+      <a href="program-jacaranda.html" class="active">Jacaranda Day</a>
+    </div>
+  </nav>
+
+  <!-- ========== EVENT HEADER ========== -->
+  <header class="event-header">
+    <h1>🎬 <span>Jacaranda</span> Film Day</h1>
+    <p style="color:#b0b0b0; font-size:1.1rem; margin-top:4px;">A full day of film workshops and European cinema screenings</p>
+    <div class="event-meta">
+      <span>📅 <strong>Saturday, 12 September 2026</strong></span>
+      <span>📍 <strong>Jacaranda Cultural Centre, Blantyre</strong></span>
+      <span class="badge badge-workshop">📝 Workshops</span>
+      <span class="badge badge-lunch">🍽️ Lunch Provided</span>
+      <span class="badge badge-gold">🎟️ RSVP Required</span>
+    </div>
+  </header>
+
+  <!-- ========== TIMETABLE ========== -->
+  <section class="timetable">
+    <h2><i>⏰</i> Event Schedule</h2>
+    <div class="timeline">
+
+      <!-- Workshop 1 -->
+      <div class="timeline-item workshop">
+        <div class="time">09:00 – 09:45</div>
+        <div class="event-detail">
+          <div class="title">📝 Workshop: From Pitching to Scriptwriting</div>
+          <div class="sub">Guest Speaker: <strong>Adam Darren Antoine</strong> – Theory of filmmaking, pitching, and scriptwriting</div>
+        </div>
+        <div class="duration">45 min</div>
+      </div>
+
+      <!-- Intermission -->
+      <div class="timeline-item intermission">
+        <div class="time">09:45 – 10:15</div>
+        <div class="event-detail">
+          <div class="title">☕ Intermission</div>
+          <div class="sub">30-minute break</div>
+        </div>
+        <div class="duration">30 min</div>
+      </div>
+
+      <!-- Workshop 2 -->
+      <div class="timeline-item workshop">
+        <div class="time">10:15 – 11:00</div>
+        <div class="event-detail">
+          <div class="title">🎥 Workshop: The Production Phase</div>
+          <div class="sub">Guest Speaker: <strong>Craig Mawanga</strong> – Filming, lighting, sound, camera operation, and production</div>
+        </div>
+        <div class="duration">45 min</div>
+      </div>
+
+      <!-- Lunch Break -->
+      <div class="timeline-item lunch">
+        <div class="time">11:00 – 12:00</div>
+        <div class="event-detail">
+          <div class="title">🍽️ Lunch Break</div>
+          <div class="sub">Lunch will be provided for all participants</div>
+        </div>
+        <div class="duration">60 min</div>
+      </div>
+
+      <!-- Intermission before screenings -->
+      <div class="timeline-item intermission">
+        <div class="time">12:00 – 13:00</div>
+        <div class="event-detail">
+          <div class="title">☕ Pre-Screening Break</div>
+          <div class="sub">Seating and preparation for the film screenings</div>
+        </div>
+        <div class="duration">60 min</div>
+      </div>
+
+      <!-- Film: Banel & Adama -->
+      <div class="timeline-item film">
+        <div class="time">13:00 – 14:27</div>
+        <div class="event-detail">
+          <div class="title">🎬 Banel & Adama</div>
+          <div class="sub">France, Mali, Senegal • Drama • 87 min</div>
+        </div>
+        <div class="duration">87 min</div>
+      </div>
+
+      <!-- Intermission -->
+      <div class="timeline-item intermission">
+        <div class="time">14:27 – 14:47</div>
+        <div class="event-detail">
+          <div class="title">☕ Intermission</div>
+          <div class="sub">20-minute break</div>
+        </div>
+        <div class="duration">20 min</div>
+      </div>
+
+      <!-- Film: Maybe Elephants -->
+      <div class="timeline-item film">
+        <div class="time">14:47 – 15:04</div>
+        <div class="event-detail">
+          <div class="title">🎬 Maybe Elephants</div>
+          <div class="sub">Canada, Norway • Animation, Short • 17 min</div>
+        </div>
+        <div class="duration">17 min</div>
+      </div>
+
+      <!-- Intermission -->
+      <div class="timeline-item intermission">
+        <div class="time">15:04 – 15:19</div>
+        <div class="event-detail">
+          <div class="title">☕ Intermission</div>
+          <div class="sub">15-minute break</div>
+        </div>
+        <div class="duration">15 min</div>
+      </div>
+
+      <!-- Film: A Boat In The Garden -->
+      <div class="timeline-item film">
+        <div class="time">15:19 – 16:34</div>
+        <div class="event-detail">
+          <div class="title">🎬 A Boat In The Garden</div>
+          <div class="sub">France, Luxembourg • Animation, Drama, Family • 75 min</div>
+        </div>
+        <div class="duration">75 min</div>
+      </div>
+
+      <!-- Intermission -->
+      <div class="timeline-item intermission">
+        <div class="time">16:34 – 16:54</div>
+        <div class="event-detail">
+          <div class="title">☕ Intermission</div>
+          <div class="sub">20-minute break</div>
+        </div>
+        <div class="duration">20 min</div>
+      </div>
+
+      <!-- Film: A New Kind Of Wilderness -->
+      <div class="timeline-item film">
+        <div class="time">16:54 – 18:18</div>
+        <div class="event-detail">
+          <div class="title">🎬 A New Kind Of Wilderness</div>
+          <div class="sub">Norway • Documentary • 84 min</div>
+        </div>
+        <div class="duration">84 min</div>
+      </div>
+
+      <!-- Intermission -->
+      <div class="timeline-item intermission">
+        <div class="time">18:18 – 18:38</div>
+        <div class="event-detail">
+          <div class="title">☕ Intermission</div>
+          <div class="sub">20-minute break</div>
+        </div>
+        <div class="duration">20 min</div>
+      </div>
+
+      <!-- Film: Beyond Sight -->
+      <div class="timeline-item film">
+        <div class="time">18:38 – 18:43</div>
+        <div class="event-detail">
+          <div class="title">🎬 Beyond Sight</div>
+          <div class="sub">Malawi • Short • 5 min</div>
+        </div>
+        <div class="duration">5 min</div>
+      </div>
+
+      <!-- Intermission -->
+      <div class="timeline-item intermission">
+        <div class="time">18:43 – 18:53</div>
+        <div class="event-detail">
+          <div class="title">☕ Intermission</div>
+          <div class="sub">10-minute break</div>
+        </div>
+        <div class="duration">10 min</div>
+      </div>
+
+      <!-- Film: Monsieur Aznavour -->
+      <div class="timeline-item film">
+        <div class="time">18:53 – 20:46</div>
+        <div class="event-detail">
+          <div class="title">🎬 Monsieur Aznavour</div>
+          <div class="sub">France • Biography, Music, Drama • 113 min</div>
+        </div>
+        <div class="duration">113 min</div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========== FILMS SECTION ========== -->
+  <section class="films-section">
+    <h2>🎞️ <span>Featured</span> Films</h2>
+    <div id="filmGrid"></div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <div class="footer-logos-wrapper">
+      <a href="https://www.malawicensorshipboard.mw" target="_blank" rel="noopener noreferrer">
+        <img src="MW%20CENC.png" alt="Malawi Censorship Board" />
+      </a>
+      <a href="https://dopemw.org/" target="_blank" rel="noopener noreferrer">
+        <img src="DOPE.png" alt="DOPE" />
+      </a>
+      <a href="https://cosoma.mw/film-association-of-malawi-fama/" target="_blank" rel="noopener noreferrer">
+        <img src="FAMA.png" alt="Film Association of Malawi" />
+      </a>
+      <a href="https://europeanfilmfestival.eu" target="_blank" rel="noopener noreferrer">
+        <img src="EFF2026.png" alt="European Film Festival" />
+      </a>
+      <a href="https://www.lilongwe.diplo.de/" target="_blank" rel="noopener noreferrer">
+        <img src="GERMANY.png" alt="German Embassy" />
+      </a>
+      <a href="https://www.dfa.ie/irish-embassy/" target="_blank" rel="noopener noreferrer">
+        <img src="IRELAND.png" alt="Irish Embassy" />
+      </a>
+      <a href="https://belgium.be/" target="_blank" rel="noopener noreferrer">
+        <img src="BELGIUM%20E.png" alt="Belgian Embassy" />
+      </a>
+      <a href="https://za.diplomatie.gouv.fr/en" target="_blank" rel="noopener noreferrer">
+        <img src="FRANCE.png" alt="French Embassy" />
+      </a>
+      <a href="https://www.exteriores.gob.es/" target="_blank" rel="noopener noreferrer">
+        <img src="SPAIN.png" alt="Spanish Embassy" />
+      </a>
+      <a href="https://www.mae.ro/" target="_blank" rel="noopener noreferrer">
+        <img src="ROMANIA.png" alt="Romanian Embassy" />
+      </a>
+      <a href="https://www.norway.no/" target="_blank" rel="noopener noreferrer">
+        <img src="NORWEGIAN%20E.png" alt="Norwegian Embassy" />
+      </a>
+      <a href="https://www.gov.uk/world/organisations/british-high-commission-lilongwe" target="_blank" rel="noopener noreferrer">
+        <img src="UK.png" alt="British High Commission" />
+      </a>
+      <a href="#" target="_blank" rel="noopener noreferrer">
+        <img src="50%20YRS.png" alt="50 Years Anniversary" />
+      </a>
+      <a href="https://lakeofstars.org/" target="_blank" rel="noopener noreferrer">
+        <img src="LOS.png" alt="Lake of Stars" />
+      </a>
+    </div>
+    <p class="footer-text">© 2026 EU Film Festival Malawi. All rights reserved.</p>
+  </footer>
+
+  <!-- ========== MODAL ========== -->
+  <div id="modalContainer" class="modal-container">
+    <div id="modalBody" class="modal-body">
+      <button id="closeModalBtn" class="modal-close">&times;</button>
+    </div>
+  </div>
+
+</div>
+
+<script>
+  // ========== DATA ==========
+  // Films for the Jacaranda event (Saturday 12 September)
+  const jacarandaFilms = [
+    {
+      "id": 1,
+      "title": "Banel & Adama",
+      "country": "France, Mali, Senegal",
+      "year": 2023,
+      "runtime": 87,
+      "director": "Ramata-Toulaye Sy",
+      "genres": ["Drama"],
+      "languages": "Fulah",
+      "poster": "https://image.tmdb.org/t/p/w500/s7qnEdfpdLYWWw8CFs0dqQftt9Y.jpg",
+      "synopsis": "Chaos ensues shortly after a young man in a remote village in northern Senegal refuses to accept his role as the new village chief.",
+      "imdb": 6.13,
+      "rt": 95,
+      "meta": 70,
+      "delegation": "",
+      "youtubeId": "dcZJ5X0H0vM",
+      "isMalawian": false,
+      "program": {
+        "day": "Saturday 12 September",
+        "time": "13:00",
+        "venue": "Jacaranda Cultural Centre, Blantyre",
+        "slot": "European Feature"
+      },
+      "awards": [
+        "Bright Horizons Award - Melbourne International Film Festival",
+        "Best Directing Prize - Marrakech Film Festival"
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Maybe Elephants",
+      "country": "Canada, Norway",
+      "year": 2024,
+      "runtime": 17,
+      "director": "Torill Kove",
+      "genres": ["Animation", "Short", "Biography", "Drama"],
+      "languages": "English",
+      "poster": "https://image.tmdb.org/t/p/w500/5P4KxYLvmhFAcDxNOYK5IExuE02.jpg",
+      "synopsis": "Three rebellious teenage daughters, a restless mother, a father struggling with potatoes, and maybe some elephants, find themselves in Nairobi. What could possibly go wrong?",
+      "imdb": 6.4,
+      "rt": 0,
+      "meta": 0,
+      "delegation": "",
+      "youtubeId": "wcWr5SZDIog",
+      "isMalawian": false,
+      "program": {
+        "day": "Saturday 12 September",
+        "time": "14:47",
+        "venue": "Jacaranda Cultural Centre, Blantyre",
+        "slot": "European Short"
+      },
+      "awards": [
+        "Audience Prize - Bucheon International Animation Festival",
+        "Best Nordic-Baltic Animated Youth Film - Fredrikstad Animation Festival",
+        "Best Animated Short - Canadian Screen Award"
+      ]
+    },
+    {
+      "id": 3,
+      "title": "A Boat In The Garden",
+      "country": "France, Luxembourg",
+      "year": 2024,
+      "runtime": 75,
+      "director": "Jean-Francois Laguionie",
+      "genres": ["Animation", "Drama", "Family"],
+      "languages": "French",
+      "poster": "https://image.tmdb.org/t/p/w500/rvOxmytad13dZPCxV0PYbhA0cwm.jpg",
+      "synopsis": "I can tell you about my father's voyage on his boat, because I was with him all the time. It was a rather strange voyage, with no ocean or sea crossing, not even a lock to pass through... The boat stayed at home and so did my father. But that does not mean there was no adventure...",
+      "imdb": 6.5,
+      "rt": 0,
+      "meta": 0,
+      "delegation": "",
+      "youtubeId": "7S_c9xZ2aj0",
+      "isMalawian": false,
+      "program": {
+        "day": "Saturday 12 September",
+        "time": "15:19",
+        "venue": "Jacaranda Cultural Centre, Blantyre",
+        "slot": "European Feature"
+      },
+      "awards": [
+        "Special Distinction Prize - Bucheon International Animation Festival",
+        "Best Animated Feature Film - Cartoons On The Bay - Pulcinella Award"
+      ]
+    },
+    {
+      "id": 4,
+      "title": "A New Kind Of Wilderness",
+      "country": "Norway",
+      "year": 2024,
+      "runtime": 84,
+      "director": "Silje Evensmo Jacobsen",
+      "genres": ["Documentary"],
+      "languages": "German, English, Norwegian",
+      "poster": "https://image.tmdb.org/t/p/w500/4Wd3wMa3IHS5AAtn1v1uxL438ty.jpg",
+      "synopsis": "In a forest in Norway, a family lives an isolated lifestyle in an attempt to be wild and free, but a tragic event changes everything, and they are forced to adjust to modern society.",
+      "imdb": 7.794,
+      "rt": 91,
+      "meta": 78,
+      "delegation": "",
+      "youtubeId": "i6eTxMSCgAs",
+      "isMalawian": false,
+      "program": {
+        "day": "Saturday 12 September",
+        "time": "16:54",
+        "venue": "Jacaranda Cultural Centre, Blantyre",
+        "slot": "European Feature"
+      },
+      "awards": [
+        "World Cinema Grand Jury Prize: Documentary - Sundance Film Festival",
+        "Best Documentary - Golden Panda Awards"
+      ]
+    },
+    {
+      "id": 14,
+      "title": "Monsieur Aznavour",
+      "country": "France",
+      "year": 2024,
+      "runtime": 113,
+      "director": "Mehdi Idir",
+      "genres": ["Biography", "Music", "Drama"],
+      "languages": "Armenian, Spanish, French, English",
+      "poster": "https://www.themoviedb.org/t/p/w1280/23FkaTaAosaTcTgyuJdTf7TvcJu.jpg",
+      "synopsis": "From his poor childhood to his rise to fame, from his triumphs to his failures, from Paris to New York, discover the exceptional journey of an artist. Intimate, intense, fragile and indestructible, devoted to his art until the very end, here is one of the most immortal singers of all time: MONSIEUR AZNAVOUR.",
+      "imdb": 7.2,
+      "rt": 67.5,
+      "meta": 0,
+      "delegation": "French",
+      "youtubeId": "evoYNCdZGOQ",
+      "isMalawian": false,
+      "program": {
+        "day": "Saturday 12 September",
+        "time": "18:53",
+        "venue": "Jacaranda Cultural Centre, Blantyre",
+        "slot": "European Feature"
+      },
+      "awards": []
+    },
+    {
+      "id": 103,
+      "title": "Beyond Sight",
+      "country": "Malawi",
+      "year": 2026,
+      "runtime": "5",
+      "director": "Mandala Banda",
+      "genres": ["Short"],
+      "languages": "Chichewa, English",
+      "poster": "",
+      "synopsis": "Beyond Sight is a 5-minute short film that challenges perceptions of disability through the inspiring story of a blind girl Mahara, who shines among chess-playing peers that she just met. Despite being overlooked and underestimated because she is blind, Mahara uses her mental skill, chess notation and a guiding friend by the name of Asante to win without a second thought.",
+      "imdb": 0,
+      "rt": 0,
+      "meta": 0,
+      "delegation": "",
+      "youtubeId": "",
+      "isMalawian": true,
+      "program": {
+        "day": "Saturday 12 September",
+        "time": "18:38",
+        "venue": "Jacaranda Cultural Centre, Blantyre",
+        "slot": "Malawian Short"
+      },
+      "awards": []
+    }
+  ];
+
+  // ========== RENDER FILMS ==========
+  function renderFilms() {
+    const grid = document.getElementById('filmGrid');
+    if (!grid) return;
+
+    // Sort films by screening time
+    const sortedFilms = [...jacarandaFilms].sort((a, b) => {
+      const timeA = a.program?.time || '00:00';
+      const timeB = b.program?.time || '00:00';
+      return timeA.localeCompare(timeB);
+    });
+
+    sortedFilms.forEach((film, index) => {
+      const card = document.createElement('div');
+      card.className = 'film-card';
+
+      const posterUrl = film.poster && film.poster.trim() !== '' 
+        ? film.poster 
+        : 'https://via.placeholder.com/300x400?text=No+Poster';
+
+      // Build badges
+      let badges = '';
+      if (film.isMalawian) badges += `<span class="badge badge-mw">🇲🇼 Malawian</span>`;
+      else badges += `<span class="badge badge-eu">🇪🇺 European</span>`;
+      
+      if (film.program?.slot) {
+        if (film.program.slot.includes('Feature')) badges += `<span class="badge badge-feature">Feature</span>`;
+        else if (film.program.slot.includes('Short')) badges += `<span class="badge badge-short">Short</span>`;
+      }
+
+      card.innerHTML = `
+        <img src="${posterUrl}" alt="${film.title}" loading="lazy" onerror="this.src='https://via.placeholder.com/300x400?text=No+Poster'">
+        <div class="card-body">
+          <div class="film-title">${film.title}</div>
+          <div class="film-meta">
+            <span>${film.director || 'TBA'}</span>
+            <span>•</span>
+            <span>${film.year || ''}</span>
+          </div>
+          <div class="film-meta" style="font-size:0.75rem; color:#666;">
+            ${film.program?.time || ''} • ${film.program?.venue || ''}
+          </div>
+          <div class="badge-row">${badges}</div>
+          <button class="details-btn" data-index="${index}">View Details</button>
+        </div>
+      `;
+      grid.appendChild(card);
+    });
+
+    // Attach modal listeners
+    document.querySelectorAll('.details-btn').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        const idx = parseInt(e.target.dataset.index, 10);
+        openModal(sortedFilms[idx]);
+      });
+    });
+  }
+
+  // ========== MODAL ==========
+  function openModal(film) {
+    const container = document.getElementById('modalContainer');
+    const body = document.getElementById('modalBody');
+    if (!container || !body) return;
+
+    // Jacaranda Form (Saturday 12 September)
+    const GOOGLE_FORM_ID = '1FAIpQLScPiE2o-0GaOlVbAQXFyPurugtfIOIg8cXxv20mLXtdCDOR5w';
+    const FILM_ENTRY_ID = '1162404058';
+
+    const filmValue = `${film.title} – ${film.program?.time || 'TBD'}`;
+    const bookingUrl = `https://docs.google.com/forms/d/e/${GOOGLE_FORM_ID}/viewform?usp=pp_url&entry.${FILM_ENTRY_ID}=${encodeURIComponent(filmValue)}`;
+
+    const trailerHtml = film.youtubeId ? `
+      <div class="video-wrapper">
+        <iframe src="https://www.youtube.com/embed/${film.youtubeId}" title="${film.title} trailer" frameborder="0" allowfullscreen></iframe>
+      </div>
+    ` : '';
+
+    const awardsHtml = film.awards && film.awards.length > 0 
+      ? `<p><strong>🏆 Awards</strong></p><ul class="awards-list">${film.awards.map(a => `<li>${a}</li>`).join('')}</ul>` 
+      : '';
+
+    const program = film.program || {};
+    const programHtml = `
+      <div class="program-box">
+        <p style="margin:4px 0;"><strong>📅 ${program.day || 'TBD'}</strong></p>
+        <p style="margin:4px 0;">🕐 ${program.time || 'TBD'}  •  📍 ${program.venue || 'TBD'}</p>
+        <p style="margin:4px 0; color:#F5C518;">🎬 ${program.slot || ''}</p>
+      </div>
+    `;
+
+    body.innerHTML = `
+      <button id="closeModalBtn" class="modal-close">&times;</button>
+      <div class="modal-content">
+        <h2>${film.title}</h2>
+        <p><strong>Director:</strong> ${film.director || 'TBA'}  •  <strong>Year:</strong> ${film.year || 'TBA'}  •  <strong>Runtime:</strong> ${film.runtime ? film.runtime + ' min' : 'TBA'}</p>
+        <p><strong>Country:</strong> ${film.country || 'TBA'}  •  <strong>Genres:</strong> ${film.genres ? film.genres.join(', ') : 'N/A'}</p>
+        <p><strong>Languages:</strong> ${film.languages || 'TBA'}</p>
+        
+        ${film.synopsis ? `<p><strong>📖 Synopsis:</strong> ${film.synopsis}</p>` : ''}
+        
+        <p><strong>⭐ Ratings:</strong> IMDb ${film.imdb || 'N/A'}${film.rt ? ` | Rotten Tomatoes ${film.rt}%` : ''}${film.meta ? ` | Metacritic ${film.meta}` : ''}</p>
+        
+        ${programHtml}
+        
+        ${trailerHtml}
+        
+        ${awardsHtml}
+        
+        <a href="${bookingUrl}" target="_blank" class="booking-btn">🎟️ Book Now</a>
+      </div>
+    `;
+
+    container.style.display = 'flex';
+    document.getElementById('closeModalBtn').addEventListener('click', closeModal);
+    container.addEventListener('click', (e) => { if (e.target === container) closeModal(); });
+  }
+
+  function closeModal() {
+    const container = document.getElementById('modalContainer');
+    if (container) container.style.display = 'none';
+  }
+
+  // ========== INIT ==========
+  document.addEventListener('DOMContentLoaded', renderFilms);
+</script>
+</body>
+</html>
