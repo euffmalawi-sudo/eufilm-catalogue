@@ -3,15 +3,18 @@ import { renderCatalogue } from './catalogue.js';
 let currentFilms = [];
 
 export function setupFilters(films) {
-  currentFilms = films;
+  // Filter out Lilongwe films (private event) before setting up filters
+  const visibleFilms = films.filter(f => f.program?.day !== 'Sunday 20 September');
+  currentFilms = visibleFilms;
+  
   const searchInput = document.getElementById('searchInput');
   const filterDate = document.getElementById('filterDate');
   const filterVenue = document.getElementById('filterVenue');
   const filterGenre = document.getElementById('filterGenre');
   
-  // Populate Date dropdown
+  // Populate Date dropdown (only with visible dates)
   const dates = new Set();
-  films.forEach(f => { if (f.program?.day) dates.add(f.program.day); });
+  visibleFilms.forEach(f => { if (f.program?.day) dates.add(f.program.day); });
   dates.forEach(d => {
     const opt = document.createElement('option');
     opt.value = d;
@@ -21,7 +24,7 @@ export function setupFilters(films) {
 
   // Populate Venue dropdown
   const venues = new Set();
-  films.forEach(f => { if (f.program?.venue) venues.add(f.program.venue); });
+  visibleFilms.forEach(f => { if (f.program?.venue) venues.add(f.program.venue); });
   venues.forEach(v => {
     const opt = document.createElement('option');
     opt.value = v;
@@ -31,7 +34,7 @@ export function setupFilters(films) {
 
   // Populate Genre dropdown
   const genres = new Set();
-  films.forEach(f => { if (f.genres) f.genres.forEach(g => genres.add(g)); });
+  visibleFilms.forEach(f => { if (f.genres) f.genres.forEach(g => genres.add(g)); });
   genres.forEach(g => {
     const opt = document.createElement('option');
     opt.value = g;
