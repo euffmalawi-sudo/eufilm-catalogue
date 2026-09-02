@@ -440,46 +440,55 @@
 
     /* ---------- FOOTER ---------- */
     .footer {
-      margin-top: 60px;
-      padding: 30px 0 20px;
-      border-top: 1px solid #2a2a2a;
-      text-align: center;
-    }
-    .footer-logos-wrapper {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      align-items: center;
-      gap: 24px 32px;
-      margin-bottom: 24px;
-      padding: 0 20px;
-    }
-    .footer-logos-wrapper a {
-      display: inline-block;
-      transition: transform 0.25s ease, opacity 0.25s ease;
-      opacity: 0.7;
-      line-height: 0;
-    }
-    .footer-logos-wrapper a:hover {
-      transform: scale(1.10);
-      opacity: 1;
-    }
-    .footer-logos-wrapper img {
-      height: 50px;
-      width: auto;
-      max-width: 120px;
-      object-fit: contain;
-      filter: grayscale(100%) brightness(200%) contrast(1.2);
-      transition: filter 0.3s ease;
-    }
-    .footer-logos-wrapper a:hover img {
-      filter: grayscale(0%) brightness(100%) contrast(1);
-    }
-    .footer-text {
-      color: #666;
-      font-size: 0.85rem;
-      margin-top: 8px;
-    }
+  margin-top: 60px;
+  padding: 30px 0 20px;
+  background: #ffffff; /* White background */
+  border-top: 1px solid #e0e0e0; /* Light gray border */
+  text-align: center;
+  border-radius: 12px; /* Optional: slightly rounded corners */
+}
+
+.footer-logos-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 24px 32px;
+  margin-bottom: 24px;
+  padding: 0 20px;
+}
+
+.footer-logos-wrapper a {
+  display: inline-block;
+  transition: transform 0.25s ease, opacity 0.25s ease;
+  opacity: 0.8;
+  line-height: 0;
+}
+
+.footer-logos-wrapper a:hover {
+  transform: scale(1.10);
+  opacity: 1;
+}
+
+.footer-logos-wrapper img {
+  height: 50px;
+  width: auto;
+  max-width: 120px;
+  object-fit: contain;
+  /* Remove grayscale/brightness so logos appear in full color on white background */
+  filter: grayscale(0%) brightness(100%) contrast(1);
+  transition: filter 0.3s ease;
+}
+
+.footer-logos-wrapper a:hover img {
+  filter: grayscale(0%) brightness(100%) contrast(1); /* Keep full color on hover */
+}
+
+.footer-text {
+  color: #333333; /* Dark text for readability on white background */
+  font-size: 0.85rem;
+  margin-top: 8px;
+}
 
     /* ---------- RESPONSIVE ---------- */
     @media (max-width: 768px) {
