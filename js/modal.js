@@ -5,28 +5,28 @@ export function openModal(film) {
 
   // --- DETERMINE WHICH FORM TO USE BASED ON VENUE ---
   let GOOGLE_FORM_ID;
+  let FILM_ENTRY_ID;
   const venue = film.program?.venue || '';
 
   if (venue.includes('Jacaranda')) {
     // Jacaranda Form (Saturday 12 September)
     GOOGLE_FORM_ID = '1FAIpQLScPiE2o-0GaOlVbAQXFyPurugtfIOIg8cXxv20mLXtdCDOR5w';
+    FILM_ENTRY_ID = '1162404058';
   } else if (venue.includes('Pabwalo')) {
     // Pabwalo Form (Saturday 19 September)
     GOOGLE_FORM_ID = '1FAIpQLScBGDHtUkdQtvRZVk4uXfxaFYXjZ0FhW3DPjUPxB8OX-4fhqg';
+    FILM_ENTRY_ID = '635912452'; // ← CORRECTED ENTRY ID FOR PABWALO
   } else {
-    // Fallback: if venue doesn't match Jacaranda or Pabwalo, use Jacaranda form as default
+    // Fallback: use Jacaranda form
     GOOGLE_FORM_ID = '1FAIpQLScPiE2o-0GaOlVbAQXFyPurugtfIOIg8cXxv20mLXtdCDOR5w';
+    FILM_ENTRY_ID = '1162404058';
   }
-
-  // --- FILM ENTRY ID (same for both forms) ---
-  const FILM_ENTRY_ID = '1162404058';
 
   // --- FORMAT THE FILM + TIME VALUE ---
   // Example: "Banel & Adama – 13:00"
   const filmValue = `${film.title} – ${film.program?.time || 'TBD'}`;
 
-  // Build the pre-filled URL with ONLY the film field
-  // (Date is no longer needed since you split the forms by venue)
+  // Build the pre-filled URL with the film field
   const bookingUrl = `https://docs.google.com/forms/d/e/${GOOGLE_FORM_ID}/viewform?usp=pp_url&entry.${FILM_ENTRY_ID}=${encodeURIComponent(filmValue)}`;
 
   // --- EMBEDDED TRAILER (YouTube iframe) ---
