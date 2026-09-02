@@ -3,25 +3,31 @@ export function openModal(film) {
   const body = document.getElementById('modalBody');
   if (!container || !body) return;
 
-  const GOOGLE_FORM_ID = '1FAIpQLSdOSqgGyZCzydXeK8iLIXmZCjmsiK5IW3q8iw83QDPsKUPYVQ';
-  const DATE_ENTRY_ID = '1185226796';
-  const FILM_ENTRY_ID = '1162404058';
+  // --- DETERMINE WHICH FORM TO USE BASED ON VENUE ---
+  let GOOGLE_FORM_ID;
+  const venue = film.program?.venue || '';
 
-  // --- FORMAT THE DATE + VENUE VALUE ---
-  // Example: "Sat 12 September - Jacaranda Cultural Centre"
-  const dateValue = film.program?.day 
-    ? film.program.day.replace('Saturday', 'Sat').replace('Sunday', 'Sun').replace('Friday', 'Fri') + ' - ' + film.program.venue?.replace(' Cultural Centre', '').replace(' National Library', ' Library').replace(' / Good Shepherd School (TBC)', '')
-    : 'TBD';
-  
-  // Simple version: use the full day name as-is
-  // const dateValue = `${film.program?.day || 'TBD'} - ${film.program?.venue || 'TBD'}`;
+  if (venue.includes('Jacaranda')) {
+    // Jacaranda Form (Saturday 12 September)
+    GOOGLE_FORM_ID = '1FAIpQLScPiE2o-0GaOlVbAQXFyPurugtfIOIg8cXxv20mLXtdCDOR5w';
+  } else if (venue.includes('Pabwalo')) {
+    // Pabwalo Form (Saturday 19 September)
+    GOOGLE_FORM_ID = '1FAIpQLScBGDHtUkdQtvRZVk4uXfxaFYXjZ0FhW3DPjUPxB8OX-4fhqg';
+  } else {
+    // Fallback: if venue doesn't match Jacaranda or Pabwalo, use Jacaranda form as default
+    GOOGLE_FORM_ID = '1FAIpQLScPiE2o-0GaOlVbAQXFyPurugtfIOIg8cXxv20mLXtdCDOR5w';
+  }
+
+  // --- FILM ENTRY ID (same for both forms) ---
+  const FILM_ENTRY_ID = '1162404058';
 
   // --- FORMAT THE FILM + TIME VALUE ---
   // Example: "Banel & Adama – 13:00"
   const filmValue = `${film.title} – ${film.program?.time || 'TBD'}`;
 
-  // Build the pre-filled URL with BOTH fields
-  const bookingUrl = `https://docs.google.com/forms/d/e/${GOOGLE_FORM_ID}/viewform?usp=pp_url&entry.${DATE_ENTRY_ID}=${encodeURIComponent(dateValue)}&entry.${FILM_ENTRY_ID}=${encodeURIComponent(filmValue)}`;
+  // Build the pre-filled URL with ONLY the film field
+  // (Date is no longer needed since you split the forms by venue)
+  const bookingUrl = `https://docs.google.com/forms/d/e/${GOOGLE_FORM_ID}/viewform?usp=pp_url&entry.${FILM_ENTRY_ID}=${encodeURIComponent(filmValue)}`;
 
   // --- EMBEDDED TRAILER (YouTube iframe) ---
   const trailerHtml = film.youtubeId ? `
