@@ -8,152 +8,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:opsz@14..32&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet">
   <style>
-    
-    /* ---------- LIST VIEW STYLES (Replace old grid styles) ---------- */
-#filmGrid {
-  display: block;
-}
-
-.day-section {
-  margin-bottom: 48px;
-  scroll-margin-top: 80px; /* Adds space when jumping from nav */
-}
-
-.day-header {
-  font-size: 1.8rem;
-  color: #ffd700;
-  border-bottom: 3px solid #2a3a6a;
-  padding-bottom: 12px;
-  margin-bottom: 24px;
-  display: flex;
-  align-items: center;
-  gap: 16px;
-  justify-content: space-between;
-}
-
-.day-header .date-badge {
-  background: #ffd700;
-  color: #0a0e1a;
-  font-size: 0.9rem;
-  padding: 4px 16px;
-  border-radius: 30px;
-  font-weight: 700;
-  white-space: nowrap;
-}
-
-.film-grid-inner {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
-/* Film Card – Row Layout */
-.film-card {
-  display: flex;
-  flex-direction: row;
-  align-items: stretch;
-  background: #151515;
-  border-radius: 14px;
-  overflow: hidden;
-  border: 1px solid #252525;
-  transition: all 0.3s ease;
-  min-height: 200px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.6);
-}
-
-.film-card:hover {
-  transform: translateY(-4px);
-  border-color: #F5C518;
-  box-shadow: 0 12px 30px rgba(245, 197, 24, 0.08);
-}
-
-.film-card img {
-  width: 160px;
-  height: 220px;
-  object-fit: cover;
-  flex-shrink: 0;
-  background: #0B0B0B;
-}
-
-.film-card .card-body {
-  padding: 16px 24px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  flex: 1;
-}
-
-.film-card .film-title {
-  font-family: 'Poppins', sans-serif;
-  font-weight: 600;
-  font-size: 1.2rem;
-  color: #fff;
-  margin-bottom: 2px;
-}
-
-.film-card .film-meta {
-  font-size: 0.9rem;
-  color: #888;
-  margin-bottom: 4px;
-}
-
-.film-card .film-meta .time-venue {
-  font-size: 0.8rem;
-  color: #666;
-}
-
-.film-card .badge-row {
-  margin: 6px 0 12px;
-}
-
-.film-card .details-btn {
-  width: auto;
-  max-width: 180px;
-  padding: 8px 24px;
-  margin: 0;
-  background: transparent;
-  border: 1.5px solid #F5C518;
-  color: #F5C518;
-  font-weight: 700;
-  border-radius: 40px;
-  transition: 0.2s;
-  font-size: 0.85rem;
-  font-family: 'Inter', sans-serif;
-  cursor: pointer;
-}
-
-.film-card .details-btn:hover {
-  background: #F5C518;
-  color: #0B0B0B;
-}
-
-/* Remove old grid styles */
-#filmGrid {
-  display: block;
-}
-
-/* Mobile Responsive: Stack vertically on small screens */
-@media (max-width: 768px) {
-  .film-card {
-    flex-direction: column;
-    min-height: auto;
-  }
-  .film-card img {
-    width: 100%;
-    height: 240px;
-  }
-  .film-card .card-body {
-    padding: 14px 16px;
-  }
-  .film-card .details-btn {
-    max-width: 100%;
-  }
-  .day-header {
-    font-size: 1.4rem;
-    flex-wrap: wrap;
-  }
-}
-    /* ---------- RESET & BASE (Monochromatic) ---------- */
+    /* ---------- RESET & BASE ---------- */
     * {
       margin: 0;
       padding: 0;
@@ -163,7 +18,7 @@
       background: #0B0B0B;
       color: #E8E8E8;
       font-family: 'Inter', sans-serif;
-      padding: 0 20px 40px;
+      padding: 20px;
       min-height: 100vh;
     }
     .container {
@@ -217,30 +72,21 @@
     .nav-links {
       display: flex;
       align-items: center;
-      gap: 30px;
+      gap: 20px;
       font-weight: 500;
-      font-size: 0.95rem;
-      color: #ccc;
-    }
-    .nav-links a:hover { color: #F5C518; transition: 0.2s; }
-    .nav-dropdown {
-      position: relative;
-      display: inline-block;
-    }
-    .nav-dropdown select {
-      background: #181818;
-      color: #ccc;
-      border: 1px solid #333;
-      padding: 8px 16px;
-      border-radius: 30px;
-      font-family: 'Inter', sans-serif;
       font-size: 0.9rem;
-      cursor: pointer;
-      outline: none;
+      color: #ccc;
+      flex-wrap: wrap;
     }
-    .nav-dropdown select:focus { border-color: #F5C518; }
+    .nav-links a {
+      padding: 6px 14px;
+      border-radius: 30px;
+      transition: 0.2s;
+    }
+    .nav-links a:hover { color: #F5C518; background: rgba(245, 197, 24, 0.1); }
+    .nav-links a.active { color: #F5C518; background: rgba(245, 197, 24, 0.1); }
 
-    /* ---------- QUICK BOOK BAR (Ster-Kinekor Style) ---------- */
+    /* ---------- QUICK BOOK BAR ---------- */
     .quick-book {
       background: #181818;
       border-radius: 16px;
@@ -303,7 +149,7 @@
       border-radius: 16px;
       padding: 30px 35px;
       margin-bottom: 40px;
-      border-left: 4px solid #1A3B7D; /* Blue accent */
+      border-left: 4px solid #1A3B7D;
     }
     .about-section h2 {
       font-family: 'Poppins', sans-serif;
@@ -387,13 +233,38 @@
     }
     .toggle-group button:hover:not(.active) { color: #fff; }
 
-    /* ---------- FILM GRID (Modern Dark Cards) ---------- */
-    #filmGrid {
+    /* ---------- FILM GRID (DATE SECTIONS + GRID) ---------- */
+    .day-section {
+      margin-bottom: 48px;
+      scroll-margin-top: 80px;
+    }
+    .day-header {
+      font-size: 1.8rem;
+      color: #ffd700;
+      border-bottom: 3px solid #2a3a6a;
+      padding-bottom: 12px;
+      margin-bottom: 24px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      justify-content: space-between;
+    }
+    .day-header .date-badge {
+      background: #ffd700;
+      color: #0a0e1a;
+      font-size: 0.9rem;
+      padding: 4px 16px;
+      border-radius: 30px;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+    .film-grid-inner {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
       gap: 28px;
-      margin-top: 10px;
     }
+
+    /* ---------- FILM CARD (GRID LAYOUT) ---------- */
     .film-card {
       background: #151515;
       border-radius: 14px;
@@ -411,7 +282,7 @@
     }
     .film-card img {
       width: 100%;
-      height: 300px;
+      height: 280px;
       object-fit: cover;
       background: #0B0B0B;
     }
@@ -434,7 +305,10 @@
       color: #888;
       margin-bottom: 6px;
     }
-    .film-card .film-meta span { margin-right: 8px; }
+    .film-card .film-meta .time-venue {
+      font-size: 0.75rem;
+      color: #666;
+    }
     .film-card .badge-row {
       display: flex;
       flex-wrap: wrap;
@@ -470,7 +344,7 @@
       color: #0B0B0B;
     }
 
-    /* ---------- MODAL (Pop-up) ---------- */
+    /* ---------- MODAL ---------- */
     .modal-container {
       display: none;
       position: fixed;
@@ -574,9 +448,10 @@
       .filter-top { border-radius: 20px; flex-direction: column; align-items: stretch; }
       .filter-toggles { flex-direction: column; align-items: stretch; }
       .toggle-group { justify-content: center; }
-      #filmGrid { grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 16px; }
+      .film-grid-inner { grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 16px; }
       .film-card img { height: 220px; }
       .modal-body { padding: 20px; margin: 10px; }
+      .day-header { font-size: 1.4rem; flex-wrap: wrap; }
     }
   </style>
 </head>
@@ -584,14 +459,20 @@
 <div class="container">
 
   <!-- ========== NAVIGATION ========== -->
-  <div class="nav-links">
-    <a href="#">Home</a>
-    <a href="#day-sat-12">Sat 12 Sep</a>
-    <a href="#day-fri-18">Fri 18 Sep</a>
-    <a href="#day-sat-19">Sat 19 Sep</a>
-    <a href="program.html" target="_blank">EU Program</a>
-    <a href="#about">About</a>
-  </div>
+  <nav class="navbar">
+    <div class="nav-logo">
+      <img src="euro-flim-1-1024x574.jpg" alt="EU Film Festival Logo" />
+      <span>EU Film Fest <small>Malawi 2026</small></span>
+    </div>
+    <div class="nav-links">
+      <a href="#">Home</a>
+      <a href="#day-sat-12">Sat 12 Sep</a>
+      <a href="#day-fri-18">Fri 18 Sep</a>
+      <a href="#day-sat-19">Sat 19 Sep</a>
+      <a href="program.html" target="_blank">EU Program</a>
+      <a href="#about">About</a>
+    </div>
+  </nav>
 
   <!-- ========== QUICK BOOK BAR ========== -->
   <div class="quick-book">
@@ -610,13 +491,13 @@
   <section id="about" class="about-section">
     <h2>🇪🇺 EU <span>Film Festival</span> Malawi 2026</h2>
     <p>
-      Celebrating the best of European and Malawian cinema. Join us from <strong>12 – 19 September 2026</strong> 
+      Celebrating the best of European and Malawian cinema. Join us from <strong>12 – 20 September 2026</strong> 
       in Blantyre and Lilongwe for a week of captivating features, shorts, documentaries, and animations. 
       Experience diverse stories, award-winning filmmaking, and vibrant cultural exchange.
     </p>
   </section>
 
-  <!-- ========== CATALOGUE (Films) ========== -->
+  <!-- ========== CATALOGUE ========== -->
   <section id="catalogue">
     <div class="catalogue-header">
       <!-- Filter Bar -->
@@ -628,7 +509,7 @@
         <select id="filterDate"><option value="all">📅 All Dates</option></select>
         <select id="filterVenue"><option value="all">📍 All Venues</option></select>
         <select id="filterGenre"><option value="all">🎭 All Genres</option></select>
-        <select id="sortBy"><option value="title">Sort: Title A-Z</option><option value="popularity">Sort: Popularity</option></select>
+        <select id="sortBy"><option value="time">Sort: Time</option><option value="title">Sort: Title A-Z</option><option value="year">Sort: Year</option></select>
       </div>
       <!-- Toggles -->
       <div class="filter-toggles">
