@@ -81,7 +81,7 @@ export function renderCatalogue(films) {
     `;
     section.appendChild(header);
 
-    // Inner container for the list of films
+    // Inner grid for the cards of this day
     const innerGrid = document.createElement('div');
     innerGrid.className = 'film-grid-inner';
 
@@ -102,10 +102,6 @@ export function renderCatalogue(films) {
         else if (film.program.slot.includes('Short')) badges += `<span class="badge badge-short">Short</span>`;
       }
 
-      // Get time and venue for display
-      const time = film.program?.time || '';
-      const venue = film.program?.venue || '';
-
       card.innerHTML = `
         <img src="${posterUrl}" alt="${film.title}" loading="lazy" onerror="this.src='https://via.placeholder.com/300x400?text=No+Poster'">
         <div class="card-body">
@@ -118,7 +114,7 @@ export function renderCatalogue(films) {
             <span>${film.country || ''}</span>
           </div>
           <div class="film-meta time-venue">
-            🕐 ${time}  •  📍 ${venue}
+            🕐 ${film.program?.time || 'TBD'}  •  📍 ${film.program?.venue || 'TBD'}
           </div>
           <div class="badge-row">${badges}</div>
           <button class="details-btn" data-film-id="${film.id}">View Details</button>
