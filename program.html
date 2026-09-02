@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>EU Residence Night – EU Film Festival Malawi 2026</title>
+  <title>European Film Festival Opening Reception – EU Film Festival Malawi 2026</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:opsz@14..32&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet">
@@ -117,6 +117,10 @@
     .event-header .event-meta .badge-red {
       background: #D32F2F;
     }
+    .event-header .event-meta .badge-gold {
+      background: #F5C518;
+      color: #0B0B0B;
+    }
 
     /* ---------- TIMETABLE ---------- */
     .timetable {
@@ -179,6 +183,24 @@
       padding: 4px 14px;
       border-radius: 30px;
       border: 1px solid #2a2a2a;
+    }
+    .timeline-item.arrival { 
+      border-left-color: #F5C518; 
+      background: #1a1a2e;
+      padding: 18px 22px;
+    }
+    .timeline-item.arrival .time {
+      font-size: 1.6rem;
+      color: #F5C518;
+      min-width: 150px;
+    }
+    .timeline-item.arrival .event-detail .title {
+      font-size: 1.4rem;
+      color: #fff;
+    }
+    .timeline-item.arrival .event-detail .sub {
+      font-size: 1rem;
+      color: #b0b0b0;
     }
     .timeline-item.performance { border-left-color: #D32F2F; }
     .timeline-item.performance .time { color: #D32F2F; }
@@ -382,6 +404,8 @@
       .event-header h1 { font-size: 1.8rem; }
       .timeline-item { flex-wrap: wrap; gap: 8px; }
       .timeline-item .time { min-width: 100px; font-size: 0.9rem; }
+      .timeline-item.arrival .time { font-size: 1.3rem; min-width: 110px; }
+      .timeline-item.arrival .event-detail .title { font-size: 1.1rem; }
       #filmGrid { grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 16px; }
       .film-card img { height: 240px; }
       .modal-body { padding: 20px; margin: 10px; }
@@ -399,19 +423,20 @@
     </div>
     <div class="nav-links">
       <a href="index.html">Catalogue</a>
-      <a href="program.html" class="active">EU Residence Night</a>
+      <a href="program.html" class="active">Opening Reception</a>
     </div>
   </nav>
 
   <!-- ========== EVENT HEADER ========== -->
   <header class="event-header">
-    <h1>🇪🇺 <span>EU Residence</span> Night</h1>
-    <p style="color:#b0b0b0; font-size:1.1rem; margin-top:4px;">An exclusive evening of European and Malawian cinema</p>
+    <h1>🇪🇺 <span>European Film Festival</span> Opening Reception</h1>
+    <p style="color:#b0b0b0; font-size:1.1rem; margin-top:4px;">An exclusive evening celebrating the start of the 2026 EU Film Festival</p>
     <div class="event-meta">
       <span>📅 <strong>Friday, 18 September 2026</strong></span>
       <span>📍 <strong>EU Residence</strong></span>
-      <span class="badge">🎟️ RSVP Required</span>
+      <span class="badge badge-gold">🎟️ RSVP Required</span>
       <span class="badge badge-red">🎵 Live Performance</span>
+      <span class="badge">🍷 Reception &amp; Networking</span>
     </div>
   </header>
 
@@ -419,6 +444,16 @@
   <section class="timetable">
     <h2><i>⏰</i> Event Schedule</h2>
     <div class="timeline">
+
+      <!-- Guest Arrival (LARGER STYLED) -->
+      <div class="timeline-item arrival">
+        <div class="time">16:30 – 18:00</div>
+        <div class="event-detail">
+          <div class="title">🥂 Guest Arrival &amp; Reception</div>
+          <div class="sub">Welcome reception, networking, and mingling</div>
+        </div>
+        <div class="duration">90 min</div>
+      </div>
 
       <!-- Performance -->
       <div class="timeline-item performance">
