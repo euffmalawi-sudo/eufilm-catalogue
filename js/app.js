@@ -24,13 +24,10 @@ async function loadFilms() {
     setupFilters(films);
     setupSorting(films);
 
-    // 3. Populate Quick Book dropdowns
+    // 3. Populate Quick Book dropdowns (Lilongwe films are filtered out)
     populateQuickSelects(films);
 
-    // 4. Setup Carousel
-    setupCarousel(films);
-
-    // 5. Quick Book button (conditional – only if the element exists)
+    // 4. Quick Book button (conditional – only if the element exists)
     const quickBookBtn = document.getElementById('quickBookBtn');
     if (quickBookBtn) {
       quickBookBtn.addEventListener('click', () => {
@@ -56,7 +53,7 @@ async function loadFilms() {
       console.warn('Quick Book button not found – skipping event listener.');
     }
 
-    // 6. Nav Venue filter (conditional – only if the element exists)
+    // 5. Nav Venue filter (conditional – only if the element exists)
     const navVenueSelect = document.getElementById('navVenueSelect');
     if (navVenueSelect) {
       navVenueSelect.addEventListener('change', (e) => {
@@ -75,11 +72,14 @@ function populateQuickSelects(films) {
   const filmSelect = document.getElementById('quickFilmSelect');
   if (!filmSelect) return;
 
-  // Filter out EU Residence films (Friday 18 September)
-  const filteredFilms = films.filter(f => f.program?.day !== 'Friday 18 September');
+  // Filter out EU Residence films (Friday 18 September) AND Lilongwe Girls School films (Sunday 20 September)
+  const filteredFilms = films.filter(f => 
+    f.program?.day !== 'Friday 18 September' && 
+    f.program?.day !== 'Sunday 20 September'
+  );
 
   // Sort by date/time
-  const dayOrder = ['Saturday 12 September', 'Saturday 19 September', 'Sunday 20 September'];
+  const dayOrder = ['Saturday 12 September', 'Saturday 19 September'];
   filteredFilms.sort((a, b) => {
     const dayA = a.program?.day || '';
     const dayB = b.program?.day || '';
@@ -105,75 +105,6 @@ function populateQuickSelects(films) {
     opt.textContent = `${f.title} (${day}, ${time})`;
     filmSelect.appendChild(opt);
   });
-}
-
-function setupCarousel(films) {
-  const track = document.getElementById('carouselTrack');
-  if (!track) return;
-
-  const posters = films.filter(f => f.poster && f.poster.trim() !== '').slice(0, 8);
-
-  let slidesHtml = posters.map(f => `
-    <div class="carousel-slide">
-      <img src="${f.poster}" alt="${f.title}" loading="lazy" onerror="this.style.display='none'" />
-      <div class="slide-overlay"><h3>${f.title}</h3><p>${f.director || ''}</p></div>
-    </div>
-  `).join('');
-
-  // Media Day slide
-  slidesHtml += `
-    <div class="carousel-slide media-day">
-      <div class="date-badge">📸 26 SEPTEMBER</div>
-      <h3>Filmmakers & Media Day</h3>
-      <p style="color:#ccc; margin:4px 0 12px;">Networking, panels, and exclusive previews.</p>
-      <a href="mailto:eufilmfestmalawi@gmail.com?subject=Media%20Day%20Inquiry">📧 More Info →</a>
-    </div>
-  `;
-
-  track.innerHTML = slidesHtml;
-
-  let currentIndex = 0;
-  const slides = track.querySelectorAll('.carousel-slide');
-  const totalSlides = slides.length;
-  const visibleSlides = window.innerWidth > 900 ? 4 : (window.innerWidth > 600 ? 2 : 1);
-  const maxIndex = Math.max(0, totalSlides - visibleSlides);
-
-  const updateCarousel = () => {
-    const slideWidth = slides[0]?.offsetWidth + 4 || 0;
-    track.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
-  };
-
-  const prevBtn = document.getElementById('prevBtn');
-  const nextBtn = document.getElementById('nextBtn');
-
-  if (prevBtn) {
-    prevBtn.addEventListener('click', () => {
-      if (currentIndex > 0) { currentIndex--; updateCarousel(); }
-      else { currentIndex = maxIndex; updateCarousel(); }
-    });
-  }
-
-  if (nextBtn) {
-    nextBtn.addEventListener('click', () => {
-      if (currentIndex < maxIndex) { currentIndex++; updateCarousel(); }
-      else { currentIndex = 0; updateCarousel(); }
-    });
-  }
-
-  window.addEventListener('resize', () => {
-    const newVisible = window.innerWidth > 900 ? 4 : (window.innerWidth > 600 ? 2 : 1);
-    const newMax = Math.max(0, totalSlides - newVisible);
-    if (currentIndex > newMax) currentIndex = newMax;
-    updateCarousel();
-  });
-
-  setInterval(() => {
-    if (currentIndex < maxIndex) { currentIndex++; } 
-    else { currentIndex = 0; }
-    updateCarousel();
-  }, 4500);
-
-  setTimeout(updateCarousel, 100);
 }
 
 // Load films
