@@ -1,7 +1,18 @@
 import { openModal } from './modal.js';
 
-// Define the exact order of the festival days
-const dayOrder = ['Saturday 12 September', 'Saturday 19 September'];
+// Map full day names to URL-friendly slugs for anchor links
+function getDaySlug(day) {
+  const map = {
+    'Saturday 12 September': 'sat-12',
+    'Friday 18 September': 'fri-18',
+    'Saturday 19 September': 'sat-19'
+  };
+  return map[day] || day.toLowerCase().replace(/ /g, '-').replace('september', 'sep');
+}
+
+// Define the exact order of the festival days (only visible days)
+const dayOrder = ['Saturday 12 September', 'Friday 18 September', 'Saturday 19 September'];
+
 function sortDays(a, b) {
   const idxA = dayOrder.indexOf(a);
   const idxB = dayOrder.indexOf(b);
@@ -16,8 +27,7 @@ export function renderCatalogue(films) {
   if (!grid) return;
   grid.innerHTML = '';
 
-  // Filter out Lilongwe Girls School films (Sunday 20 September)
-  // These are private events and should not be displayed in the catalogue
+  // Filter out Lilongwe Girls School films (Sunday 20 September) – private event
   const visibleFilms = films.filter(f => f.program?.day !== 'Sunday 20 September');
 
   if (visibleFilms.length === 0) {
@@ -57,9 +67,10 @@ export function renderCatalogue(films) {
       });
     }
 
-    // Create the Day Section wrapper
+    // Create the Day Section wrapper with an ID for anchor linking
     const section = document.createElement('div');
     section.className = 'day-section';
+    section.id = 'day-' + getDaySlug(day);
 
     const filmCount = dayFilms.length;
     const header = document.createElement('div');
@@ -70,7 +81,7 @@ export function renderCatalogue(films) {
     `;
     section.appendChild(header);
 
-    // Inner grid for the cards of this day
+    // Inner container for the list of films
     const innerGrid = document.createElement('div');
     innerGrid.className = 'film-grid-inner';
 
@@ -80,12 +91,38 @@ export function renderCatalogue(films) {
       const posterUrl = film.poster && film.poster.trim() !== '' 
         ? film.poster 
         : 'https://via.placeholder.com/300x400?text=No+Poster';
+
+      // Build badges
+      let badges = '';
+      if (film.isMalawian) badges += `<span class="badge badge-mw">🇲🇼 Malawian</span>`;
+      else badges += `<span class="badge badge-eu">🇪🇺 European</span>`;
+      
+      if (film.program?.slot) {
+        if (film.program.slot.includes('Feature')) badges += `<span class="badge badge-feature">Feature</span>`;
+        else if (film.program.slot.includes('Short')) badges += `<span class="badge badge-short">Short</span>`;
+      }
+
+      // Get time and venue for display
+      const time = film.program?.time || '';
+      const venue = film.program?.venue || '';
+
       card.innerHTML = `
         <img src="${posterUrl}" alt="${film.title}" loading="lazy" onerror="this.src='https://via.placeholder.com/300x400?text=No+Poster'">
-        <h3 class="film-title">${film.title}</h3>
-        <p class="film-director">${film.director || 'Director TBA'}</p>
-        <p class="film-year">${film.year || ''}  •  ${film.country || ''}</p>
-        <button class="details-btn" data-film-id="${film.id}">View Details</button>
+        <div class="card-body">
+          <div class="film-title">${film.title}</div>
+          <div class="film-meta">
+            <span>${film.director || 'Director TBA'}</span>
+            <span>•</span>
+            <span>${film.year || ''}</span>
+            <span>•</span>
+            <span>${film.country || ''}</span>
+          </div>
+          <div class="film-meta time-venue">
+            🕐 ${time}  •  📍 ${venue}
+          </div>
+          <div class="badge-row">${badges}</div>
+          <button class="details-btn" data-film-id="${film.id}">View Details</button>
+        </div>
       `;
       innerGrid.appendChild(card);
     });
