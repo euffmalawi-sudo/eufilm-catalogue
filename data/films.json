@@ -23,8 +23,8 @@
     "isMalawian": false,
     "program": {
       "day": "Saturday 12 September",
-      "time": "13:00",
-      "venue": "Jacaranda Cultural Centre, Blantyre",
+      "time": "12:30",
+      "venue": "Alliance Française de Blantyre",
       "slot": "European Feature"
     },
     "awards": [
@@ -56,8 +56,8 @@
     "isMalawian": false,
     "program": {
       "day": "Saturday 12 September",
-      "time": "14:47",
-      "venue": "Jacaranda Cultural Centre, Blantyre",
+      "time": "14:15",
+      "venue": "Alliance Française de Blantyre",
       "slot": "European Short"
     },
     "awards": [
@@ -90,8 +90,8 @@
     "isMalawian": false,
     "program": {
       "day": "Saturday 12 September",
-      "time": "15:19",
-      "venue": "Jacaranda Cultural Centre, Blantyre",
+      "time": "14:45",
+      "venue": "Alliance Française de Blantyre",
       "slot": "European Feature"
     },
     "awards": [
@@ -123,8 +123,8 @@
     "isMalawian": false,
     "program": {
       "day": "Saturday 12 September",
-      "time": "16:54",
-      "venue": "Jacaranda Cultural Centre, Blantyre",
+      "time": "16:15",
+      "venue": "Alliance Française de Blantyre",
       "slot": "European Feature"
     },
     "awards": [
@@ -156,7 +156,7 @@
     "isMalawian": false,
     "program": {
       "day": "Friday 18 September",
-      "time": "20:04",
+      "time": "20:05",
       "venue": "EU Residence",
       "slot": "European Feature"
     },
@@ -186,9 +186,9 @@
     "isMalawian": false,
     "program": {
       "day": "Saturday 19 September",
-      "time": "13:08",
-      "venue": "Pabwalo National Library",
-      "slot": "European Short"
+      "time": "12:00",
+      "venue": "Pabwalo Multipurpose Room at the National Library",
+      "slot": "European Feature"
     },
     "awards": []
   },
@@ -216,7 +216,7 @@
     "isMalawian": false,
     "program": {
       "day": "Sunday 20 September",
-      "time": "15:00",
+      "time": "14:00",
       "venue": "Lilongwe Girls School / Good Shepherd School (TBC)",
       "slot": "European Feature"
     },
@@ -246,8 +246,8 @@
     "isMalawian": false,
     "program": {
       "day": "Saturday 19 September",
-      "time": "11:00",
-      "venue": "Pabwalo National Library",
+      "time": "10:00",
+      "venue": "Pabwalo Multipurpose Room at the National Library",
       "slot": "European Feature"
     },
     "awards": [
@@ -273,7 +273,7 @@
     "combined": 0,
     "festivalScore": 0,
     "contentRisk": 0,
-    "delegation": "",
+    "delegation": "German",
     "imdbId": "tt29730305",
     "eventSuggestion": "Saturday 19 Sep",
     "youtubeId": "TsVpWX0nVyQ",
@@ -281,10 +281,9 @@
     "program": {
       "day": "Saturday 19 September",
       "time": "15:30",
-      "venue": "Pabwalo National Library",
+      "venue": "Pabwalo Multipurpose Room at the National Library",
       "slot": "European Feature"
     },
-    "dropdownLabel": "Peacock – Saturday 19 Sep, 13:00",
     "awards": [
       "Best First Feature Award - Stockholm International Film Festival",
       "Best Leading Actor - Austrian Film Awards"
@@ -314,8 +313,8 @@
     "isMalawian": false,
     "program": {
       "day": "Saturday 19 September",
-      "time": "14:59",
-      "venue": "Pabwalo National Library",
+      "time": "15:10",
+      "venue": "Pabwalo Multipurpose Room at the National Library",
       "slot": "European Short"
     },
     "awards": []
@@ -344,8 +343,8 @@
     "isMalawian": false,
     "program": {
       "day": "Saturday 19 September",
-      "time": "13:13",
-      "venue": "Pabwalo National Library",
+      "time": "13:45",
+      "venue": "Pabwalo Multipurpose Room at the National Library",
       "slot": "European Feature"
     },
     "awards": [
@@ -358,7 +357,7 @@
     "title": "Is There Anybody Out There?",
     "country": "United Kingdom",
     "year": 2023,
-    "runtime": "90",
+    "runtime": 90,
     "director": "Ella Glendining",
     "genres": ["Drama"],
     "languages": "English",
@@ -377,8 +376,8 @@
     "isMalawian": false,
     "program": {
       "day": "Saturday 19 September",
-      "time": "17:27",
-      "venue": "Pabwalo National Library",
+      "time": "18:10",
+      "venue": "Pabwalo Multipurpose Room at the National Library",
       "slot": "European Feature"
     },
     "awards": []
@@ -407,8 +406,8 @@
     "isMalawian": false,
     "program": {
       "day": "Saturday 19 September",
-      "time": "19:12",
-      "venue": "Pabwalo National Library",
+      "time": "19:50",
+      "venue": "Pabwalo Multipurpose Room at the National Library",
       "slot": "European Feature"
     },
     "awards": []
@@ -437,8 +436,8 @@
     "isMalawian": false,
     "program": {
       "day": "Saturday 12 September",
-      "time": "18:53",
-      "venue": "Jacaranda Cultural Center",
+      "time": "18:45",
+      "venue": "Alliance Française de Blantyre",
       "slot": "European Feature"
     },
     "awards": []
@@ -478,10 +477,10 @@
     "title": "Amina",
     "country": "Malawi",
     "year": 2025,
-    "runtime": "15",
+    "runtime": 15,
     "director": "Faith Msole",
     "genres": ["Short"],
-    "languages": "TBC",
+    "languages": "Chichewa, English",
     "poster": "amina.jpeg",
     "synopsis": "When Amina arrives at school visibly distressed, her best friend Angella gently encourages her to reveal the secret she has been carrying. Through painful flashbacks, Amina recounts how poverty and her mother's failing marriage have led to her repeated sexual abuse by her stepfather. When a sudden revelation threatens to shatter what remains of her family, Amina is forced to confront the devastating consequences of a secret that can no longer be hidden.",
     "imdb": 0,
@@ -492,13 +491,13 @@
     "contentRisk": 0,
     "delegation": "",
     "imdbId": "",
-    "eventSuggestion": "Saturday 19 Sep",
+    "eventSuggestion": "Saturday 12 Sep",
     "youtubeId": "",
     "isMalawian": true,
     "program": {
-      "day": "Saturday 19 September",
-      "time": "21:10",
-      "venue": "Pabwalo National Library",
+      "day": "Saturday 12 September",
+      "time": "18:15",
+      "venue": "Alliance Française de Blantyre",
       "slot": "Malawian Short"
     },
     "awards": []
@@ -538,7 +537,7 @@
     "title": "Nelia's Dream",
     "country": "Malawi",
     "year": 2025,
-    "runtime": "41",
+    "runtime": 41,
     "director": "Bright Africa Makina",
     "genres": ["Drama"],
     "languages": "Chichewa",
@@ -552,14 +551,14 @@
     "contentRisk": 0,
     "delegation": "",
     "imdbId": "",
-    "eventSuggestion": "Sunday 20 Sep",
+    "eventSuggestion": "Saturday 19 Sep",
     "youtubeId": "XiYZNZMkGJ4",
     "isMalawian": true,
     "program": {
-      "day": "Sunday 20 September",
-      "time": "17:30",
-      "venue": "Lilongwe Girls School / Good Shepherd School (TBC)",
-      "slot": "Malawian Short"
+      "day": "Saturday 19 September",
+      "time": "17:20",
+      "venue": "Pabwalo Multipurpose Room at the National Library",
+      "slot": "Malawian Feature"
     },
     "awards": []
   },
@@ -568,11 +567,11 @@
     "title": "Beyond Sight",
     "country": "Malawi",
     "year": 2026,
-    "runtime": "5",
+    "runtime": 5,
     "director": "Mandala Banda",
     "genres": ["Short"],
     "languages": "Chichewa, English",
-    "poster": "Beyond Sight Film Poster.jpg",
+    "poster": "",
     "synopsis": "Beyond Sight is a 5-minute short film that challenges perceptions of disability through the inspiring story of a blind girl Mahara, who shines among chess-playing peers that she just met. Despite being overlooked and underestimated because she is blind, Mahara uses her mental skill, chess notation and a guiding friend by the name of Asante to win without a second thought.",
     "imdb": 0,
     "rt": 0,
@@ -582,13 +581,13 @@
     "contentRisk": 0,
     "delegation": "",
     "imdbId": "",
-    "eventSuggestion": "Saturday 12 Sep",
+    "eventSuggestion": "Sunday 20 Sep",
     "youtubeId": "",
     "isMalawian": true,
     "program": {
-      "day": "Saturday 12 September",
-      "time": "18:38",
-      "venue": "Jacaranda Cultural Center",
+      "day": "Sunday 20 September",
+      "time": "16:45",
+      "venue": "Lilongwe Girls School / Good Shepherd School (TBC)",
       "slot": "Malawian Short"
     },
     "awards": []
