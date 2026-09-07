@@ -8,14 +8,18 @@ export function openModal(film) {
   let FILM_ENTRY_ID;
   const venue = film.program?.venue || '';
 
-  if (venue.includes('Jacaranda')) {
+  if (venue.includes('Jacaranda') || venue.includes('Alliance Française')) {
     // Jacaranda Form (Saturday 12 September)
     GOOGLE_FORM_ID = '1FAIpQLScPiE2o-0GaOlVbAQXFyPurugtfIOIg8cXxv20mLXtdCDOR5w';
     FILM_ENTRY_ID = '1162404058';
   } else if (venue.includes('Pabwalo')) {
     // Pabwalo Form (Saturday 19 September)
     GOOGLE_FORM_ID = '1FAIpQLScBGDHtUkdQtvRZVk4uXfxaFYXjZ0FhW3DPjUPxB8OX-4fhqg';
-    FILM_ENTRY_ID = '635912452'; // ← CORRECTED ENTRY ID FOR PABWALO
+    FILM_ENTRY_ID = '635912452';
+  } else if (venue.includes('EU Residence')) {
+    // EU Residence Form (Friday 18 September) – NOW OPEN TO PUBLIC
+    GOOGLE_FORM_ID = '1FAIpQLScfA8ITA559ZlzoDILNBDdtfv-D1yKmfEXpZgWEXxkO_Co4qw';
+    FILM_ENTRY_ID = '635912452';
   } else {
     // Fallback: use Jacaranda form
     GOOGLE_FORM_ID = '1FAIpQLScPiE2o-0GaOlVbAQXFyPurugtfIOIg8cXxv20mLXtdCDOR5w';
@@ -23,7 +27,6 @@ export function openModal(film) {
   }
 
   // --- FORMAT THE FILM + TIME VALUE ---
-  // Example: "Banel & Adama – 13:00"
   const filmValue = `${film.title} – ${film.program?.time || 'TBD'}`;
 
   // Build the pre-filled URL with the film field
@@ -58,6 +61,7 @@ export function openModal(film) {
       <p><strong>Director:</strong> ${film.director || 'TBA'}  •  <strong>Year:</strong> ${film.year || 'TBA'}  •  <strong>Runtime:</strong> ${film.runtime ? film.runtime + ' min' : 'TBA'}</p>
       <p><strong>Country:</strong> ${film.country || 'TBA'}  •  <strong>Genres:</strong> ${film.genres ? film.genres.join(', ') : 'N/A'}</p>
       <p><strong>Languages:</strong> ${film.languages || 'TBA'}</p>
+      <p><strong>Malawi Rating:</strong> ${film.rating || 'Not rated'}</p>
       
       ${film.synopsis ? `<p><strong>📖 Synopsis:</strong> ${film.synopsis}</p>` : ''}
       
