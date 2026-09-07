@@ -17,17 +17,11 @@ async function loadFilms() {
     window.__films = films;
     window.__currentFiltered = films;
 
-    // 1. Render Catalogue
     renderCatalogue(films);
-
-    // 2. Setup Filters & Sorting
     setupFilters(films);
     setupSorting(films);
-
-    // 3. Populate Quick Book dropdowns
     populateQuickSelects(films);
 
-    // 4. Quick Book button
     const quickBookBtn = document.getElementById('quickBookBtn');
     if (quickBookBtn) {
       quickBookBtn.addEventListener('click', () => {
@@ -41,17 +35,31 @@ async function loadFilms() {
           alert('Film not found. Please try again.');
           return;
         }
-        const GOOGLE_FORM_ID = '1FAIpQLSdOSqgGyZCzydXeK8iLIXmZCjmsiK5IW3q8iw83QDPsKUPYVQ';
-        const DATE_ENTRY_ID = '1185226796';
-        const FILM_ENTRY_ID = '1162404058';
-        const dateValue = `${film.program?.day || 'TBD'} - ${film.program?.venue || 'TBD'}`;
+        // Use the same logic as modal.js to determine which form to use
+        let GOOGLE_FORM_ID;
+        let FILM_ENTRY_ID;
+        const venue = film.program?.venue || '';
+
+        if (venue.includes('Jacaranda') || venue.includes('Alliance Française')) {
+          GOOGLE_FORM_ID = '1FAIpQLScPiE2o-0GaOlVbAQXFyPurugtfIOIg8cXxv20mLXtdCDOR5w';
+          FILM_ENTRY_ID = '1162404058';
+        } else if (venue.includes('Pabwalo')) {
+          GOOGLE_FORM_ID = '1FAIpQLScBGDHtUkdQtvRZVk4uXfxaFYXjZ0FhW3DPjUPxB8OX-4fhqg';
+          FILM_ENTRY_ID = '635912452';
+        } else if (venue.includes('EU Residence')) {
+          GOOGLE_FORM_ID = '1FAIpQLScfA8ITA559ZlzoDILNBDdtfv-D1yKmfEXpZgWEXxkO_Co4qw';
+          FILM_ENTRY_ID = '635912452';
+        } else {
+          GOOGLE_FORM_ID = '1FAIpQLScPiE2o-0GaOlVbAQXFyPurugtfIOIg8cXxv20mLXtdCDOR5w';
+          FILM_ENTRY_ID = '1162404058';
+        }
+
         const filmValue = `${film.title} – ${film.program?.time || 'TBD'}`;
-        const url = `https://docs.google.com/forms/d/e/${GOOGLE_FORM_ID}/viewform?usp=pp_url&entry.${DATE_ENTRY_ID}=${encodeURIComponent(dateValue)}&entry.${FILM_ENTRY_ID}=${encodeURIComponent(filmValue)}`;
+        const url = `https://docs.google.com/forms/d/e/${GOOGLE_FORM_ID}/viewform?usp=pp_url&entry.${FILM_ENTRY_ID}=${encodeURIComponent(filmValue)}`;
         window.open(url, '_blank');
       });
     }
 
-    // 5. Nav Venue filter (conditional)
     const navVenueSelect = document.getElementById('navVenueSelect');
     if (navVenueSelect) {
       navVenueSelect.addEventListener('change', (e) => {
@@ -70,13 +78,11 @@ function populateQuickSelects(films) {
   const filmSelect = document.getElementById('quickFilmSelect');
   if (!filmSelect) return;
 
-  // Filter out EU Residence films (Friday 18 September) AND Lilongwe Girls School films (Sunday 20 September)
-  const filteredFilms = films.filter(f => 
-    f.program?.day !== 'Friday 18 September' && 
-    f.program?.day !== 'Sunday 20 September'
-  );
+  // Only filter out EU Residence films from Quick Book if they are still private
+  // Since EU Residence is now public, we only filter out Lilongwe (private event)
+  const filteredFilms = films.filter(f => f.program?.day !== 'Sunday 20 September');
 
-  const dayOrder = ['Saturday 12 September', 'Saturday 19 September'];
+  const dayOrder = ['Saturday 12 September', 'Friday 18 September', 'Saturday 19 September'];
   filteredFilms.sort((a, b) => {
     const dayA = a.program?.day || '';
     const dayB = b.program?.day || '';
