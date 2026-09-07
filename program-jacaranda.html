@@ -201,6 +201,11 @@
     .timeline-item.film .time { color: #1A3B7D; }
     .timeline-item.intermission { border-left-color: #555; background: #111; }
     .timeline-item.intermission .time { color: #777; }
+    .timeline-item.discussion { 
+      border-left-color: #F5C518; 
+      background: #1a1a2e;
+    }
+    .timeline-item.discussion .time { color: #F5C518; }
 
     /* ---------- FILM GRID ---------- */
     .films-section {
@@ -294,6 +299,71 @@
     .details-btn:hover {
       background: #F5C518;
       color: #0B0B0B;
+    }
+
+    /* ---------- POSTER RATING OVERLAY ---------- */
+    .poster-wrapper {
+      position: relative;
+      overflow: hidden;
+    }
+    .poster-wrapper img {
+      width: 100%;
+      height: 280px;
+      object-fit: cover;
+      background: #0B0B0B;
+    }
+    .poster-rating {
+      position: absolute;
+      top: 12px;
+      left: 12px;
+      padding: 4px 14px;
+      border-radius: 30px;
+      font-weight: 800;
+      font-size: 1rem;
+      color: #fff;
+      background: #555;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.6);
+      z-index: 2;
+      text-shadow: 0 1px 4px rgba(0,0,0,0.5);
+    }
+    .poster-rating.rating-u { background: #2E7D32; }
+    .poster-rating.rating-a { background: #F57C00; }
+    .poster-rating.rating-aa { background: #C62828; }
+
+    .rating-badge {
+      display: inline-block;
+      padding: 2px 12px;
+      border-radius: 30px;
+      font-weight: 700;
+      font-size: 0.7rem;
+      color: #fff;
+    }
+    .rating-badge.rating-u { background: #2E7D32; }
+    .rating-badge.rating-a { background: #F57C00; }
+    .rating-badge.rating-aa { background: #C62828; }
+
+    /* ---------- RATING LEGEND ---------- */
+    .rating-legend {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 16px 24px;
+      padding: 12px 20px;
+      background: #141414;
+      border-radius: 40px;
+      border: 1px solid #2a2a2a;
+      margin-bottom: 24px;
+      font-size: 0.85rem;
+    }
+    .legend-title {
+      font-weight: 600;
+      color: #F5C518;
+    }
+    .legend-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: #ccc;
     }
 
     /* ---------- MODAL ---------- */
@@ -461,6 +531,7 @@
       <a href="index.html">Catalogue</a>
       <a href="program.html">Opening Reception</a>
       <a href="program-jacaranda.html" class="active">Jacaranda Day</a>
+      <a href="program-lilongwe.html">Lilongwe Girls</a>
     </div>
   </nav>
 
@@ -470,7 +541,7 @@
     <p style="color:#b0b0b0; font-size:1.1rem; margin-top:4px;">A full day of film workshops and European cinema screenings</p>
     <div class="event-meta">
       <span>📅 <strong>Saturday, 12 September 2026</strong></span>
-      <span>📍 <strong>Jacaranda Cultural Centre, Blantyre</strong></span>
+      <span>📍 <strong>Alliance Française de Blantyre</strong></span>
       <span class="badge badge-workshop">📝 Workshops</span>
       <span class="badge badge-lunch">🍽️ Lunch Provided</span>
       <span class="badge badge-gold">🎟️ RSVP Required</span>
@@ -482,21 +553,31 @@
     <h2><i>⏰</i> Event Schedule</h2>
     <div class="timeline">
 
+      <!-- Registration -->
+      <div class="timeline-item workshop">
+        <div class="time">09:00 – 09:30</div>
+        <div class="event-detail">
+          <div class="title">📝 Registration</div>
+          <div class="sub">Check-in for workshop participants</div>
+        </div>
+        <div class="duration">30 min</div>
+      </div>
+
       <!-- Workshop 1 -->
       <div class="timeline-item workshop">
-        <div class="time">09:00 – 09:45</div>
+        <div class="time">09:30 – 10:15</div>
         <div class="event-detail">
-          <div class="title">📝 Workshop: From Pitching to Scriptwriting</div>
-          <div class="sub">Guest Speaker: <strong>Adam Darren Antoine</strong> – Theory of filmmaking, pitching, and scriptwriting</div>
+          <div class="title">🎬 Workshop: Screenplay Writing</div>
+          <div class="sub">Guest Speaker: <strong>Shemu Joya</strong> – Malawian Award-Winning Filmmaker</div>
         </div>
         <div class="duration">45 min</div>
       </div>
 
-      <!-- Intermission -->
+      <!-- Health Break -->
       <div class="timeline-item intermission">
-        <div class="time">09:45 – 10:15</div>
+        <div class="time">10:15 – 10:45</div>
         <div class="event-detail">
-          <div class="title">☕ Intermission</div>
+          <div class="title">☕ Health Break</div>
           <div class="sub">30-minute break</div>
         </div>
         <div class="duration">30 min</div>
@@ -504,67 +585,47 @@
 
       <!-- Workshop 2 -->
       <div class="timeline-item workshop">
-        <div class="time">10:15 – 11:00</div>
+        <div class="time">10:45 – 11:30</div>
         <div class="event-detail">
-          <div class="title">🎥 Workshop: The Production Phase</div>
-          <div class="sub">Guest Speaker: <strong>Craig Mawanga</strong> – Filming, lighting, sound, camera operation, and production</div>
+          <div class="title">🎬 Workshop: What Actually Makes a Film Happen</div>
+          <div class="sub">Guest Speaker: <strong>Adam Antoine</strong> – Malawian Filmmaker and Fixer</div>
         </div>
         <div class="duration">45 min</div>
       </div>
 
-      <!-- Lunch Break -->
+      <!-- Networking -->
+      <div class="timeline-item discussion">
+        <div class="time">11:30 – 12:00</div>
+        <div class="event-detail">
+          <div class="title">💬 Discussions &amp; Networking</div>
+          <div class="sub">Connect with fellow filmmakers and enthusiasts</div>
+        </div>
+        <div class="duration">30 min</div>
+      </div>
+
+      <!-- Lunch -->
       <div class="timeline-item lunch">
-        <div class="time">11:00 – 12:00</div>
+        <div class="time">12:00 – 12:30</div>
         <div class="event-detail">
           <div class="title">🍽️ Lunch Break</div>
           <div class="sub">Lunch will be provided for all participants</div>
         </div>
-        <div class="duration">60 min</div>
-      </div>
-
-      <!-- Intermission before screenings -->
-      <div class="timeline-item intermission">
-        <div class="time">12:00 – 13:00</div>
-        <div class="event-detail">
-          <div class="title">☕ Pre-Screening Break</div>
-          <div class="sub">Seating and preparation for the film screenings</div>
-        </div>
-        <div class="duration">60 min</div>
+        <div class="duration">30 min</div>
       </div>
 
       <!-- Film: Banel & Adama -->
       <div class="timeline-item film">
-        <div class="time">13:00 – 14:27</div>
+        <div class="time">12:30 – 14:00</div>
         <div class="event-detail">
           <div class="title">🎬 Banel & Adama</div>
           <div class="sub">France, Mali, Senegal • Drama • 87 min</div>
         </div>
-        <div class="duration">87 min</div>
+        <div class="duration">90 min</div>
       </div>
 
       <!-- Intermission -->
       <div class="timeline-item intermission">
-        <div class="time">14:27 – 14:47</div>
-        <div class="event-detail">
-          <div class="title">☕ Intermission</div>
-          <div class="sub">20-minute break</div>
-        </div>
-        <div class="duration">20 min</div>
-      </div>
-
-      <!-- Film: Maybe Elephants -->
-      <div class="timeline-item film">
-        <div class="time">14:47 – 15:04</div>
-        <div class="event-detail">
-          <div class="title">🎬 Maybe Elephants</div>
-          <div class="sub">Canada, Norway • Animation, Short • 17 min</div>
-        </div>
-        <div class="duration">17 min</div>
-      </div>
-
-      <!-- Intermission -->
-      <div class="timeline-item intermission">
-        <div class="time">15:04 – 15:19</div>
+        <div class="time">14:00 – 14:15</div>
         <div class="event-detail">
           <div class="title">☕ Intermission</div>
           <div class="sub">15-minute break</div>
@@ -572,59 +633,19 @@
         <div class="duration">15 min</div>
       </div>
 
-      <!-- Film: A Boat In The Garden -->
+      <!-- Film: Maybe Elephants -->
       <div class="timeline-item film">
-        <div class="time">15:19 – 16:34</div>
+        <div class="time">14:15 – 14:35</div>
         <div class="event-detail">
-          <div class="title">🎬 A Boat In The Garden</div>
-          <div class="sub">France, Luxembourg • Animation, Drama, Family • 75 min</div>
-        </div>
-        <div class="duration">75 min</div>
-      </div>
-
-      <!-- Intermission -->
-      <div class="timeline-item intermission">
-        <div class="time">16:34 – 16:54</div>
-        <div class="event-detail">
-          <div class="title">☕ Intermission</div>
-          <div class="sub">20-minute break</div>
+          <div class="title">🎬 Maybe Elephants</div>
+          <div class="sub">Canada, Norway • Animation, Short • 17 min</div>
         </div>
         <div class="duration">20 min</div>
       </div>
 
-      <!-- Film: A New Kind Of Wilderness -->
-      <div class="timeline-item film">
-        <div class="time">16:54 – 18:18</div>
-        <div class="event-detail">
-          <div class="title">🎬 A New Kind Of Wilderness</div>
-          <div class="sub">Norway • Documentary • 84 min</div>
-        </div>
-        <div class="duration">84 min</div>
-      </div>
-
       <!-- Intermission -->
       <div class="timeline-item intermission">
-        <div class="time">18:18 – 18:38</div>
-        <div class="event-detail">
-          <div class="title">☕ Intermission</div>
-          <div class="sub">20-minute break</div>
-        </div>
-        <div class="duration">20 min</div>
-      </div>
-
-      <!-- Film: Beyond Sight -->
-      <div class="timeline-item film">
-        <div class="time">18:38 – 18:43</div>
-        <div class="event-detail">
-          <div class="title">🎬 Beyond Sight</div>
-          <div class="sub">Malawi • Short • 5 min</div>
-        </div>
-        <div class="duration">5 min</div>
-      </div>
-
-      <!-- Intermission -->
-      <div class="timeline-item intermission">
-        <div class="time">18:43 – 18:53</div>
+        <div class="time">14:35 – 14:45</div>
         <div class="event-detail">
           <div class="title">☕ Intermission</div>
           <div class="sub">10-minute break</div>
@@ -632,18 +653,86 @@
         <div class="duration">10 min</div>
       </div>
 
+      <!-- Film: A Boat In The Garden -->
+      <div class="timeline-item film">
+        <div class="time">14:45 – 16:05</div>
+        <div class="event-detail">
+          <div class="title">🎬 A Boat In The Garden</div>
+          <div class="sub">France, Luxembourg • Animation, Drama, Family • 75 min</div>
+        </div>
+        <div class="duration">80 min</div>
+      </div>
+
+      <!-- Intermission -->
+      <div class="timeline-item intermission">
+        <div class="time">16:05 – 16:15</div>
+        <div class="event-detail">
+          <div class="title">☕ Intermission</div>
+          <div class="sub">10-minute break</div>
+        </div>
+        <div class="duration">10 min</div>
+      </div>
+
+      <!-- Film: A New Kind Of Wilderness -->
+      <div class="timeline-item film">
+        <div class="time">16:15 – 17:45</div>
+        <div class="event-detail">
+          <div class="title">🎬 A New Kind Of Wilderness</div>
+          <div class="sub">Norway • Documentary • 84 min</div>
+        </div>
+        <div class="duration">90 min</div>
+      </div>
+
+      <!-- Extended Intermission -->
+      <div class="timeline-item intermission">
+        <div class="time">17:45 – 18:15</div>
+        <div class="event-detail">
+          <div class="title">☕ Extended Intermission</div>
+          <div class="sub">30-minute break</div>
+        </div>
+        <div class="duration">30 min</div>
+      </div>
+
+      <!-- Film: Amina (SWAPPED IN) -->
+      <div class="timeline-item film">
+        <div class="time">18:15 – 18:30</div>
+        <div class="event-detail">
+          <div class="title">🎬 Amina</div>
+          <div class="sub">Malawi • Short • 15 min</div>
+        </div>
+        <div class="duration">15 min</div>
+      </div>
+
+      <!-- Intermission -->
+      <div class="timeline-item intermission">
+        <div class="time">18:30 – 18:45</div>
+        <div class="event-detail">
+          <div class="title">☕ Intermission</div>
+          <div class="sub">15-minute break</div>
+        </div>
+        <div class="duration">15 min</div>
+      </div>
+
       <!-- Film: Monsieur Aznavour -->
       <div class="timeline-item film">
-        <div class="time">18:53 – 20:46</div>
+        <div class="time">18:45 – 20:45</div>
         <div class="event-detail">
           <div class="title">🎬 Monsieur Aznavour</div>
           <div class="sub">France • Biography, Music, Drama • 113 min</div>
         </div>
-        <div class="duration">113 min</div>
+        <div class="duration">120 min</div>
       </div>
 
     </div>
   </section>
+
+  <!-- ========== RATING LEGEND ========== -->
+  <div class="rating-legend">
+    <span class="legend-title">🇲🇼 Malawi Censorship Ratings:</span>
+    <span class="legend-item"><span class="rating-badge rating-u">U</span> Universal – Suitable for all ages</span>
+    <span class="legend-item"><span class="rating-badge rating-a">A</span> Parental Guidance</span>
+    <span class="legend-item"><span class="rating-badge rating-aa">AA</span> 14 years and above</span>
+  </div>
 
   <!-- ========== FILMS SECTION ========== -->
   <section class="films-section">
@@ -664,7 +753,7 @@
         <img src="FAMA.png" alt="Film Association of Malawi" />
       </a>
       <a href="https://europeanfilmfestival.eu" target="_blank" rel="noopener noreferrer">
-        <img src="EFF%202026.png" alt="European Film Festival" />
+        <img src="EFF2026.png" alt="European Film Festival" />
       </a>
       <a href="https://www.lilongwe.diplo.de/" target="_blank" rel="noopener noreferrer">
         <img src="GERMANY.png" alt="German Embassy" />
@@ -711,7 +800,7 @@
 
 <script>
   // ========== DATA ==========
-  // Films for the Jacaranda event (Saturday 12 September)
+  // Films for the Jacaranda event (Saturday 12 September) – UPDATED
   const jacarandaFilms = [
     {
       "id": 1,
@@ -730,10 +819,11 @@
       "delegation": "",
       "youtubeId": "dcZJ5X0H0vM",
       "isMalawian": false,
+      "rating": "AA",
       "program": {
         "day": "Saturday 12 September",
-        "time": "13:00",
-        "venue": "Jacaranda Cultural Centre, Blantyre",
+        "time": "12:30",
+        "venue": "Alliance Française de Blantyre",
         "slot": "European Feature"
       },
       "awards": [
@@ -758,10 +848,11 @@
       "delegation": "",
       "youtubeId": "wcWr5SZDIog",
       "isMalawian": false,
+      "rating": "U",
       "program": {
         "day": "Saturday 12 September",
-        "time": "14:47",
-        "venue": "Jacaranda Cultural Centre, Blantyre",
+        "time": "14:15",
+        "venue": "Alliance Française de Blantyre",
         "slot": "European Short"
       },
       "awards": [
@@ -787,10 +878,11 @@
       "delegation": "",
       "youtubeId": "7S_c9xZ2aj0",
       "isMalawian": false,
+      "rating": "U",
       "program": {
         "day": "Saturday 12 September",
-        "time": "15:19",
-        "venue": "Jacaranda Cultural Centre, Blantyre",
+        "time": "14:45",
+        "venue": "Alliance Française de Blantyre",
         "slot": "European Feature"
       },
       "awards": [
@@ -815,10 +907,11 @@
       "delegation": "",
       "youtubeId": "i6eTxMSCgAs",
       "isMalawian": false,
+      "rating": "AA",
       "program": {
         "day": "Saturday 12 September",
-        "time": "16:54",
-        "venue": "Jacaranda Cultural Centre, Blantyre",
+        "time": "16:15",
+        "venue": "Alliance Française de Blantyre",
         "slot": "European Feature"
       },
       "awards": [
@@ -843,35 +936,37 @@
       "delegation": "French",
       "youtubeId": "evoYNCdZGOQ",
       "isMalawian": false,
+      "rating": "AA",
       "program": {
         "day": "Saturday 12 September",
-        "time": "18:53",
-        "venue": "Jacaranda Cultural Centre, Blantyre",
+        "time": "18:45",
+        "venue": "Alliance Française de Blantyre",
         "slot": "European Feature"
       },
       "awards": []
     },
     {
-      "id": 103,
-      "title": "Beyond Sight",
+      "id": 100,
+      "title": "Amina",
       "country": "Malawi",
-      "year": 2026,
-      "runtime": "5",
-      "director": "Mandala Banda",
+      "year": 2025,
+      "runtime": 15,
+      "director": "Faith Msole",
       "genres": ["Short"],
       "languages": "Chichewa, English",
-      "poster": "",
-      "synopsis": "Beyond Sight is a 5-minute short film that challenges perceptions of disability through the inspiring story of a blind girl Mahara, who shines among chess-playing peers that she just met. Despite being overlooked and underestimated because she is blind, Mahara uses her mental skill, chess notation and a guiding friend by the name of Asante to win without a second thought.",
+      "poster": "amina.jpeg",
+      "synopsis": "When Amina arrives at school visibly distressed, her best friend Angella gently encourages her to reveal the secret she has been carrying. Through painful flashbacks, Amina recounts how poverty and her mother's failing marriage have led to her repeated sexual abuse by her stepfather. When a sudden revelation threatens to shatter what remains of her family, Amina is forced to confront the devastating consequences of a secret that can no longer be hidden.",
       "imdb": 0,
       "rt": 0,
       "meta": 0,
       "delegation": "",
       "youtubeId": "",
       "isMalawian": true,
+      "rating": "AA",
       "program": {
         "day": "Saturday 12 September",
-        "time": "18:38",
-        "venue": "Jacaranda Cultural Centre, Blantyre",
+        "time": "18:15",
+        "venue": "Alliance Française de Blantyre",
         "slot": "Malawian Short"
       },
       "awards": []
@@ -908,8 +1003,18 @@
         else if (film.program.slot.includes('Short')) badges += `<span class="badge badge-short">Short</span>`;
       }
 
+      // Rating badge on poster
+      let ratingBadge = '';
+      if (film.rating) {
+        const ratingClass = film.rating === 'U' ? 'rating-u' : (film.rating === 'A' ? 'rating-a' : 'rating-aa');
+        ratingBadge = `<span class="poster-rating ${ratingClass}">${film.rating}</span>`;
+      }
+
       card.innerHTML = `
-        <img src="${posterUrl}" alt="${film.title}" loading="lazy" onerror="this.src='https://via.placeholder.com/300x400?text=No+Poster'">
+        <div class="poster-wrapper">
+          <img src="${posterUrl}" alt="${film.title}" loading="lazy" onerror="this.src='https://via.placeholder.com/300x400?text=No+Poster'">
+          ${ratingBadge}
+        </div>
         <div class="card-body">
           <div class="film-title">${film.title}</div>
           <div class="film-meta">
@@ -920,7 +1025,10 @@
           <div class="film-meta" style="font-size:0.75rem; color:#666;">
             ${film.program?.time || ''} • ${film.program?.venue || ''}
           </div>
-          <div class="badge-row">${badges}</div>
+          <div class="badge-row">
+            ${badges}
+            ${film.rating ? `<span class="badge rating-badge rating-${film.rating.toLowerCase()}">${film.rating}</span>` : ''}
+          </div>
           <button class="details-btn" data-index="${index}">View Details</button>
         </div>
       `;
@@ -942,7 +1050,7 @@
     const body = document.getElementById('modalBody');
     if (!container || !body) return;
 
-    // Jacaranda Form (Saturday 12 September)
+    // Jacaranda Form
     const GOOGLE_FORM_ID = '1FAIpQLScPiE2o-0GaOlVbAQXFyPurugtfIOIg8cXxv20mLXtdCDOR5w';
     const FILM_ENTRY_ID = '1162404058';
 
@@ -975,6 +1083,7 @@
         <p><strong>Director:</strong> ${film.director || 'TBA'}  •  <strong>Year:</strong> ${film.year || 'TBA'}  •  <strong>Runtime:</strong> ${film.runtime ? film.runtime + ' min' : 'TBA'}</p>
         <p><strong>Country:</strong> ${film.country || 'TBA'}  •  <strong>Genres:</strong> ${film.genres ? film.genres.join(', ') : 'N/A'}</p>
         <p><strong>Languages:</strong> ${film.languages || 'TBA'}</p>
+        <p><strong>Malawi Rating:</strong> ${film.rating || 'Not rated'}</p>
         
         ${film.synopsis ? `<p><strong>📖 Synopsis:</strong> ${film.synopsis}</p>` : ''}
         
