@@ -102,8 +102,18 @@ export function renderCatalogue(films) {
         else if (film.program.slot.includes('Short')) badges += `<span class="badge badge-short">Short</span>`;
       }
 
+      // --- RATING BADGE (overlay on poster) ---
+      let ratingBadge = '';
+      if (film.rating) {
+        const ratingClass = film.rating === 'U' ? 'rating-u' : (film.rating === 'A' ? 'rating-a' : 'rating-aa');
+        ratingBadge = `<span class="poster-rating ${ratingClass}">${film.rating}</span>`;
+      }
+
       card.innerHTML = `
-        <img src="${posterUrl}" alt="${film.title}" loading="lazy" onerror="this.src='https://via.placeholder.com/300x400?text=No+Poster'">
+        <div class="poster-wrapper">
+          <img src="${posterUrl}" alt="${film.title}" loading="lazy" onerror="this.src='https://via.placeholder.com/300x400?text=No+Poster'">
+          ${ratingBadge}
+        </div>
         <div class="card-body">
           <div class="film-title">${film.title}</div>
           <div class="film-meta">
@@ -116,7 +126,10 @@ export function renderCatalogue(films) {
           <div class="film-meta time-venue">
             🕐 ${film.program?.time || 'TBD'}  •  📍 ${film.program?.venue || 'TBD'}
           </div>
-          <div class="badge-row">${badges}</div>
+          <div class="badge-row">
+            ${badges}
+            ${film.rating ? `<span class="badge rating-badge rating-${film.rating.toLowerCase()}">${film.rating}</span>` : ''}
+          </div>
           <button class="details-btn" data-film-id="${film.id}">View Details</button>
         </div>
       `;
