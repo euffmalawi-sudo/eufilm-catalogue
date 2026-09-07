@@ -5,13 +5,14 @@ function getDaySlug(day) {
   const map = {
     'Saturday 12 September': 'sat-12',
     'Friday 18 September': 'fri-18',
-    'Saturday 19 September': 'sat-19'
+    'Saturday 19 September': 'sat-19',
+    'Sunday 20 September': 'sun-20'
   };
   return map[day] || day.toLowerCase().replace(/ /g, '-').replace('september', 'sep');
 }
 
-// Define the exact order of the festival days (only visible days)
-const dayOrder = ['Saturday 12 September', 'Friday 18 September', 'Saturday 19 September'];
+// Define the exact order of the festival days
+const dayOrder = ['Saturday 12 September', 'Friday 18 September', 'Saturday 19 September', 'Sunday 20 September'];
 
 function sortDays(a, b) {
   const idxA = dayOrder.indexOf(a);
@@ -27,19 +28,17 @@ export function renderCatalogue(films) {
   if (!grid) return;
   grid.innerHTML = '';
 
-  // Filter out Lilongwe Girls School films (Sunday 20 September) – private event
-  const visibleFilms = films.filter(f => f.program?.day !== 'Sunday 20 September');
+  // ALL films are now visible – no filtering
+  const visibleFilms = films;
 
   if (visibleFilms.length === 0) {
     grid.innerHTML = '<p style="text-align:center;padding:40px;color:#b0c4de;">No films match your criteria.</p>';
     return;
   }
 
-  // Get current sort preference from the dropdown
   const sortSelect = document.getElementById('sortBy');
   const sortVal = sortSelect ? sortSelect.value : 'time';
 
-  // 1. Group films by their program day
   const groups = {};
   visibleFilms.forEach(film => {
     const day = film.program?.day || 'TBD';
@@ -47,19 +46,16 @@ export function renderCatalogue(films) {
     groups[day].push(film);
   });
 
-  // 2. Sort the days
   const sortedDays = Object.keys(groups).sort(sortDays);
 
-  // 3. Loop through each day and create a section
   sortedDays.forEach(day => {
     let dayFilms = groups[day];
 
-    // Sort the films INSIDE this day based on the dropdown
     if (sortVal === 'title') {
       dayFilms.sort((a, b) => a.title.localeCompare(b.title));
     } else if (sortVal === 'year') {
       dayFilms.sort((a, b) => (b.year || 0) - (a.year || 0));
-    } else { // default: sort by screening time
+    } else {
       dayFilms.sort((a, b) => {
         const timeA = a.program?.time || '00:00';
         const timeB = b.program?.time || '00:00';
@@ -67,7 +63,6 @@ export function renderCatalogue(films) {
       });
     }
 
-    // Create the Day Section wrapper with an ID for anchor linking
     const section = document.createElement('div');
     section.className = 'day-section';
     section.id = 'day-' + getDaySlug(day);
@@ -81,7 +76,6 @@ export function renderCatalogue(films) {
     `;
     section.appendChild(header);
 
-    // Inner grid for the cards of this day
     const innerGrid = document.createElement('div');
     innerGrid.className = 'film-grid-inner';
 
@@ -92,7 +86,6 @@ export function renderCatalogue(films) {
         ? film.poster 
         : 'https://via.placeholder.com/300x400?text=No+Poster';
 
-      // Build badges
       let badges = '';
       if (film.isMalawian) badges += `<span class="badge badge-mw">🇲🇼 Malawian</span>`;
       else badges += `<span class="badge badge-eu">🇪🇺 European</span>`;
@@ -102,7 +95,6 @@ export function renderCatalogue(films) {
         else if (film.program.slot.includes('Short')) badges += `<span class="badge badge-short">Short</span>`;
       }
 
-      // --- RATING BADGE (overlay on poster) ---
       let ratingBadge = '';
       if (film.rating) {
         const ratingClass = film.rating === 'U' ? 'rating-u' : (film.rating === 'A' ? 'rating-a' : 'rating-aa');
@@ -140,7 +132,6 @@ export function renderCatalogue(films) {
     grid.appendChild(section);
   });
 
-  // Attach click listeners to all "View Details" buttons
   document.querySelectorAll('.details-btn').forEach(btn => {
     btn.addEventListener('click', (e) => {
       const id = parseInt(e.target.dataset.filmId, 10);
