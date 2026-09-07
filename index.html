@@ -8,49 +8,6 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:opsz@14..32&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet">
   <style>
-
-    /* ---------- POSTER RATING OVERLAY ---------- */
-.poster-wrapper {
-  position: relative;
-  overflow: hidden;
-}
-.poster-wrapper img {
-  width: 100%;
-  height: 280px;
-  object-fit: cover;
-  background: #0B0B0B;
-}
-.poster-rating {
-  position: absolute;
-  top: 12px;
-  left: 12px;
-  padding: 4px 14px;
-  border-radius: 30px;
-  font-weight: 800;
-  font-size: 1rem;
-  color: #fff;
-  background: #555;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.6);
-  z-index: 2;
-  text-shadow: 0 1px 4px rgba(0,0,0,0.5);
-}
-.poster-rating.rating-u { background: #2E7D32; }  /* Green */
-.poster-rating.rating-a { background: #F57C00; }  /* Orange */
-.poster-rating.rating-aa { background: #C62828; } /* Red */
-
-/* Also for the badge in the card body (already had .rating-badge) */
-.rating-badge {
-  display: inline-block;
-  padding: 2px 12px;
-  border-radius: 30px;
-  font-weight: 700;
-  font-size: 0.7rem;
-  color: #fff;
-}
-.rating-badge.rating-u { background: #2E7D32; }
-.rating-badge.rating-a { background: #F57C00; }
-.rating-badge.rating-aa { background: #C62828; }
-    
     /* ---------- RESET & BASE ---------- */
     * {
       margin: 0;
@@ -115,14 +72,14 @@
     .nav-links {
       display: flex;
       align-items: center;
-      gap: 20px;
+      gap: 12px;
       font-weight: 500;
-      font-size: 0.9rem;
+      font-size: 0.85rem;
       color: #ccc;
       flex-wrap: wrap;
     }
     .nav-links a {
-      padding: 6px 14px;
+      padding: 6px 12px;
       border-radius: 30px;
       transition: 0.2s;
     }
@@ -276,14 +233,6 @@
     }
     .toggle-group button:hover:not(.active) { color: #fff; }
 
-    <!-- Rating Legend -->
-<div class="rating-legend">
-  <span class="legend-title">🇲🇼 Malawi Censorship Ratings:</span>
-  <span class="legend-item"><span class="rating-badge rating-u">U</span> Universal – Suitable for all ages</span>
-  <span class="legend-item"><span class="rating-badge rating-a">A</span> Parental Guidance</span>
-  <span class="legend-item"><span class="rating-badge rating-aa">AA</span> 14 years and above</span>
-</div>
-    
     /* ---------- FILM GRID (DATE SECTIONS + GRID) ---------- */
     .day-section {
       margin-bottom: 48px;
@@ -395,6 +344,71 @@
       color: #0B0B0B;
     }
 
+    /* ---------- POSTER RATING OVERLAY ---------- */
+    .poster-wrapper {
+      position: relative;
+      overflow: hidden;
+    }
+    .poster-wrapper img {
+      width: 100%;
+      height: 280px;
+      object-fit: cover;
+      background: #0B0B0B;
+    }
+    .poster-rating {
+      position: absolute;
+      top: 12px;
+      left: 12px;
+      padding: 4px 14px;
+      border-radius: 30px;
+      font-weight: 800;
+      font-size: 1rem;
+      color: #fff;
+      background: #555;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.6);
+      z-index: 2;
+      text-shadow: 0 1px 4px rgba(0,0,0,0.5);
+    }
+    .poster-rating.rating-u { background: #2E7D32; }
+    .poster-rating.rating-a { background: #F57C00; }
+    .poster-rating.rating-aa { background: #C62828; }
+
+    .rating-badge {
+      display: inline-block;
+      padding: 2px 12px;
+      border-radius: 30px;
+      font-weight: 700;
+      font-size: 0.7rem;
+      color: #fff;
+    }
+    .rating-badge.rating-u { background: #2E7D32; }
+    .rating-badge.rating-a { background: #F57C00; }
+    .rating-badge.rating-aa { background: #C62828; }
+
+    /* ---------- RATING LEGEND ---------- */
+    .rating-legend {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 16px 24px;
+      padding: 12px 20px;
+      background: #141414;
+      border-radius: 40px;
+      border: 1px solid #2a2a2a;
+      margin-bottom: 24px;
+      font-size: 0.85rem;
+    }
+    .legend-title {
+      font-weight: 600;
+      color: #F5C518;
+    }
+    .legend-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: #ccc;
+    }
+
     /* ---------- MODAL ---------- */
     .modal-container {
       display: none;
@@ -491,60 +505,52 @@
 
     /* ---------- FOOTER ---------- */
     .footer {
-  margin-top: 60px;
-  padding: 30px 0 20px;
-  background: #ffffff; /* White background */
-  border-top: 1px solid #e0e0e0; /* Light gray border */
-  text-align: center;
-  border-radius: 12px; /* Optional: slightly rounded corners */
-}
-
-.footer-logos-wrapper {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  gap: 24px 32px;
-  margin-bottom: 24px;
-  padding: 0 20px;
-}
-
-.footer-logos-wrapper a {
-  display: inline-block;
-  transition: transform 0.25s ease, opacity 0.25s ease;
-  opacity: 0.8;
-  line-height: 0;
-}
-
-.footer-logos-wrapper a:hover {
-  transform: scale(1.10);
-  opacity: 1;
-}
-
-.footer-logos-wrapper img {
-  height: 50px;
-  width: auto;
-  max-width: 120px;
-  object-fit: contain;
-  /* Remove grayscale/brightness so logos appear in full color on white background */
-  filter: grayscale(0%) brightness(100%) contrast(1);
-  transition: filter 0.3s ease;
-}
-
-.footer-logos-wrapper a:hover img {
-  filter: grayscale(0%) brightness(100%) contrast(1); /* Keep full color on hover */
-}
-
-.footer-text {
-  color: #333333; /* Dark text for readability on white background */
-  font-size: 0.85rem;
-  margin-top: 8px;
-}
+      margin-top: 60px;
+      padding: 30px 0 20px;
+      border-top: 1px solid #2a2a2a;
+      text-align: center;
+    }
+    .footer-logos-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 24px 32px;
+      margin-bottom: 24px;
+      padding: 0 20px;
+    }
+    .footer-logos-wrapper a {
+      display: inline-block;
+      transition: transform 0.25s ease, opacity 0.25s ease;
+      opacity: 0.7;
+      line-height: 0;
+    }
+    .footer-logos-wrapper a:hover {
+      transform: scale(1.10);
+      opacity: 1;
+    }
+    .footer-logos-wrapper img {
+      height: 50px;
+      width: auto;
+      max-width: 120px;
+      object-fit: contain;
+      filter: grayscale(100%) brightness(200%) contrast(1.2);
+      transition: filter 0.3s ease;
+    }
+    .footer-logos-wrapper a:hover img {
+      filter: grayscale(0%) brightness(100%) contrast(1);
+    }
+    .footer-text {
+      color: #666;
+      font-size: 0.85rem;
+      margin-top: 8px;
+    }
 
     /* ---------- RESPONSIVE ---------- */
     @media (max-width: 768px) {
       .navbar { flex-direction: column; align-items: stretch; gap: 10px; }
-      .nav-links { justify-content: space-around; flex-wrap: wrap; gap: 10px; }
+      .nav-links { justify-content: center; flex-wrap: wrap; gap: 6px; }
+      .nav-links a { font-size: 0.8rem; padding: 4px 10px; }
       .quick-book { flex-direction: column; align-items: stretch; }
       .quick-book .qb-fields { flex-direction: column; }
       .quick-book .qb-fields select { width: 100%; }
@@ -569,15 +575,17 @@
       <img src="euro-flim-1-1024x574.jpg" alt="EU Film Festival Logo" />
       <span>EU Film Fest <small>Malawi 2026</small></span>
     </div>
-  <div class="nav-links">
-    <a href="#">Home</a>
-    <a href="#day-sat-12">Sat 12 Sep</a>
-    <a href="#day-fri-18">Fri 18 Sep</a>
-    <a href="#day-sat-19">Sat 19 Sep</a>
-    <a href="program.html" target="_blank">EU Program</a>
-    <a href="program-jacaranda.html" target="_blank">Jacaranda Day</a>
-    <a href="#about">About</a>
-  </div>
+    <div class="nav-links">
+      <a href="#">Home</a>
+      <a href="#day-sat-12">Sat 12 Sep</a>
+      <a href="#day-fri-18">Fri 18 Sep</a>
+      <a href="#day-sat-19">Sat 19 Sep</a>
+      <a href="#day-sun-20">Sun 20 Sep</a>
+      <a href="program.html" target="_blank">EU Program</a>
+      <a href="program-jacaranda.html" target="_blank">Jacaranda Day</a>
+      <a href="program-lilongwe.html" target="_blank">Lilongwe Girls</a>
+      <a href="#about">About</a>
+    </div>
   </nav>
 
   <!-- ========== QUICK BOOK BAR ========== -->
@@ -602,6 +610,14 @@
       Experience diverse stories, award-winning filmmaking, and vibrant cultural exchange.
     </p>
   </section>
+
+  <!-- ========== RATING LEGEND ========== -->
+  <div class="rating-legend">
+    <span class="legend-title">🇲🇼 Malawi Censorship Ratings:</span>
+    <span class="legend-item"><span class="rating-badge rating-u">U</span> Universal – Suitable for all ages</span>
+    <span class="legend-item"><span class="rating-badge rating-a">A</span> Parental Guidance</span>
+    <span class="legend-item"><span class="rating-badge rating-aa">AA</span> 14 years and above</span>
+  </div>
 
   <!-- ========== CATALOGUE ========== -->
   <section id="catalogue">
@@ -632,13 +648,6 @@
       </div>
     </div>
 
-    <div class="rating-legend">
-  <span class="legend-title">🇲🇼 Malawi Censorship Ratings:</span>
-  <span class="legend-item"><span class="rating-badge rating-u">U</span> Universal – Suitable for all ages</span>
-  <span class="legend-item"><span class="rating-badge rating-a">A</span> Parental Guidance</span>
-  <span class="legend-item"><span class="rating-badge rating-aa">AA</span> 14 years and above</span>
-</div>
-    
     <!-- Film Grid -->
     <div id="filmGrid"></div>
   </section>
@@ -656,7 +665,7 @@
         <img src="FAMA.png" alt="Film Association of Malawi" />
       </a>
       <a href="https://europeanfilmfestival.eu" target="_blank" rel="noopener noreferrer">
-        <img src="EFF%202026.png" alt="European Film Festival" />
+        <img src="EFF2026.png" alt="European Film Festival" />
       </a>
       <a href="https://www.lilongwe.diplo.de/" target="_blank" rel="noopener noreferrer">
         <img src="GERMANY.png" alt="German Embassy" />
