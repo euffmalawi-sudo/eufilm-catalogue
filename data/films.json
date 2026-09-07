@@ -52,7 +52,7 @@
     "rating": "U",
     "program": {
       "day": "Saturday 12 September",
-      "time": "14:15",
+      "time": "14:10",
       "venue": "Alliance Française de Blantyre",
       "slot": "European Short"
     },
@@ -84,7 +84,7 @@
     "rating": "U",
     "program": {
       "day": "Saturday 12 September",
-      "time": "14:45",
+      "time": "14:40",
       "venue": "Alliance Française de Blantyre",
       "slot": "European Feature"
     },
@@ -115,7 +115,7 @@
     "rating": "AA",
     "program": {
       "day": "Saturday 12 September",
-      "time": "16:15",
+      "time": "16:10",
       "venue": "Alliance Française de Blantyre",
       "slot": "European Feature"
     },
@@ -202,7 +202,7 @@
     "rating": "A",
     "program": {
       "day": "Sunday 20 September",
-      "time": "14:00",
+      "time": "14:30",
       "venue": "Lilongwe Girls School / Good Shepherd School (TBC)",
       "slot": "European Feature"
     },
@@ -408,7 +408,7 @@
     "rating": "AA",
     "program": {
       "day": "Saturday 12 September",
-      "time": "18:45",
+      "time": "18:15",
       "venue": "Alliance Française de Blantyre",
       "slot": "European Feature"
     },
@@ -464,7 +464,7 @@
     "rating": "AA",
     "program": {
       "day": "Saturday 12 September",
-      "time": "18:15",
+      "time": "17:50",
       "venue": "Alliance Française de Blantyre",
       "slot": "Malawian Short"
     },
@@ -546,7 +546,35 @@
     "rating": "A",
     "program": {
       "day": "Sunday 20 September",
-      "time": "16:45",
+      "time": "14:00",
+      "venue": "Lilongwe Girls School / Good Shepherd School (TBC)",
+      "slot": "Malawian Short"
+    },
+    "awards": []
+  },
+    {
+    "id": 104,
+    "title": "TBA",
+    "country": "Malawi",
+    "year": 2026,
+    "runtime": 5,
+    "director": "TBA",
+    "genres": ["Short"],
+    "languages": "Chichewa, English",
+    "poster": "",
+    "synopsis": "This is a space for a synopsis",
+    "imdb": 0,
+    "rt": 0,
+    "meta": 0,
+    "delegation": "",
+    "imdbId": "",
+    "eventSuggestion": "Sunday 20 Sep",
+    "youtubeId": "",
+    "isMalawian": true,
+    "rating": "A",
+    "program": {
+      "day": "Sunday 20 September",
+      "time": "14:05",
       "venue": "Lilongwe Girls School / Good Shepherd School (TBC)",
       "slot": "Malawian Short"
     },
