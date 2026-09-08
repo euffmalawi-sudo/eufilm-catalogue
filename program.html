@@ -303,6 +303,71 @@
       color: #0B0B0B;
     }
 
+    /* ---------- POSTER RATING OVERLAY ---------- */
+    .poster-wrapper {
+      position: relative;
+      overflow: hidden;
+    }
+    .poster-wrapper img {
+      width: 100%;
+      height: 280px;
+      object-fit: cover;
+      background: #0B0B0B;
+    }
+    .poster-rating {
+      position: absolute;
+      top: 12px;
+      left: 12px;
+      padding: 4px 14px;
+      border-radius: 30px;
+      font-weight: 800;
+      font-size: 1rem;
+      color: #fff;
+      background: #555;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.6);
+      z-index: 2;
+      text-shadow: 0 1px 4px rgba(0,0,0,0.5);
+    }
+    .poster-rating.rating-u { background: #2E7D32; }
+    .poster-rating.rating-a { background: #F57C00; }
+    .poster-rating.rating-aa { background: #C62828; }
+
+    .rating-badge {
+      display: inline-block;
+      padding: 2px 12px;
+      border-radius: 30px;
+      font-weight: 700;
+      font-size: 0.7rem;
+      color: #fff;
+    }
+    .rating-badge.rating-u { background: #2E7D32; }
+    .rating-badge.rating-a { background: #F57C00; }
+    .rating-badge.rating-aa { background: #C62828; }
+
+    /* ---------- RATING LEGEND ---------- */
+    .rating-legend {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 16px 24px;
+      padding: 12px 20px;
+      background: #141414;
+      border-radius: 40px;
+      border: 1px solid #2a2a2a;
+      margin-bottom: 24px;
+      font-size: 0.85rem;
+    }
+    .legend-title {
+      font-weight: 600;
+      color: #F5C518;
+    }
+    .legend-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: #ccc;
+    }
+
     /* ---------- MODAL ---------- */
     .modal-container {
       display: none;
@@ -399,55 +464,46 @@
 
     /* ---------- FOOTER ---------- */
     .footer {
-  margin-top: 60px;
-  padding: 30px 0 20px;
-  background: #ffffff; /* White background */
-  border-top: 1px solid #e0e0e0; /* Light gray border */
-  text-align: center;
-  border-radius: 12px; /* Optional: slightly rounded corners */
-}
-
-.footer-logos-wrapper {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  gap: 24px 32px;
-  margin-bottom: 24px;
-  padding: 0 20px;
-}
-
-.footer-logos-wrapper a {
-  display: inline-block;
-  transition: transform 0.25s ease, opacity 0.25s ease;
-  opacity: 0.8;
-  line-height: 0;
-}
-
-.footer-logos-wrapper a:hover {
-  transform: scale(1.10);
-  opacity: 1;
-}
-
-.footer-logos-wrapper img {
-  height: 50px;
-  width: auto;
-  max-width: 120px;
-  object-fit: contain;
-  /* Remove grayscale/brightness so logos appear in full color on white background */
-  filter: grayscale(0%) brightness(100%) contrast(1);
-  transition: filter 0.3s ease;
-}
-
-.footer-logos-wrapper a:hover img {
-  filter: grayscale(0%) brightness(100%) contrast(1); /* Keep full color on hover */
-}
-
-.footer-text {
-  color: #333333; /* Dark text for readability on white background */
-  font-size: 0.85rem;
-  margin-top: 8px;
-}
+      margin-top: 60px;
+      padding: 30px 0 20px;
+      border-top: 1px solid #2a2a2a;
+      text-align: center;
+    }
+    .footer-logos-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 24px 32px;
+      margin-bottom: 24px;
+      padding: 0 20px;
+    }
+    .footer-logos-wrapper a {
+      display: inline-block;
+      transition: transform 0.25s ease, opacity 0.25s ease;
+      opacity: 0.7;
+      line-height: 0;
+    }
+    .footer-logos-wrapper a:hover {
+      transform: scale(1.10);
+      opacity: 1;
+    }
+    .footer-logos-wrapper img {
+      height: 50px;
+      width: auto;
+      max-width: 120px;
+      object-fit: contain;
+      filter: grayscale(100%) brightness(200%) contrast(1.2);
+      transition: filter 0.3s ease;
+    }
+    .footer-logos-wrapper a:hover img {
+      filter: grayscale(0%) brightness(100%) contrast(1);
+    }
+    .footer-text {
+      color: #666;
+      font-size: 0.85rem;
+      margin-top: 8px;
+    }
 
     /* ---------- RESPONSIVE ---------- */
     @media (max-width: 768px) {
@@ -478,6 +534,8 @@
     <div class="nav-links">
       <a href="index.html">Catalogue</a>
       <a href="program.html" class="active">Opening Reception</a>
+      <a href="program-jacaranda.html">Jacaranda Day</a>
+      <a href="program-lilongwe.html">Lilongwe Girls</a>
     </div>
   </nav>
 
@@ -561,26 +619,34 @@
 
       <!-- Intermission -->
       <div class="timeline-item intermission">
-        <div class="time">19:54 – 20:04</div>
+        <div class="time">19:54 – 20:05</div>
         <div class="event-detail">
           <div class="title">☕ Intermission</div>
-          <div class="sub">10-minute break</div>
+          <div class="sub">11-minute break</div>
         </div>
-        <div class="duration">10 min</div>
+        <div class="duration">11 min</div>
       </div>
 
       <!-- The Mohican (THIRD FILM) -->
       <div class="timeline-item film">
-        <div class="time">20:04 – 22:00</div>
+        <div class="time">20:05 – 22:00</div>
         <div class="event-detail">
           <div class="title">🎬 The Mohican</div>
           <div class="sub">France • Crime, Drama, Thriller • 116 min</div>
         </div>
-        <div class="duration">116 min</div>
+        <div class="duration">115 min</div>
       </div>
 
     </div>
   </section>
+
+  <!-- ========== RATING LEGEND ========== -->
+  <div class="rating-legend">
+    <span class="legend-title">🇲🇼 Malawi Censorship Ratings:</span>
+    <span class="legend-item"><span class="rating-badge rating-u">U</span> Universal – Suitable for all ages</span>
+    <span class="legend-item"><span class="rating-badge rating-a">A</span> Parental Guidance</span>
+    <span class="legend-item"><span class="rating-badge rating-aa">AA</span> 14 years and above</span>
+  </div>
 
   <!-- ========== FILMS SECTION ========== -->
   <section class="films-section">
@@ -601,7 +667,7 @@
         <img src="FAMA.png" alt="Film Association of Malawi" />
       </a>
       <a href="https://europeanfilmfestival.eu" target="_blank" rel="noopener noreferrer">
-        <img src="EFF%202026.png" alt="European Film Festival" />
+        <img src="EFF2026.png" alt="European Film Festival" />
       </a>
       <a href="https://www.lilongwe.diplo.de/" target="_blank" rel="noopener noreferrer">
         <img src="GERMANY.png" alt="German Embassy" />
@@ -692,6 +758,7 @@
       "delegation": "",
       "youtubeId": "R_xzWr0z29Y",
       "isMalawian": false,
+      "rating": "U",
       "program": {
         "day": "Friday 18 September",
         "time": "19:45",
@@ -717,9 +784,10 @@
       "delegation": "French",
       "youtubeId": "50P9YPu-TH0",
       "isMalawian": false,
+      "rating": "AA",
       "program": {
         "day": "Friday 18 September",
-        "time": "20:04",
+        "time": "20:05",
         "venue": "EU Residence",
         "slot": "European Feature"
       },
@@ -750,8 +818,18 @@
         else if (film.program.slot.includes('Short')) badges += `<span class="badge badge-short">Short</span>`;
       }
 
+      // Rating badge on poster
+      let ratingBadge = '';
+      if (film.rating) {
+        const ratingClass = film.rating === 'U' ? 'rating-u' : (film.rating === 'A' ? 'rating-a' : 'rating-aa');
+        ratingBadge = `<span class="poster-rating ${ratingClass}">${film.rating}</span>`;
+      }
+
       card.innerHTML = `
-        <img src="${posterUrl}" alt="${film.title}" loading="lazy" onerror="this.src='https://via.placeholder.com/300x400?text=No+Poster'">
+        <div class="poster-wrapper">
+          <img src="${posterUrl}" alt="${film.title}" loading="lazy" onerror="this.src='https://via.placeholder.com/300x400?text=No+Poster'">
+          ${ratingBadge}
+        </div>
         <div class="card-body">
           <div class="film-title">${film.title}</div>
           <div class="film-meta">
@@ -762,7 +840,10 @@
           <div class="film-meta" style="font-size:0.75rem; color:#666;">
             ${film.program?.time || ''} • ${film.program?.venue || ''}
           </div>
-          <div class="badge-row">${badges}</div>
+          <div class="badge-row">
+            ${badges}
+            ${film.rating ? `<span class="badge rating-badge rating-${film.rating.toLowerCase()}">${film.rating}</span>` : ''}
+          </div>
           <button class="details-btn" data-index="${index}">View Details</button>
         </div>
       `;
@@ -784,13 +865,15 @@
     const body = document.getElementById('modalBody');
     if (!container || !body) return;
 
-    const GOOGLE_FORM_ID = '1FAIpQLSdOSqgGyZCzydXeK8iLIXmZCjmsiK5IW3q8iw83QDPsKUPYVQ';
-    const DATE_ENTRY_ID = '1185226796';
-    const FILM_ENTRY_ID = '1162404058';
+    // --- EU RESIDENCE FORM (UPDATED) ---
+    const GOOGLE_FORM_ID = '1FAIpQLScfA8ITA559ZlzoDILNBDdtfv-D1yKmfEXpZgWEXxkO_Co4qw';
+    const FILM_ENTRY_ID = '635912452';
 
-    const dateValue = `${film.program?.day || 'TBD'} - ${film.program?.venue || 'TBD'}`;
+    // --- FORMAT THE FILM + TIME VALUE ---
     const filmValue = `${film.title} – ${film.program?.time || 'TBD'}`;
-    const bookingUrl = `https://docs.google.com/forms/d/e/${GOOGLE_FORM_ID}/viewform?usp=pp_url&entry.${DATE_ENTRY_ID}=${encodeURIComponent(dateValue)}&entry.${FILM_ENTRY_ID}=${encodeURIComponent(filmValue)}`;
+
+    // Build the pre-filled URL
+    const bookingUrl = `https://docs.google.com/forms/d/e/${GOOGLE_FORM_ID}/viewform?usp=pp_url&entry.${FILM_ENTRY_ID}=${encodeURIComponent(filmValue)}`;
 
     const trailerHtml = film.youtubeId ? `
       <div class="video-wrapper">
@@ -818,6 +901,7 @@
         <p><strong>Director:</strong> ${film.director || 'TBA'}  •  <strong>Year:</strong> ${film.year || 'TBA'}  •  <strong>Runtime:</strong> ${film.runtime ? film.runtime + ' min' : 'TBA'}</p>
         <p><strong>Country:</strong> ${film.country || 'TBA'}  •  <strong>Genres:</strong> ${film.genres ? film.genres.join(', ') : 'N/A'}</p>
         <p><strong>Languages:</strong> ${film.languages || 'TBA'}</p>
+        <p><strong>Malawi Rating:</strong> ${film.rating || 'Not rated'}</p>
         
         ${film.synopsis ? `<p><strong>📖 Synopsis:</strong> ${film.synopsis}</p>` : ''}
         
