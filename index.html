@@ -569,21 +569,28 @@
     }
 
     /* ============================================================
-       NEW PSD‑INSPIRED STYLES (added on top)
+       NEW PSD-INSPIRED HERO STYLES (with background image)
        ============================================================ */
 
-    /* ----- Hero ----- */
+    /* ----- Hero with background image ----- */
     .hero-section {
-      padding: 40px 0 50px;
+      padding: 40px 0 30px;
       border-bottom: 1px solid rgba(245, 197, 24, 0.15);
       margin-bottom: 40px;
+      background: linear-gradient(rgba(11, 11, 11, 0.75), rgba(11, 11, 11, 0.88)), url('hero-bg.jpg') center/cover no-repeat;
+      border-radius: 16px;
+      position: relative;
     }
+
     .hero-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 40px;
       align-items: center;
+      padding: 20px 30px;
     }
+
+    /* Left column – text */
     .hero-left .premiere-badge {
       font-size: 0.85rem;
       color: #F5C518;
@@ -594,7 +601,7 @@
     .hero-left .hero-date {
       font-size: 1.2rem;
       font-weight: 300;
-      color: #bbb;
+      color: #ccc;
     }
     .hero-left h1 {
       font-family: 'Poppins', sans-serif;
@@ -606,186 +613,76 @@
     }
     .hero-left .hero-director {
       font-size: 1.1rem;
-      color: #aaa;
+      color: #bbb;
       margin-bottom: 24px;
     }
     .hero-left .hero-meta {
       margin-top: 16px;
       font-size: 0.85rem;
-      color: #888;
+      color: #aaa;
     }
     .hero-left .hero-meta span {
-      background: #1a1a1a;
+      background: rgba(0,0,0,0.5);
       padding: 4px 14px;
       border-radius: 20px;
       margin-right: 10px;
       color: #F5C518;
     }
-    .hero-right {
-      background: #161616;
-      border-radius: 16px;
-      padding: 28px 24px;
-      border: 1px solid #2a2a2a;
-      box-shadow: 0 20px 40px rgba(0,0,0,0.6);
-    }
-    .hero-right h3 {
-      color: #F5C518;
-      font-size: 0.9rem;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      margin-bottom: 12px;
-    }
-    .hero-right ul {
-      list-style: none;
-      display: flex;
-      flex-direction: column;
-      gap: 6px;
-    }
-    .hero-right ul li {
-      display: flex;
-      justify-content: space-between;
-      border-bottom: 1px solid #222;
-      padding: 8px 0;
-      font-size: 0.95rem;
-    }
-    .hero-right ul li span:last-child {
-      color: #F5C518;
-    }
 
-    /* ----- Big Screen (film strip) ----- */
-    .big-screen {
-      padding: 20px 0 40px;
-    }
-    .big-screen h2 {
-      font-family: 'Poppins', sans-serif;
-      font-size: 2rem;
-      font-weight: 600;
-      margin-bottom: 28px;
-      color: #fff;
-    }
-    .film-strip {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
-      gap: 24px;
-    }
-    .strip-card {
-      background: #141414;
-      border-radius: 12px;
-      overflow: hidden;
-      border: 1px solid #222;
-      transition: transform 0.2s;
-    }
-    .strip-card:hover {
-      transform: translateY(-6px);
-      border-color: #F5C518;
-    }
-    .strip-card .poster-placeholder {
-      height: 220px;
-      background: #1a1a1a;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 3rem;
-      color: #444;
-      border-bottom: 2px solid #2a2a2a;
-    }
-    .strip-card .strip-info {
-      padding: 12px 14px 16px;
-    }
-    .strip-card .strip-info h4 {
-      font-family: 'Poppins', sans-serif;
-      font-weight: 600;
-      font-size: 1rem;
-      color: #fff;
-      margin-bottom: 2px;
-    }
-    .strip-card .strip-info .sub {
-      font-size: 0.8rem;
-      color: #999;
-    }
-    .strip-card .strip-info .meta {
-      font-size: 0.7rem;
-      color: #666;
-      margin-top: 6px;
-      display: flex;
-      gap: 12px;
-    }
-    .strip-card .strip-info .meta .rating-badge {
-      background: #222;
-      padding: 0 8px;
-      border-radius: 4px;
-      color: #F5C518;
-    }
-
-    /* ----- Schedule Table ----- */
-    .schedule-section {
-      padding: 20px 0 40px;
-    }
-    .schedule-section h2 {
-      font-family: 'Poppins', sans-serif;
-      font-size: 2rem;
-      font-weight: 600;
-      margin-bottom: 24px;
-      color: #fff;
-    }
-    .schedule-wrap {
-      background: #111;
-      border-radius: 16px;
-      border: 1px solid #222;
-      overflow: hidden;
-    }
-    .schedule-wrap table {
+    /* Right column – poster image */
+    .hero-poster img {
       width: 100%;
-      border-collapse: collapse;
+      max-height: 450px;
+      object-fit: cover;
+      border-radius: 16px;
+      border: 2px solid #2a2a2a;
+      box-shadow: 0 20px 50px rgba(0,0,0,0.8);
+      transition: transform 0.3s ease;
     }
-    .schedule-wrap th {
-      text-align: left;
-      padding: 16px 20px;
-      background: #1a1a1a;
-      color: #F5C518;
-      font-weight: 600;
-      font-size: 0.8rem;
-      letter-spacing: 1px;
-      text-transform: uppercase;
-      border-bottom: 2px solid #2a2a2a;
-    }
-    .schedule-wrap td {
-      padding: 14px 20px;
-      border-bottom: 1px solid #1f1f1f;
-      font-size: 0.95rem;
-    }
-    .schedule-wrap tr:last-child td {
-      border-bottom: none;
-    }
-    .schedule-wrap .venue-tag {
-      background: #1f1f1f;
-      padding: 2px 12px;
-      border-radius: 20px;
-      font-size: 0.7rem;
-      color: #aaa;
-      white-space: nowrap;
-    }
-    .schedule-wrap .film-title {
-      font-weight: 500;
+    .hero-poster img:hover {
+      transform: scale(1.02);
     }
 
-    /* ----- Responsive tweaks for new sections ----- */
+    /* Quick glance bar (below hero) */
+    .hero-quick-glance {
+      max-width: 1200px;
+      margin: 25px auto 0;
+      background: rgba(22, 22, 22, 0.9);
+      backdrop-filter: blur(4px);
+      border-radius: 12px;
+      padding: 14px 28px;
+      border: 1px solid #2a2a2a;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 10px 20px;
+      font-size: 0.9rem;
+      color: #ccc;
+    }
+    .hero-quick-glance .glance-label {
+      color: #F5C518;
+      font-weight: 600;
+    }
+
+    /* Responsive hero */
     @media (max-width: 768px) {
       .hero-grid {
         grid-template-columns: 1fr;
+        padding: 15px;
+        gap: 25px;
       }
       .hero-left h1 {
         font-size: 2.6rem;
       }
-      .film-strip {
-        grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+      .hero-poster img {
+        max-height: 300px;
       }
-      .strip-card .poster-placeholder {
-        height: 180px;
-      }
-      .schedule-wrap td,
-      .schedule-wrap th {
-        padding: 10px 12px;
+      .hero-quick-glance {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 6px;
+        padding: 14px 18px;
         font-size: 0.8rem;
       }
     }
@@ -793,35 +690,39 @@
       .hero-left h1 {
         font-size: 2rem;
       }
+      .hero-section {
+        padding: 20px 0 20px;
+      }
     }
+
+    /* ---------- REMOVED "BIG SCREEN" – no styles needed ---------- */
   </style>
 </head>
 <body>
 <div class="container">
 
-  <!-- ========== NAVIGATION (unchanged) ========== -->
+  <!-- ========== NAVIGATION ========== -->
   <nav class="navbar">
     <div class="nav-logo">
       <img src="euro-flim-1-1024x574.jpg" alt="EU Film Festival Logo" />
       <span>EU Film Fest <small>Malawi 2026</small></span>
     </div>
     <div class="nav-links">
-      <a href="#">Home</a>
-      <a href="program-jacaranda.html" target="_blank">Jacaranda Day</a>
-      <a href="program.html" target="_blank">EU Program</a>
-      <a href="program-pabwalo.html" target="_blank">Pabwalo Day</a>
-      <a href="program-lilongwe.html" target="_blank">Lilongwe Girls</a>
+      <a href="index.html" class="active">Catalogue</a>
+      <a href="program.html">Opening Reception</a>
+      <a href="program-jacaranda.html">Jacaranda Day</a>
+      <a href="program-pabwalo.html">Pabwalo Day</a>
+      <a href="program-lilongwe.html">Lilongwe Girls</a>
       <a href="#about">About</a>
     </div>
   </nav>
 
   <!-- ============================================================
-       NEW PSD‑INSPIRED SECTIONS
+       HERO (PSD-inspired with background + poster)
        ============================================================ -->
-
-  <!-- ========== HERO ========== -->
   <section class="hero-section" id="heroSection">
-    <div class="hero-grid">
+    <div class="container hero-grid">
+      <!-- LEFT: Text -->
       <div class="hero-left">
         <div class="premiere-badge">★ Opening Night</div>
         <div class="hero-date" id="heroDate">12 September · 12:30</div>
@@ -833,36 +734,37 @@
           <span>🇫🇷 French</span>
         </div>
       </div>
-      <div class="hero-right">
-        <h3>📅 Quick glance</h3>
-        <ul>
-          <li><span>Sat 12 Sep</span> <span>Alliance Française</span></li>
-          <li><span>Fri 18 Sep</span> <span>EU Residence</span></li>
-          <li><span>Sat 19 Sep</span> <span>Pabwalo Multipurpose</span></li>
-          <li><span>Sun 20 Sep</span> <span>Lilongwe Girls (private)</span></li>
-        </ul>
-        <!-- Reuse rating legend (or duplicate) – we'll show a small one here -->
-        <div style="margin-top:16px; font-size:0.8rem; color:#888; display:flex; gap:16px;">
-          <span><span class="rating-badge rating-u">U</span> All ages</span>
-          <span><span class="rating-badge rating-a">A</span> Parental guidance</span>
-          <span><span class="rating-badge rating-aa">AA</span> 14+</span>
-        </div>
+
+      <!-- RIGHT: Poster Image -->
+      <div class="hero-poster">
+        <img src="banel-poster.jpg" alt="Banel & Adama poster" id="heroPosterImg" />
       </div>
+    </div>
+
+    <!-- Quick Glance Bar (below hero) -->
+    <div class="container hero-quick-glance">
+      <span class="glance-label">📅 Quick glance</span>
+      <span>Sat 12 Sep – Alliance Française</span>
+      <span>Fri 18 Sep – EU Residence</span>
+      <span>Sat 19 Sep – Pabwalo Multipurpose</span>
+      <span>Sun 20 Sep – Lilongwe Girls (private)</span>
     </div>
   </section>
 
-  <!-- ========== SCHEDULE ========== -->
+  <!-- ============================================================
+       SCHEDULE (kept as-is)
+       ============================================================ -->
   <section class="schedule-section">
     <div class="container">
-      <h2>📆 Schedule</h2>
-      <div class="schedule-wrap">
-        <table>
+      <h2 style="font-family: 'Poppins', sans-serif; font-size:2rem; font-weight:600; margin-bottom:24px; color:#fff;">📆 Schedule</h2>
+      <div class="schedule-wrap" style="background:#111; border-radius:16px; border:1px solid #222; overflow:hidden;">
+        <table style="width:100%; border-collapse:collapse;">
           <thead>
             <tr>
-              <th>Date</th>
-              <th>Time</th>
-              <th>Venue</th>
-              <th>Film</th>
+              <th style="text-align:left; padding:16px 20px; background:#1a1a1a; color:#F5C518; font-weight:600; font-size:0.8rem; letter-spacing:1px; text-transform:uppercase; border-bottom:2px solid #2a2a2a;">Date</th>
+              <th style="text-align:left; padding:16px 20px; background:#1a1a1a; color:#F5C518; font-weight:600; font-size:0.8rem; letter-spacing:1px; text-transform:uppercase; border-bottom:2px solid #2a2a2a;">Time</th>
+              <th style="text-align:left; padding:16px 20px; background:#1a1a1a; color:#F5C518; font-weight:600; font-size:0.8rem; letter-spacing:1px; text-transform:uppercase; border-bottom:2px solid #2a2a2a;">Venue</th>
+              <th style="text-align:left; padding:16px 20px; background:#1a1a1a; color:#F5C518; font-weight:600; font-size:0.8rem; letter-spacing:1px; text-transform:uppercase; border-bottom:2px solid #2a2a2a;">Film</th>
             </tr>
           </thead>
           <tbody id="scheduleBody">
@@ -874,10 +776,8 @@
   </section>
 
   <!-- ============================================================
-       EXISTING SECTIONS (kept in original order)
+       QUICK BOOK BAR (original)
        ============================================================ -->
-
-  <!-- ========== QUICK BOOK BAR (original) ========== -->
   <div class="quick-book">
     <div class="qb-title">
       <i>🎟️</i> Quick Book
@@ -1000,8 +900,8 @@
 </div>
 
 <!-- ============================================================
-     EXTRA SCRIPT: Populate hero, film strip & schedule
-     (does NOT interfere with app.js – it only adds content)
+     EXTRA SCRIPT: Populate hero poster & schedule
+     (does NOT interfere with app.js)
      ============================================================ -->
 <script>
   (function() {
@@ -1036,14 +936,14 @@
         <tr>
           <td><strong>${s.date}</strong></td>
           <td>${s.time}</td>
-          <td><span class="venue-tag">${s.venue}</span></td>
-          <td class="film-title">${s.film}</td>
+          <td><span style="background:#1f1f1f; padding:2px 12px; border-radius:20px; font-size:0.7rem; color:#aaa; white-space:nowrap;">${s.venue}</span></td>
+          <td style="font-weight:500;">${s.film}</td>
         </tr>
       `).join('');
     }
     renderSchedule();
 
-    // ----- Fetch films.json to populate hero & film strip -----
+    // ----- Fetch films.json to populate hero poster -----
     fetch('data/films.json')
       .then(res => res.json())
       .then(films => {
@@ -1058,31 +958,40 @@
           <span>${heroFilm.rating || 'AA'} · ${heroFilm.runtime || '87 min'}</span>
           <span>${heroFilm.origin ? '🇫🇷 ' + heroFilm.origin : ''}</span>
         `;
-        // Optional: set hero book button link if available
+        // Hero book button
         const heroBtn = document.getElementById('heroBookBtn');
         if (heroFilm.bookingUrl) heroBtn.href = heroFilm.bookingUrl;
 
-        // 2) Film strip – first 8 films
-        const strip = document.getElementById('filmStrip');
-        const featured = films.slice(0, 8);
-        strip.innerHTML = featured.map((f, idx) => {
-          const ratingBadge = f.rating ? `<span class="rating-badge">${f.rating}</span>` : '';
-          return `
-            <div class="strip-card">
-              <div class="poster-placeholder" style="background:linear-gradient(135deg, #${Math.floor(Math.random()*16777215).toString(16).padStart(6,'0')}, #111);">🎬</div>
-              <div class="strip-info">
-                <h4>${f.title}</h4>
-                <div class="sub">${f.origin || ''}</div>
-                <div class="meta">
-                  <span>${f.runtime || ''}</span>
-                  ${ratingBadge}
-                </div>
-              </div>
-            </div>
-          `;
-        }).join('');
+        // 2) Update hero poster image
+        const posterImg = document.getElementById('heroPosterImg');
+        if (posterImg) {
+          // Use film.poster if available, otherwise fallback to banel-poster.jpg
+          posterImg.src = heroFilm.poster || 'banel-poster.jpg';
+          posterImg.alt = (heroFilm.title || 'Banel & Adama') + ' poster';
+        }
+
+        // 3) Populate filter dropdowns (Origin, Genre) – helps your existing filters.js
+        const originSelect = document.getElementById('filterOrigin');
+        const origins = [...new Set(films.map(f => f.origin).filter(Boolean))];
+        origins.forEach(o => {
+          const opt = document.createElement('option');
+          opt.value = o;
+          opt.textContent = o;
+          originSelect.appendChild(opt);
+        });
+
+        const genreSelect = document.getElementById('filterGenre');
+        const genres = [...new Set(films.map(f => f.genre).filter(Boolean))];
+        genres.forEach(g => {
+          const opt = document.createElement('option');
+          opt.value = g;
+          opt.textContent = g;
+          genreSelect.appendChild(opt);
+        });
+
+        // If your old JS needs the data, it will fetch it again – that's fine.
       })
-      .catch(err => console.warn('Could not load films.json for hero/strip:', err));
+      .catch(err => console.warn('Could not load films.json for hero poster:', err));
 
   })();
 </script>
