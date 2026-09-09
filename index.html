@@ -8,6 +8,9 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:opsz@14..32&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet">
   <style>
+    /* ============================================================
+       YOUR EXISTING CSS (kept 100% intact)
+       ============================================================ */
     /* ---------- RESET & BASE ---------- */
     * {
       margin: 0;
@@ -564,12 +567,239 @@
       .footer-logos-wrapper { gap: 16px 20px; }
       .footer-logos-wrapper img { height: 40px; max-width: 90px; }
     }
+
+    /* ============================================================
+       NEW PSD‑INSPIRED STYLES (added on top)
+       ============================================================ */
+
+    /* ----- Hero ----- */
+    .hero-section {
+      padding: 40px 0 50px;
+      border-bottom: 1px solid rgba(245, 197, 24, 0.15);
+      margin-bottom: 40px;
+    }
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      align-items: center;
+    }
+    .hero-left .premiere-badge {
+      font-size: 0.85rem;
+      color: #F5C518;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+    .hero-left .hero-date {
+      font-size: 1.2rem;
+      font-weight: 300;
+      color: #bbb;
+    }
+    .hero-left h1 {
+      font-family: 'Poppins', sans-serif;
+      font-size: 3.8rem;
+      font-weight: 700;
+      line-height: 1.1;
+      margin: 8px 0 4px;
+      color: #fff;
+    }
+    .hero-left .hero-director {
+      font-size: 1.1rem;
+      color: #aaa;
+      margin-bottom: 24px;
+    }
+    .hero-left .hero-meta {
+      margin-top: 16px;
+      font-size: 0.85rem;
+      color: #888;
+    }
+    .hero-left .hero-meta span {
+      background: #1a1a1a;
+      padding: 4px 14px;
+      border-radius: 20px;
+      margin-right: 10px;
+      color: #F5C518;
+    }
+    .hero-right {
+      background: #161616;
+      border-radius: 16px;
+      padding: 28px 24px;
+      border: 1px solid #2a2a2a;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+    }
+    .hero-right h3 {
+      color: #F5C518;
+      font-size: 0.9rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+    .hero-right ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .hero-right ul li {
+      display: flex;
+      justify-content: space-between;
+      border-bottom: 1px solid #222;
+      padding: 8px 0;
+      font-size: 0.95rem;
+    }
+    .hero-right ul li span:last-child {
+      color: #F5C518;
+    }
+
+    /* ----- Big Screen (film strip) ----- */
+    .big-screen {
+      padding: 20px 0 40px;
+    }
+    .big-screen h2 {
+      font-family: 'Poppins', sans-serif;
+      font-size: 2rem;
+      font-weight: 600;
+      margin-bottom: 28px;
+      color: #fff;
+    }
+    .film-strip {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+      gap: 24px;
+    }
+    .strip-card {
+      background: #141414;
+      border-radius: 12px;
+      overflow: hidden;
+      border: 1px solid #222;
+      transition: transform 0.2s;
+    }
+    .strip-card:hover {
+      transform: translateY(-6px);
+      border-color: #F5C518;
+    }
+    .strip-card .poster-placeholder {
+      height: 220px;
+      background: #1a1a1a;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 3rem;
+      color: #444;
+      border-bottom: 2px solid #2a2a2a;
+    }
+    .strip-card .strip-info {
+      padding: 12px 14px 16px;
+    }
+    .strip-card .strip-info h4 {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 600;
+      font-size: 1rem;
+      color: #fff;
+      margin-bottom: 2px;
+    }
+    .strip-card .strip-info .sub {
+      font-size: 0.8rem;
+      color: #999;
+    }
+    .strip-card .strip-info .meta {
+      font-size: 0.7rem;
+      color: #666;
+      margin-top: 6px;
+      display: flex;
+      gap: 12px;
+    }
+    .strip-card .strip-info .meta .rating-badge {
+      background: #222;
+      padding: 0 8px;
+      border-radius: 4px;
+      color: #F5C518;
+    }
+
+    /* ----- Schedule Table ----- */
+    .schedule-section {
+      padding: 20px 0 40px;
+    }
+    .schedule-section h2 {
+      font-family: 'Poppins', sans-serif;
+      font-size: 2rem;
+      font-weight: 600;
+      margin-bottom: 24px;
+      color: #fff;
+    }
+    .schedule-wrap {
+      background: #111;
+      border-radius: 16px;
+      border: 1px solid #222;
+      overflow: hidden;
+    }
+    .schedule-wrap table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    .schedule-wrap th {
+      text-align: left;
+      padding: 16px 20px;
+      background: #1a1a1a;
+      color: #F5C518;
+      font-weight: 600;
+      font-size: 0.8rem;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      border-bottom: 2px solid #2a2a2a;
+    }
+    .schedule-wrap td {
+      padding: 14px 20px;
+      border-bottom: 1px solid #1f1f1f;
+      font-size: 0.95rem;
+    }
+    .schedule-wrap tr:last-child td {
+      border-bottom: none;
+    }
+    .schedule-wrap .venue-tag {
+      background: #1f1f1f;
+      padding: 2px 12px;
+      border-radius: 20px;
+      font-size: 0.7rem;
+      color: #aaa;
+      white-space: nowrap;
+    }
+    .schedule-wrap .film-title {
+      font-weight: 500;
+    }
+
+    /* ----- Responsive tweaks for new sections ----- */
+    @media (max-width: 768px) {
+      .hero-grid {
+        grid-template-columns: 1fr;
+      }
+      .hero-left h1 {
+        font-size: 2.6rem;
+      }
+      .film-strip {
+        grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+      }
+      .strip-card .poster-placeholder {
+        height: 180px;
+      }
+      .schedule-wrap td,
+      .schedule-wrap th {
+        padding: 10px 12px;
+        font-size: 0.8rem;
+      }
+    }
+    @media (max-width: 480px) {
+      .hero-left h1 {
+        font-size: 2rem;
+      }
+    }
   </style>
 </head>
 <body>
 <div class="container">
 
-  <!-- ========== NAVIGATION ========== -->
+  <!-- ========== NAVIGATION (unchanged) ========== -->
   <nav class="navbar">
     <div class="nav-logo">
       <img src="euro-flim-1-1024x574.jpg" alt="EU Film Festival Logo" />
@@ -585,7 +815,79 @@
     </div>
   </nav>
 
-  <!-- ========== QUICK BOOK BAR ========== -->
+  <!-- ============================================================
+       NEW PSD‑INSPIRED SECTIONS
+       ============================================================ -->
+
+  <!-- ========== HERO ========== -->
+  <section class="hero-section" id="heroSection">
+    <div class="hero-grid">
+      <div class="hero-left">
+        <div class="premiere-badge">★ Opening Night</div>
+        <div class="hero-date" id="heroDate">12 September · 12:30</div>
+        <h1 id="heroTitle">Banel &amp; Adama</h1>
+        <div class="hero-director" id="heroDirector">A film by Ramata-Toulaye Sy</div>
+        <a href="#" class="qb-btn" id="heroBookBtn" style="display:inline-block; padding:12px 40px; font-size:1rem;">book tickets</a>
+        <div class="hero-meta" id="heroMeta">
+          <span>AA · 87 min</span>
+          <span>🇫🇷 French</span>
+        </div>
+      </div>
+      <div class="hero-right">
+        <h3>📅 Quick glance</h3>
+        <ul>
+          <li><span>Sat 12 Sep</span> <span>Alliance Française</span></li>
+          <li><span>Fri 18 Sep</span> <span>EU Residence</span></li>
+          <li><span>Sat 19 Sep</span> <span>Pabwalo Multipurpose</span></li>
+          <li><span>Sun 20 Sep</span> <span>Lilongwe Girls (private)</span></li>
+        </ul>
+        <!-- Reuse rating legend (or duplicate) – we'll show a small one here -->
+        <div style="margin-top:16px; font-size:0.8rem; color:#888; display:flex; gap:16px;">
+          <span><span class="rating-badge rating-u">U</span> All ages</span>
+          <span><span class="rating-badge rating-a">A</span> Parental guidance</span>
+          <span><span class="rating-badge rating-aa">AA</span> 14+</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== ON THE BIG SCREEN ========== -->
+  <section class="big-screen">
+    <div class="container">
+      <h2>🎬 On the big screen</h2>
+      <div class="film-strip" id="filmStrip">
+        <!-- populated by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== SCHEDULE ========== -->
+  <section class="schedule-section">
+    <div class="container">
+      <h2>📆 Schedule</h2>
+      <div class="schedule-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Date</th>
+              <th>Time</th>
+              <th>Venue</th>
+              <th>Film</th>
+            </tr>
+          </thead>
+          <tbody id="scheduleBody">
+            <!-- populated by JS -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       EXISTING SECTIONS (kept in original order)
+       ============================================================ -->
+
+  <!-- ========== QUICK BOOK BAR (original) ========== -->
   <div class="quick-book">
     <div class="qb-title">
       <i>🎟️</i> Quick Book
@@ -598,7 +900,7 @@
     </div>
   </div>
 
-  <!-- ========== ABOUT SECTION ========== -->
+  <!-- ========== ABOUT SECTION (original) ========== -->
   <section id="about" class="about-section">
     <h2>🇪🇺 EU <span>Film Festival</span> Malawi 2026</h2>
     <p>
@@ -608,7 +910,7 @@
     </p>
   </section>
 
-  <!-- ========== RATING LEGEND ========== -->
+  <!-- ========== RATING LEGEND (original) ========== -->
   <div class="rating-legend">
     <span class="legend-title">🇲🇼 Malawi Censorship Ratings:</span>
     <span class="legend-item"><span class="rating-badge rating-u">U</span> Universal – Suitable for all ages</span>
@@ -616,7 +918,7 @@
     <span class="legend-item"><span class="rating-badge rating-aa">AA</span> 14 years and above</span>
   </div>
 
-  <!-- ========== CATALOGUE ========== -->
+  <!-- ========== CATALOGUE (fully untouched) ========== -->
   <section id="catalogue">
     <div class="catalogue-header">
       <!-- Filter Bar -->
@@ -645,11 +947,11 @@
       </div>
     </div>
 
-    <!-- Film Grid -->
+    <!-- Film Grid (your app.js renders into this) -->
     <div id="filmGrid"></div>
   </section>
 
-  <!-- ========== FOOTER ========== -->
+  <!-- ========== FOOTER (unchanged) ========== -->
   <footer class="footer">
     <div class="footer-logos-wrapper">
       <a href="https://www.malawicensorshipboard.mw" target="_blank" rel="noopener noreferrer">
@@ -698,7 +1000,7 @@
     <p class="footer-text">© 2026 EU Film Festival Malawi. All rights reserved.</p>
   </footer>
 
-  <!-- ========== MODAL ========== -->
+  <!-- ========== MODAL (unchanged) ========== -->
   <div id="modalContainer" class="modal-container">
     <div id="modalBody" class="modal-body">
       <button id="closeModalBtn" class="modal-close">&times;</button>
@@ -707,6 +1009,96 @@
 
 </div>
 
+<!-- ============================================================
+     EXTRA SCRIPT: Populate hero, film strip & schedule
+     (does NOT interfere with app.js – it only adds content)
+     ============================================================ -->
+<script>
+  (function() {
+    // ----- Hardcoded schedule (from your project summary) -----
+    const scheduleData = [
+      { date: "Sat 12 Sep", time: "12:30", venue: "Alliance Française", film: "Banel & Adama" },
+      { date: "Sat 12 Sep", time: "14:10", venue: "Alliance Française", film: "Maybe Elephants" },
+      { date: "Sat 12 Sep", time: "14:40", venue: "Alliance Française", film: "A Boat In The Garden" },
+      { date: "Sat 12 Sep", time: "16:10", venue: "Alliance Française", film: "A New Kind Of Wilderness" },
+      { date: "Sat 12 Sep", time: "17:50", venue: "Alliance Française", film: "Amina" },
+      { date: "Sat 12 Sep", time: "18:15", venue: "Alliance Française", film: "Monsieur Aznavour" },
+      { date: "Fri 18 Sep", time: "18:20", venue: "EU Residence", film: "Banjo Boys" },
+      { date: "Fri 18 Sep", time: "19:45", venue: "EU Residence", film: "Pearl Diver" },
+      { date: "Fri 18 Sep", time: "20:05", venue: "EU Residence", film: "The Mohican" },
+      { date: "Sat 19 Sep", time: "10:00", venue: "Pabwalo", film: "A Happy Day" },
+      { date: "Sat 19 Sep", time: "12:00", venue: "Pabwalo", film: "Tarrac" },
+      { date: "Sat 19 Sep", time: "13:45", venue: "Pabwalo", film: "Living Large" },
+      { date: "Sat 19 Sep", time: "15:10", venue: "Pabwalo", film: "Nuit Chérie (Sweet Night)" },
+      { date: "Sat 19 Sep", time: "15:30", venue: "Pabwalo", film: "Peacock" },
+      { date: "Sat 19 Sep", time: "17:20", venue: "Pabwalo", film: "Nelia's Dream" },
+      { date: "Sat 19 Sep", time: "18:10", venue: "Pabwalo", film: "Is There Anybody Out There?" },
+      { date: "Sat 19 Sep", time: "19:50", venue: "Pabwalo", film: "Nasty" },
+      { date: "Sun 20 Sep", time: "14:00", venue: "Lilongwe Girls", film: "Beyond Sight" },
+      { date: "Sun 20 Sep", time: "14:30", venue: "Lilongwe Girls", film: "Campeones (Champions)" }
+    ];
+
+    // ----- Render schedule -----
+    function renderSchedule() {
+      const tbody = document.getElementById('scheduleBody');
+      if (!tbody) return;
+      tbody.innerHTML = scheduleData.map(s => `
+        <tr>
+          <td><strong>${s.date}</strong></td>
+          <td>${s.time}</td>
+          <td><span class="venue-tag">${s.venue}</span></td>
+          <td class="film-title">${s.film}</td>
+        </tr>
+      `).join('');
+    }
+    renderSchedule();
+
+    // ----- Fetch films.json to populate hero & film strip -----
+    fetch('data/films.json')
+      .then(res => res.json())
+      .then(films => {
+        if (!films || films.length === 0) return;
+
+        // 1) Hero – pick film with id=1 or first
+        const heroFilm = films.find(f => f.id === 1) || films[0];
+        document.getElementById('heroTitle').textContent = heroFilm.title || 'Banel & Adama';
+        document.getElementById('heroDirector').textContent = heroFilm.director ? `A film by ${heroFilm.director}` : '';
+        document.getElementById('heroDate').textContent = heroFilm.date || '12 September · 12:30';
+        document.getElementById('heroMeta').innerHTML = `
+          <span>${heroFilm.rating || 'AA'} · ${heroFilm.runtime || '87 min'}</span>
+          <span>${heroFilm.origin ? '🇫🇷 ' + heroFilm.origin : ''}</span>
+        `;
+        // Optional: set hero book button link if available
+        const heroBtn = document.getElementById('heroBookBtn');
+        if (heroFilm.bookingUrl) heroBtn.href = heroFilm.bookingUrl;
+
+        // 2) Film strip – first 8 films
+        const strip = document.getElementById('filmStrip');
+        const featured = films.slice(0, 8);
+        strip.innerHTML = featured.map((f, idx) => {
+          const ratingBadge = f.rating ? `<span class="rating-badge">${f.rating}</span>` : '';
+          return `
+            <div class="strip-card">
+              <div class="poster-placeholder" style="background:linear-gradient(135deg, #${Math.floor(Math.random()*16777215).toString(16).padStart(6,'0')}, #111);">🎬</div>
+              <div class="strip-info">
+                <h4>${f.title}</h4>
+                <div class="sub">${f.origin || ''}</div>
+                <div class="meta">
+                  <span>${f.runtime || ''}</span>
+                  ${ratingBadge}
+                </div>
+              </div>
+            </div>
+          `;
+        }).join('');
+      })
+      .catch(err => console.warn('Could not load films.json for hero/strip:', err));
+
+  })();
+</script>
+
+<!-- ========== YOUR EXISTING APP.JS (unchanged) ========== -->
 <script type="module" src="./js/app.js"></script>
+
 </body>
 </html>
